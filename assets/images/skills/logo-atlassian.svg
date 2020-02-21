@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135.482 127.032" height="126.08" width="135.36" id="svg37" version="1.1">
+  <defs id="defs9">
+    <linearGradient gradientTransform="matrix(2.21663 0 0 1.92654 -15.333 .333)" gradientUnits="userSpaceOnUse" y2="64.292" x2="11.239" y1="35.051" x1="28.121" id="linear-gradient">
+      <stop id="stop4" stop-color="#0052cc" offset="0"/>
+      <stop id="stop6" stop-color="#2684ff" offset=".923"/>
+    </linearGradient>
+    <style id="style2"/>
+  </defs>
+  <g transform="translate(-8.648 -6.904)" id="layer1">
+    <g id="g830" transform="translate(0 .001)">
+      <g id="Layer_2" data-name="Layer 2" transform="matrix(.90155 0 0 .91034 27.982 19.267)">
+        <g id="Blue">
+          <g id="g822" transform="matrix(1.0458 0 0 1.11073 -5.922 -13.948)" stroke-width="2.067">
+            <path d="M53.575 2.306a93.515 81.277 0 00-5.46 80.24l23.805 41.378a4.238 3.684 0 003.79 2.037h49.367a4.238 3.684 0 003.79-5.331S62.453 5.17 60.783 2.283a4.003 3.48 0 00-7.208.023zM27.567 58.35a4.114 3.576 0 00-6.998.662l-35.46 61.618a4.238 3.684 0 003.791 5.33h49.376a4.085 3.55 0 003.79-2.036c10.651-19.128 4.196-48.213-14.499-65.573z" id="path15" fill="#2684ff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

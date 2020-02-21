@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" theme="normal">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Steve Thompson's professional Web Developer Portfolio Site"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/png" href="assets/images/icons/favicon.ico">
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous"
+  />
+    <title>Steve Thompson's Web Developer Portfolio</title>
+  </head>
+  <body>
+      <main class="sec-main">
+        <header class="sec-main__header">
+          <div class="sec-main__header-brand">
+              <div class="sec-main__header-avatar">
+                <img src="./assets/images/Avatar.svg" alt="Avatar">
+              </div>
+              <div class="sec-main__header-name">
+                <span class="sec-main__header-fname">Steve</span>
+                <span class="sec-main__header-lname">Thompson</span>
+              </div>
+          </div>
+          <nav class="sec-main__header-nav">
+            <div class="sec-main__header-nav-menu-icon"><i class="fas fa-bars"></i></div>
+            <ul class="sec-main__header-nav-menu">
+              <li class="sec-main__header-nav-item"><a href="#sec-about" class="sec-main__header-nav-link">About</a></li>
+              <li class="sec-main__header-nav-item"><a href="#sec-portfolio" class="sec-main__header-nav-link">Portfolio</a></li>
+              <li class="sec-main__header-nav-item"><a href="#sec-contact" class="sec-main__header-nav-link">Contact</a></li>
+              <li class="sec-main__header-nav-item"><a href="#sec-skills" class="sec-main__header-nav-link">Skills</a></li>
+            </ul> 
+          </nav>
+        </header>
+        <div id="sec-main__about" class="sec-main__about">
+          <div class="sec-main__about-container">
+            <h1 class="sr-only">Steve Thompson's Web Developer Portfolio</h1>
+            <h2 class="sec-main__about-title">Web Developer
+              <span class="sec-main__about-title-secondary-info">& <br> Experienced IT Professional</span>
+            </h2>
+            <div class="sec-main__about-me">
+              <p class="sec-main__about-me-info">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+              </p>
+              <p class="sec-main__about-me-info">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+              </p>
+            </div>
+            <footer class="sec-main__about-footer">
+              <a class="sec-main__about-cta-dl-resume" href="./assets/docs/SteveThompson-resume.pdf">Download Resume</a>
+            </footer>
+          </div>
+        </div>
+      </main>
+      <section id="sec-portfolio" class="sec-portfolio">
+        <div class="sec-portfolio__heading">
+          <i class="sec-portfolio__heading-icon fas fa-briefcase"></i>
+          <h2 class="sec-portfolio__heading-title">Portfolio</h2>
+        </div>
+        <div class="sec-portfolio__main">
+          <div class="sec-portfolio__carousel">
+            <div id="proj-tryathlete" class="sec-portfolio__proj-card">
+                <img class="sec-portfolio__proj-img" src="./assets/images/projects/proj-tryathlete.jpg"/>
+                <div class="sec-portfolio__proj-info">
+                  <div class="sec-portfolio__proj-title">TryAthlete <br>App</div>
+                  <div class="sec-portfolio__proj-action-container">
+                    <a class="sec-portfolio__proj-view-code" href="https://github.com/sthmpsn/TryAthlete" target="_blank">View Code</a>
+                    <a class="sec-portfolio__proj-run-app" href="https://my-try-athlete.herokuapp.com" target="_blank">Run App</a>
+                  </div>
+                </div>
+            </div>
+            <div id="proj-clicky" class="sec-portfolio__proj-card">
+              <img class="sec-portfolio__proj-img" src="./assets/images/projects/proj-clicky.jpg"/>
+              <div class="sec-portfolio__proj-info">
+                <div class="sec-portfolio__proj-title">The Simpsons Memory Click Game</div>
+                <div class="sec-portfolio__proj-action-container">
+                  <a class="sec-portfolio__proj-view-code" href="https://github.com/sthmpsn/clicky-game" target="_blank">View Code</a>
+                  <a class="sec-portfolio__proj-run-app" href="https://sthmpsn.github.io/clicky-game" target="_blank">Run App</a>
+                </div>
+              </div>
+            </div>
+            <div id="proj-cyoa" class="sec-portfolio__proj-card">
+              <img class="sec-portfolio__proj-img" src="./assets/images/projects/proj-cyoa.jpg"/>
+              <div class="sec-portfolio__proj-info">
+                <div class="sec-portfolio__proj-title">Choose Your Own Adventure! - Coding Boot Camp Edition</div>
+                <div class="sec-portfolio__proj-action-container">
+                  <a class="sec-portfolio__proj-view-code" href="https://github.com/sthmpsn/Web-Dev-Alliance" target="_blank">View Code</a>
+                  <a class="sec-portfolio__proj-run-app" href="https://cyoa-bc.herokuapp.com" target="_blank">Run App</a>
+                </div>
+              </div>
+            </div>
+            <div id="proj-rpg" class="sec-portfolio__proj-card">
+              <img class="sec-portfolio__proj-img" src="./assets/images/projects/proj-rpg.jpg"/>
+              <div class="sec-portfolio__proj-info">
+                <div class="sec-portfolio__proj-title">Star Wars RPG Game</div>
+                <div class="sec-portfolio__proj-action-container">
+                  <a class="sec-portfolio__proj-view-code" href="https://github.com/sthmpsn/StarWars-RPG" target="_blank">View Code</a>
+                  <a class="sec-portfolio__proj-run-app" href="https://sthmpsn.github.io/StarWars-RPG" target="_blank">Run App</a>
+                </div>
+              </div>
+            </div>
+            <div id="proj-lirr-schedule" class="sec-portfolio__proj-card">
+              <img class="sec-portfolio__proj-img" src="./assets/images/projects/proj-trainSchedule.jpg"/>
+              <div class="sec-portfolio__proj-info">
+                <div class="sec-portfolio__proj-title">LIRR Train Schedule Mockup!</div>
+                <div class="sec-portfolio__proj-action-container">
+                  <a class="sec-portfolio__proj-view-code" href="https://github.com/sthmpsn/Train-Schedule" target="_blank">View Code</a>
+                  <a class="sec-portfolio__proj-run-app" href="https://sthmpsn.github.io/Train-Schedule" target="_blank">Run App</a>
+                </div>
+              </div>
+            </div>
+            <div id="proj-my-reviews" class="sec-portfolio__proj-card">
+              <img class="sec-portfolio__proj-img" src="./assets/images/projects/proj-myReviews.jpg"/>
+              <div class="sec-portfolio__proj-info">
+                <div class="sec-portfolio__proj-title">My Reviews App</div>
+                <div class="sec-portfolio__proj-action-container">
+                  <a class="sec-portfolio__proj-view-code" href="https://github.com/sthmpsn/ReviewMe" target="_blank">View Code</a>
+                  <a class="sec-portfolio__proj-run-app" href="https://sthmpsn.github.io/ReviewMe" target="_blank">Run App</a>
+                </div>
+              </div>
+            </div>
+            <div id="proj-giphy-tv" class="sec-portfolio__proj-card">
+              <img class="sec-portfolio__proj-img" src="./assets/images/projects/proj-giphyTv.jpg"/>
+              <div class="sec-portfolio__proj-info">
+                <div class="sec-portfolio__proj-title">Giphy TV App</div>
+                <div class="sec-portfolio__proj-action-container">
+                  <a class="sec-portfolio__proj-view-code" href="https://github.com/sthmpsn/Giffy-TV" target="_blank">View Code</a>
+                  <a class="sec-portfolio__proj-run-app" href="https://sthmpsn.github.io/Giffy-TV" target="_blank">Run App</a>
+                </div>
+              </div>
+            </div>
+            <div id="proj-book-search" class="sec-portfolio__proj-card">
+              <img class="sec-portfolio__proj-img" src="./assets/images/projects/proj-bookSearch.jpg"/>
+              <div class="sec-portfolio__proj-info">
+                <div class="sec-portfolio__proj-title">Google Book Search Collection</div>
+                <div class="sec-portfolio__proj-action-container">
+                  <a class="sec-portfolio__proj-view-code" href="https://github.com/sthmpsn/book-search" target="_blank">View Code</a>
+                  <a class="sec-portfolio__proj-run-app" href="https://my-google-booksearch.herokuapp.com" target="_blank">Run App</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sec-portfolio__carousel-controls">
+            <div class="sec-portfolio__carousel-ctrl-prev-button"></div>
+            <div class="sec-portfolio__carousel-proj-tech">
+              Project Details...In Progress
+            </div>
+            <div class="sec-portfolio__carousel-ctrl-next-button"></div>
+          </div>
+        </div>
+      </section>
+      <section id="sec-contact" class="sec-contact ">
+        <div class="sec-contact__heading">
+          <i class="sec-contact__heading-icon fas fa-at"></i>
+          <h2 class="sec-contact__heading-title">Contact</h2>
+        </div>
+        <footer id="sec-contact__main" class="sec-contact__main">
+          <div class="sec-contact__email-container">
+            <a class="sec-contact__email-icon-container icon-border" href="mailto:sthmpsn@gmail.com">
+              <i class="sec-contact__email-icon sec-contact__contact-icon fas fa-envelope"></i>
+            </a>
+            <address class="sec-contact__address">
+              sthmpsn@gmail.com
+            </address>
+          </div>
+          <div class="sec-contact__phone-container">
+            <a class="sec-contact__phone-icon-container icon-border" href="tel:631-834-8881">
+              <i class="sec-contact__phone-icon sec-contact__contact-icon fas fa-phone"></i>
+            </a>
+            <div class="sec-contact__phone-num">
+              631-834-8881
+            </div>
+          </div>
+          <div class="sec-contact__social-media">
+            <a href="https://github.com/sthmpsn" target="_blank"><i class="sec-contact__github-icon sec-contact__icon fab fa-github-alt"></i></a>
+            <a href="https://www.linkedin.com/in/steven-thompson-10a5071b" target="_blank"><i class="sec-contact__linkedin-icon sec-contact__icon fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/StevenT35878867" target="_blank"><i class="sec-contact__twitter-icon sec-contact__icon fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/steve.thompson.5055" target="_blank"><i class="sec-contact__facebook-icon sec-contact__icon fab fa-facebook-f"></i></a>
+            <a href="https://codepen.io/sthmpsn" target="_blank"><i class="sec-contact__codepen-icon sec-contact__icon fab fa-codepen"></i></a>
+          </div>  
+        </footer>
+      </section>
+      
+      <section id="sec-skills" class="sec-skills ">
+        <div class="sec-skills__heading">
+          <i class="sec-skills__heading-icon fas fa-tools"></i>
+          <h2 class="sec-skills__heading-title">Skills</h2>
+        </div>
+        <div class="sec-skills__showcase">
+          <div class="sec-skills__skill-orbit-path sec-skills--skill-orbit-path-rotate"
+          >
+            <div class="sec-skills__skill-csharp sec-skills--skill-rotate">
+              <img src="assets/images/skills/logo-c-sharp.svg">
+            </div>
+            <div class="sec-skills__skill-bootstrap sec-skills--skill-rotate">
+              <img src="assets/images/skills/logo-bootstrap.svg">
+            </div>
+            <div class="sec-skills__skill-javascript sec-skills--skill-rotate">
+              <img src="assets/images/skills/logo-javascript.svg">            </div>
+            <div class="sec-skills__skill-jquery sec-skills--skill-rotate">
+              <img src="assets/images/skills/logo-jquery.svg"> 
+            </div>
+            <div class="sec-skills__skill-reactjs sec-skills--skill-rotate">
+              <img src="assets/images/skills/logo-react.svg">            </div>
+            <div class="sec-skills__skill-atlassian sec-skills--skill-rotate">
+              <img src="assets/images/skills/logo-atlassian.svg">            </div>
+            <div class="sec-skills__skill-sass sec-skills--skill-rotate">
+              <img src="assets/images/skills/logo-sass.svg">            </div>
+            <div class="sec-skills__skill-mongodb sec-skills--skill-rotate">
+              <img src="assets/images/skills/logo-mongoDB.svg">            </div>
+            <div class="sec-skills__skill-git sec-skills--skill-rotate">
+              <img src="assets/images/skills/logo-git.svg">            </div>
+            <div class="sec-skills__skill-css3 sec-skills--skill-rotate">
+              <img src="assets/images/skills/logo-css3-alt.svg">          </div>
+            <div class="sec-skills__skill-nodejs sec-skills--skill-rotate">
+              <img src="assets/images/skills/logo-node-js.svg">            </div>
+            <div class="sec-skills__skill-dotnetcore sec-skills--skill-rotate">
+              <img src="assets/images/skills/logo-dotNet.svg">            </div>
+          </div>
+          <div class="sec-skills__skill-html5">
+            <img src="assets/images/skills/logo-html5.svg">          </div>
+          <div class="sec-skills__showcase-skill-names">
+            <span class="sec-skills--showcase-skill-names-scroll"></span>
+          </div>
+        </div>
+        <div class="sec-skills__main">
+          <div class="sec-skills__skill-legend">
+            <div class="sec-skills__skill-legend-proficient">
+              <div class="sec-skills__skill-legend-title sec-skills--skill-legend-proficient-title">
+                Proficient
+              </div>
+              <div class="sec-skills__skill-legend-icon sec-skills--skill-legend-proficient-icon">
+                P
+              </div>
+            </div>
+            <div class="sec-skills--skill-legend-intermediate">
+              <div class="sec-skills__skill-legend-title sec-skills__skill-legend-intermediate-title">
+                Intermediate
+              </div>
+              <div class="sec-skills__skill-legend-icon sec-skills--skill-legend-intermediate-icon">
+                I
+              </div>
+            </div>
+            <div class="sec-skills--skill-legend-advance">
+              <div class="sec-skills__skill-legend-title sec-skills__skill-legend-advance-title">
+                Advance
+              </div>
+              <div class="sec-skills__skill-legend-icon sec-skills--skill-legend-advance-icon">
+                A
+              </div>
+            </div>
+          </div>
+          <div class="sec-skills__skill-card">
+            <div class="sec-skills__skill-name">HTML</div>
+            <div class="sec-skills__skill-level sec-skills--skill-advance">A</div>
+          </div>
+          <div class="sec-skills__skill-card">
+            <div class="sec-skills__skill-name">CSS</div>
+            <div class="sec-skills__skill-level sec-skills--skill-advance">A</div>
+          </div>
+          <div class="sec-skills__skill-card">
+            <div class="sec-skills__skill-name">Javascript</div>
+            <div class="sec-skills__skill-level sec-skills--skill-intermediate">I</div>
+          </div>
+          <div class="sec-skills__skill-card">
+            <div class="sec-skills__skill-name">jQuery</div>
+            <div class="sec-skills__skill-level sec-skills--skill-intermediate">I</div>
+          </div>
+          <div class="sec-skills__skill-card">
+            <div class="sec-skills__skill-name">Boostrap</div>
+            <div class="sec-skills__skill-level sec-skills--skill-intermediate">I</div>
+          </div>
+          <div class="sec-skills__skill-card">
+            <div class="sec-skills__skill-name">NodeJS</div>
+            <div class="sec-skills__skill-level sec-skills--skill-intermediate">I</div>
+          </div>
+          <div class="sec-skills__skill-card">
+            <div class="sec-skills__skill-name">ReactJS</div>
+            <div class="sec-skills__skill-level sec-skills--skill-intermediate">I</div>
+          </div>
+          <div class="sec-skills__skill-card">
+            <div class="sec-skills__skill-name">Sass</div>
+            <div class="sec-skills__skill-level sec-skills--skill-intermediate">I</div>
+          </div>
+          <div class="sec-skills__skill-card">
+            <div class="sec-skills__skill-name">SQL</div>
+            <div class="sec-skills__skill-level sec-skills--skill-intermediate">I</div>
+          </div>
+          <div class="sec-skills__skill-card">
+            <div class="sec-skills__skill-name">noSQL</div>
+            <div class="sec-skills__skill-level sec-skills--skill-proficient">P</div>
+          </div>
+          <div class="sec-skills__skill-card">
+            <div class="sec-skills__skill-name">.Net Core</div>
+            <div class="sec-skills__skill-level sec-skills--skill-proficient">P</div>
+          </div>
+          <div class="sec-skills__skill-card">
+            <div class="sec-skills__skill-name">C#</div>
+            <div class="sec-skills__skill-level sec-skills--skill-proficient">P</div>
+          </div>
+          <div class="sec-skills__skill-card">
+            <div class="sec-skills__skill-name">Design</div>
+            <div class="sec-skills__skill-level sec-skills--skill-proficient">P</div>
+          </div>
+          <div class="sec-skills__skill-card">
+            <div class="sec-skills__skill-name">UX</div>
+            <div class="sec-skills__skill-level sec-skills--skill-proficient">P</div>
+          </div>
+          <div class="sec-skills__skill-card">
+            <div class="sec-skills__skill-name">Unit Testing</div>
+            <div class="sec-skills__skill-level sec-skills--skill-proficient">P</div>
+          </div>
+        </div>
+      </section>
+    <script src="javascript/main.js"></script>
+  </body

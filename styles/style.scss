@@ -1,0 +1,19 @@
+// MAIN SASS STYLES ENTRY - Contains "high level" styles that apply HTML and BODY tags as well as imports to other partials
+/* Using BEM CSS Naming Standard along with Sass Nesting*/
+
+// ********* [START] IMPORT OF PARTIALS *********
+@import "reset";
+
+// ********* [END] IMPORT OF PARTIALS *********
+
+//  Screen Reader only content. Provide better Sematics for SR's
+.sr-only {
+  clip: rect(1px,  1px,  1px,  1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}

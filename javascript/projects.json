@@ -1,0 +1,76 @@
+{
+    "projects": [
+        {
+            "name" : "proj-tryAthlete", 
+            "title" : "Try Athlete",
+            "desc" : "Fitness Goals App",
+            "coverImg" : "../assets/images/projects/proj-tryathlete.jpg",
+            "site" : "App Site Link",
+            "gitRepo" : "Git Repo Link",
+            "tech" : ["HTML", "CSS", "JavaScript"]
+        },
+        {
+            "name" : "proj-clicky", 
+            "title" : "Simpsons Memory Game",
+            "desc" : "Simpsons Themed Memory Click Game",
+            "coverImg" : "../assets/images/projects/proj-clicky.jpeg",
+            "site" : "App Site Link",
+            "gitRepo" : "Git Repo Link",
+            "tech" : ["HTML", "CSS", "JavaScript", "NodeJS", "ExpressJS", "ReactJS"]
+        },
+        {
+            "name" : "proj-cyoa", 
+            "title" : "Choose Your Own Adventure",
+            "desc" : "Coding Boot Camp Themed CYOA Game",
+            "coverImg" : "../assets/images/projects/proj-cyoa",
+            "site" : "App Site Link",
+            "gitRepo" : "Git Repo Link",
+            "tech" : ["HTML", "CSS", "JavaScript"]
+        },
+        {
+            "name" : "proj-rpg", 
+            "title" : "Star Wars RPG",
+            "desc" : "Star Wars Themed RPG",
+            "coverImg" : "../assets/images/projects/proj-rpg",
+            "site" : "App Site Link",
+            "gitRepo" : "Git Repo Link",
+            "tech" : ["HTML", "CSS", "JavaScript"]
+        },
+        {
+            "name" : "proj-lirr-schedule", 
+            "title" : "LIRR Train Schedule Mockup",
+            "desc" : "Long Island Railroad Schedule Mockup",
+            "coverImg" : "../assets/images/projects/proj-trainSchedule.jpg",
+            "site" : "App Site Link",
+            "gitRepo" : "Git Repo Link",
+            "tech" : ["HTML", "CSS", "JavaScript", "Firebase"]
+        },
+        {
+            "name" : "proj-my-reviews", 
+            "title" : "My Reviews",
+            "desc" : "A Personal Product Review Site App",
+            "coverImg" : "../assets/images/projects/proj-myReviews.jpg",
+            "site" : "App Site Link",
+            "gitRepo" : "Git Repo Link",
+            "tech" : ["HTML", "CSS", "JavaScript"]
+        },
+        {
+            "name" : "proj-giphy-tv", 
+            "title" : "Giphy TV",
+            "desc" : "Review categories of GIF images",
+            "coverImg" : "../assets/images/projects/proj-giphyTv.jpg",
+            "site" : "App Site Link",
+            "gitRepo" : "Git Repo Link",
+            "tech" : ["HTML", "CSS", "JavaScript"]
+        },
+        {
+            "name" : "proj-book-search", 
+            "title" : "Google Book Search",
+            "desc" : "Google Book Search that allows saving of favorites",
+            "coverImg" : "../assets/images/projects/proj-",
+            "site" : "App Site Link",
+            "gitRepo" : "Git Repo Link",
+            "tech" : ["HTML", "CSS", "JavaScript", "NodeJS", "ExpressJS", "ReactJS"]
+        }
+    ]
+}

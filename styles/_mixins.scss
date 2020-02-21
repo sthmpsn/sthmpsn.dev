@@ -1,0 +1,7 @@
+// Create Media Queries based on the screen with Passed
+// Screen-widths should be 640px, 768px, 1920px
+@mixin breakPoint($screenWidth) {
+  @media only screen and (min-width: $screenWidth) {
+    @content;
+  }
+}

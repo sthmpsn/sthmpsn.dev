@@ -13,7 +13,7 @@ html {
   box-sizing: inherit;
 }
 
-body {
+body, h2 {
   margin: 0;
   padding: 0;
 }
@@ -173,6 +173,7 @@ body {
   font-weight: bold;
   background-color: #4f25f9;
   color: #F3F3F3;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,6 +187,7 @@ body {
 
 .sec-main__header .sec-main__header-brand {
   margin-right: 60px;
+  text-align: left;
 }
 
 .sec-main__header .sec-main__header-brand .sec-main__header-avatar {
@@ -238,16 +240,22 @@ body {
   padding: 1.5rem 3rem;
 }
 
+.sec-main__about {
+  padding-top: 20px;
+}
+
 .sec-main__about .sec-main__about-title {
   text-align: center;
 }
 
 .sec-main__about .sec-main__about-title .sec-main__about-title-primary {
-  font-size: 2rem;
+  font-size: 1.9rem;
+  letter-spacing: 3px;
 }
 
 .sec-main__about .sec-main__about-title .sec-main__about-title-secondary {
   font-weight: 600;
+  letter-spacing: 3px;
 }
 
 .sec-main__about .sec-main__about-title .sec-main__about-title-ampersand {
@@ -258,10 +266,11 @@ body {
   font-size: 0.9rem;
   letter-spacing: 1px;
   text-align: justify;
-  padding: 5px 0 25px 0;
+  padding: 20px 0;
 }
 
 .sec-main__aside {
+  padding: 5px 0;
   text-align: center;
 }
 
@@ -291,6 +300,27 @@ body {
 
 .sec-portfolio {
   border: 1px solid red;
+  font-size: 1rem;
+  padding: 0 20px 20px 20px;
+}
+
+.sec-portfolio__heading {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0 -20px;
+  padding: 30px 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #4f25f9;
+  color: #F3F3F3;
+  text-align: center;
+}
+
+.sec-portfolio__heading > i {
+  display: none;
+}
+
+.sec-portfolio__projects {
+  padding-top: 20px;
 }
 
 html {

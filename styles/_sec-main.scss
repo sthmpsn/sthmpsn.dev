@@ -18,6 +18,7 @@
 
     #{$self}__header-brand {
       margin-right: 60px;
+      text-align: left;
 
       #{$self}__header-avatar {
         display: none;
@@ -72,19 +73,24 @@
   } // End header
 
   &__about {
+    @include sectionBody;
+
     #{$self}__about-title {
       text-align: center;
 
       #{$self}__about-title-primary {
-        font-size: 2rem;
+        font-size: 1.9rem;
+        letter-spacing: 3px;
       }
 
       #{$self}__about-title-secondary {
         font-weight: 600;
+        letter-spacing: 3px;
       }
 
       #{$self}__about-title-ampersand {
         font-weight: 500;
+        
       }
     } // End about-title
 
@@ -92,11 +98,12 @@
       font-size: 0.9rem;
       letter-spacing: 1px;
       text-align: justify;
-      padding: 5px 0 25px 0;
+      padding: 20px 0;
     } // End about-me
   } // End "about"
 
   &__aside {
+    padding: 5px 0;
     text-align: center; // center the button
 
     #{$self}__cta-dl-resume {

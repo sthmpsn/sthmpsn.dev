@@ -1,6 +1,21 @@
 .sec-portfolio {
 $self: &; // For Nested BEM support. Defines variable as ".sec-portfolio"
 border: 1px solid red; //debug only
+@include sectionContainer;
+
+    &__heading {
+        @include sectionHeading;
+
+        & > i {
+            display: none;
+        }
 
 
-}
+    } // End heading
+
+    &__projects {
+        @include sectionBody;
+    }
+
+
+} // END .sec-portfolio

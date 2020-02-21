@@ -21,7 +21,14 @@
   font-weight: bold;
   background-color: $primary-color;
   color: $secondary-color;
+  text-align: center;
 }
+
+// Standardize on section body content styles for consistency
+@mixin sectionBody {
+  padding-top: 20px;  // since the sectionContainer & sectionHeading control a majority of the spacing only fine tune is needed
+}
+
 
 // Button Generator
 @mixin newButton($padding-height, $padding-width, $line-height, $font-size, $border-radius: 0) {

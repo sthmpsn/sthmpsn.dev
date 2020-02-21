@@ -12,8 +12,8 @@ html {
   box-sizing: inherit;
 }
 
-body {
-    // Take away default spacing from body so now additional spacing along the sides
+body, h2 {
+    // Take away default spacing from body and h2 so we can control the spacing
     margin:0;
     padding: 0;
 }

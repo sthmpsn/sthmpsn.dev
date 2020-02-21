@@ -3,6 +3,14 @@
 
 // ********* [START] IMPORT OF PARTIALS *********
 @import "reset";
+@import "variables";
+@import "mixins";
+@import "layout";
+@import "animations";
+
+// Section Styles
+@import "sec-main";
+@import "sec-portfolio";
 
 // ********* [END] IMPORT OF PARTIALS *********
 
@@ -16,4 +24,8 @@
   overflow: hidden;
   padding: 0;
   position: absolute;
+}
+
+body {
+  background-color: $txt-color; // temp color for layout purposes
 }

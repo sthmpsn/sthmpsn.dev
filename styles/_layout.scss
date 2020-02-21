@@ -1,0 +1,62 @@
+.grid-wrapper {
+    // width: 95%;  //debug purpose
+    margin: 0 auto;
+    background-color: $secondary-color;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "grid-main"
+        "grid-portfolio"
+        "grid-contact"
+        "grid-skills";
+}
+
+.sec-main {
+    // Site Grid Wrapper
+    grid-area: grid-main;
+    
+    // sec-main Grid layout
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "m-header"
+        "m-about"
+        "m-footer";
+
+    &__header {
+        grid-area: m-header;
+    }
+
+    &__about-me {
+        grid-area: m-about;
+    }
+
+    &__about-footer {
+        grid-area: m-footer;
+    }
+
+    @include breakPoint(992px){
+        display: grid;
+        grid-template-columns: .5fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            "m-header  m-about"
+            "m-header  m-about"
+            "m-header  m-footer";
+
+    } // End breakPoint(992px)
+}
+
+.sec-portfolio {
+    grid-area: grid-portfolio;
+}
+
+.sec-contact {
+    grid-area: grid-contact;
+}
+
+.sec-skills {
+    grid-area: grid-skills;
+}

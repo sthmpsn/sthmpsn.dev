@@ -5,3 +5,15 @@
     @content;
   }
 }
+
+// Standardize on section container styles for consistency
+@mixin sectionContainer {
+  padding: 0 20px; // left and right padding
+}
+
+// Standardize on section HEADINGS styles for consistency
+@mixin sectionHeading {
+  padding: 30px 20px;  // All around padding
+  font-size: 2.5rem;
+  font-weight: bold;
+}

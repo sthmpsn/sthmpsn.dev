@@ -1,5 +1,6 @@
 .grid-wrapper {
     // width: 95%;  //debug purpose
+    border: 1px solid green;
     margin: 0 auto;
     background-color: $secondary-color;
     display: grid;
@@ -23,7 +24,7 @@
     grid-template-areas: 
         "m-header"
         "m-about"
-        "m-footer";
+        "m-aside";
 
     &__header {
         grid-area: m-header;
@@ -33,8 +34,8 @@
         grid-area: m-about;
     }
 
-    &__about-footer {
-        grid-area: m-footer;
+    &__aside {
+        grid-area: m-aside;
     }
 
     @include breakPoint(992px){

@@ -1,15 +1,15 @@
 .sec-main {
   $self: &; // For Nested BEM support. Defines variable as ".sec-main"
+  @include sectionContainer;
 
   & > * {
     // All direct children of sec-main. Don't directly on .sec-main since it will
     //  cause container background to not take up full width of page
-    @include sectionContainer;
+    // @include sectionContainer;
   }
 
   &__header {
     @include sectionHeading;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,7 +26,7 @@
 
     #{$self}__header-nav {
       #{$self}__header-nav-menu-icon {
-        font-size: 3.5rem;
+        font-size: 3rem;
         cursor: pointer;
       } // End header-nav-menu-icon
 
@@ -34,10 +34,12 @@
         display: none;
         list-style-type: none;
         font-size: 1rem;
+        color: $txt-color;
       } // End header-nav-menu
 
       #{$self}__header-nav-menu--active {
-        background: $secondary-color;
+        // background: $secondary-color;
+        background: $nav-bg-color;
         position: absolute;
         display: block;
         width: 50%;
@@ -70,14 +72,35 @@
   } // End header
 
   &__about {
-    border: 1px solid red; //debug only
+    #{$self}__about-title {
+      text-align: center;
 
+      #{$self}__about-title-primary {
+        font-size: 2rem;
+      }
 
+      #{$self}__about-title-secondary {
+        font-weight: 600;
+      }
 
+      #{$self}__about-title-ampersand {
+        font-weight: 500;
+      }
+    } // End about-title
 
+    #{$self}__about-me {
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      text-align: justify;
+      padding: 5px 0 25px 0;
+    } // End about-me
+  } // End "about"
 
+  &__aside {
+    text-align: center; // center the button
 
-
-  }// End "about"
-
+    #{$self}__cta-dl-resume {
+      @include newButton(10px, 20px, normal, 1rem, 20px);
+    }
+  } // End aside
 } // END .sec-main

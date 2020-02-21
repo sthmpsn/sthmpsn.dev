@@ -1,9 +1,6 @@
 .sec-portfolio {
 $self: &; // For Nested BEM support. Defines variable as ".sec-portfolio"
-
-    & img {
-        display: none;  // temp hide for debugging
-    }
+border: 1px solid red; //debug only
 
 
 }

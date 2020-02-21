@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* Using BEM CSS Naming Standard along with Sass Nesting*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap");
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -18,8 +19,9 @@ body {
 }
 
 .grid-wrapper {
+  border: 1px solid green;
   margin: 0 auto;
-  background-color: #eeeeee;
+  background-color: #F3F3F3;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -39,7 +41,7 @@ body {
       grid-template-columns: 1fr;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-      grid-template-areas: "m-header" "m-about" "m-footer";
+      grid-template-areas: "m-header" "m-about" "m-aside";
 }
 
 .sec-main__header {
@@ -54,10 +56,10 @@ body {
   grid-area: m-about;
 }
 
-.sec-main__about-footer {
+.sec-main__aside {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  grid-area: m-footer;
+  grid-area: m-aside;
 }
 
 @media only screen and (min-width: 992px) {
@@ -158,14 +160,19 @@ body {
   }
 }
 
-.sec-main > * {
-  padding: 0 20px;
+.sec-main {
+  font-size: 1rem;
+  padding: 0 20px 20px 20px;
 }
 
 .sec-main__header {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0 -20px;
   padding: 30px 20px;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
+  background-color: #4f25f9;
+  color: #F3F3F3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,7 +193,7 @@ body {
 }
 
 .sec-main__header .sec-main__header-nav .sec-main__header-nav-menu-icon {
-  font-size: 3.5rem;
+  font-size: 3rem;
   cursor: pointer;
 }
 
@@ -194,10 +201,11 @@ body {
   display: none;
   list-style-type: none;
   font-size: 1rem;
+  color: #737373;
 }
 
 .sec-main__header .sec-main__header-nav .sec-main__header-nav-menu--active {
-  background: #eeeeee;
+  background: #eff6fb;
   position: absolute;
   display: block;
   width: 50%;
@@ -230,12 +238,65 @@ body {
   padding: 1.5rem 3rem;
 }
 
-.sec-main__about {
+.sec-main__about .sec-main__about-title {
+  text-align: center;
+}
+
+.sec-main__about .sec-main__about-title .sec-main__about-title-primary {
+  font-size: 2rem;
+}
+
+.sec-main__about .sec-main__about-title .sec-main__about-title-secondary {
+  font-weight: 600;
+}
+
+.sec-main__about .sec-main__about-title .sec-main__about-title-ampersand {
+  font-weight: 500;
+}
+
+.sec-main__about .sec-main__about-me {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-align: justify;
+  padding: 5px 0 25px 0;
+}
+
+.sec-main__aside {
+  text-align: center;
+}
+
+.sec-main__aside .sec-main__cta-dl-resume {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  line-height: normal;
+  border-radius: 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4f25f9), to(#28137D));
+  background: linear-gradient(#4f25f9, #28137D);
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff #737373 #737373 #fff;
+}
+
+.sec-main__aside .sec-main__cta-dl-resume:hover {
+  color: #f6fe09;
+}
+
+.sec-main__aside .sec-main__cta-dl-resume:active {
+  border-color: #737373 #fff #fff #737373;
+}
+
+.sec-portfolio {
   border: 1px solid red;
 }
 
-.sec-portfolio img {
-  display: none;
+html {
+  scroll-behavior: smooth;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #737373;
 }
 
 .sr-only {
@@ -252,5 +313,9 @@ body {
 
 body {
   background-color: #737373;
+}
+
+img {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

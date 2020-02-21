@@ -1,8 +1,13 @@
 // Theme Colors
 $primary-color: #4f25f9;
-$secondary-color: #eeeeee;
+// $secondary-color: #eeeeee;
+$secondary-color: #F3F3F3;  // Testing out color
 $txt-color: #737373;
 $standout-color: #f6fe09;
+$btn-bg-color: linear-gradient($primary-color,#28137D);
+// $nav-bg-color: #e2f0fa;
+$nav-bg-color: #eff6fb;
+$btn-txt-color: #fff;
 
 
 // Basic reusable variables

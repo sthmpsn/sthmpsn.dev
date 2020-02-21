@@ -8,12 +8,41 @@
 
 // Standardize on section container styles for consistency
 @mixin sectionContainer {
-  padding: 0 20px; // left and right padding
+  font-size: 1rem;
+  padding: 0 20px 20px 20px; // left, right, and bottom padding for consistency spacing
 }
 
 // Standardize on section HEADINGS styles for consistency
 @mixin sectionHeading {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0 -20px;
   padding: 30px 20px;  // All around padding
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
+  background-color: $primary-color;
+  color: $secondary-color;
+}
+
+// Button Generator
+@mixin newButton($padding-height, $padding-width, $line-height, $font-size, $border-radius: 0) {
+  display: inline-block; // Make the link a block level element so other elements are aware of it's full height and width
+  padding: $padding-height $padding-width;
+  font-size: $font-size;
+  line-height: $line-height; // centers the button text vertically
+  border-radius: $border-radius;
+  background: $btn-bg-color;
+  color: $btn-txt-color;
+  text-decoration: none;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $btn-txt-color $txt-color $txt-color $btn-txt-color;
+
+  &:hover {
+    color: $standout-color;
+  }
+
+  &:active {
+    border-color:  $txt-color $btn-txt-color $btn-txt-color $txt-color;
+  }
 }

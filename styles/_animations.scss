@@ -27,3 +27,18 @@
       opacity: 0;
     }
   }
+
+  // Elements that use this Animation
+  // .sec-projects__proj-cta - Project CTA Buttons
+  // This is a work around for delaying the clickability of the CTA buttons when hidden
+  @keyframes delay-pointer-events {
+    0% {
+      visibility: hidden;
+    }
+    50% {
+      visibility: hidden;
+    }
+    100% {
+      visibility: visible;
+    }
+  }

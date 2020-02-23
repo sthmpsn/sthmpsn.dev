@@ -42,8 +42,9 @@ border: 1px solid red; //debug only
             
                #{$self}__proj-cta {
                     opacity: 1;
-                    pointer-events: all;   // Enables the links to be clickable since it's not visible (opacity: 1)
-                    transition: opacity .5s linear;  
+                    transition: opacity .5s linear; // smoothens the button display 
+                    pointer-events: auto;   // enables clicking of the links again (after animation runs)
+                    animation: delay-pointer-events .5s linear; // Delays the link clickability for point 500ms
                 }
             }
 

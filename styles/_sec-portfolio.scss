@@ -16,24 +16,42 @@ border: 1px solid red; //debug only
     &__projects {
         @include sectionBody;
 
+        #{$self}__carousel {
+            display: flex;
+            flex-wrap: wrap;   // push children (proj-card) to next row as needed
+            justify-content: center;
+        }
+
         #{$self}__proj-card {
             min-width: 200px;
-            max-width: 365px;
+            max-width: 360px;
             height: 230px;
-            margin: 20px auto;
+            margin: 10px 10px;
             border: 1px solid $txt-color;
             border-radius: 5px;
             box-shadow: $boxShadow;
             position: relative;
             overflow: hidden;
 
+            @include breakPoint(768px) {
+                margin: 15px 15px;            
+            }
+
             &:hover #{$self}__proj-info {
                 opacity: 1;
+            
+               #{$self}__proj-cta {
+                    visibility: visible;
+                    opacity: 1;
+                    transition: visibility 1ms, opacity .5s linear;  // helps if on mobile mitigate accidental clicking of button when tap once
+                }
             }
 
             &:hover #{$self}__proj-img {
                 transform: scale(1.3) rotate(15deg);
             }
+
+
 
             #{$self}__proj-img {
                 width: 100%;
@@ -67,6 +85,8 @@ border: 1px solid red; //debug only
                     display: flex;
                     justify-content: space-around;
                     width: 100%;
+                    visibility: hidden;
+                    opacity: 0;
 
                     & > .btn-3d {
                         top: -6px; // Start 6px up for the button press effect

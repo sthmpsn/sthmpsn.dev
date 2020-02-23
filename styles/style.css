@@ -369,11 +369,22 @@ body, h2 {
   padding-top: 20px;
 }
 
+.sec-portfolio__projects .sec-portfolio__carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .sec-portfolio__projects .sec-portfolio__proj-card {
   min-width: 200px;
-  max-width: 365px;
+  max-width: 360px;
   height: 230px;
-  margin: 20px auto;
+  margin: 10px 10px;
   border: 1px solid #737373;
   border-radius: 5px;
   -webkit-box-shadow: 5px 10px 10px;
@@ -382,8 +393,21 @@ body, h2 {
   overflow: hidden;
 }
 
+@media only screen and (min-width: 768px) {
+  .sec-portfolio__projects .sec-portfolio__proj-card {
+    margin: 15px 15px;
+  }
+}
+
 .sec-portfolio__projects .sec-portfolio__proj-card:hover .sec-portfolio__proj-info {
   opacity: 1;
+}
+
+.sec-portfolio__projects .sec-portfolio__proj-card:hover .sec-portfolio__proj-info .sec-portfolio__proj-cta {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: visibility 1ms, opacity .5s linear;
+  transition: visibility 1ms, opacity .5s linear;
 }
 
 .sec-portfolio__projects .sec-portfolio__proj-card:hover .sec-portfolio__proj-img {
@@ -437,6 +461,8 @@ body, h2 {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 100%;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .sec-portfolio__projects .sec-portfolio__proj-card .sec-portfolio__proj-info .sec-portfolio__proj-cta > .btn-3d {

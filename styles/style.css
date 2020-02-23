@@ -404,10 +404,10 @@ body, h2 {
 }
 
 .sec-portfolio__projects .sec-portfolio__proj-card:hover .sec-portfolio__proj-info .sec-portfolio__proj-cta {
-  visibility: visible;
   opacity: 1;
-  -webkit-transition: opacity .5s linear .3s;
-  transition: opacity .5s linear .3s;
+  pointer-events: all;
+  -webkit-transition: opacity .5s linear;
+  transition: opacity .5s linear;
 }
 
 .sec-portfolio__projects .sec-portfolio__proj-card:hover .sec-portfolio__proj-img {
@@ -461,7 +461,7 @@ body, h2 {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 100%;
-  visibility: hidden;
+  pointer-events: none;
   opacity: 0;
 }
 

@@ -41,9 +41,9 @@ border: 1px solid red; //debug only
                 opacity: 1;
             
                #{$self}__proj-cta {
-                    visibility: visible;
                     opacity: 1;
-                    transition: opacity .5s linear .3s;  // helps if on mobile mitigate accidental clicking of button when tap once
+                    pointer-events: all;   // Enables the links to be clickable since it's not visible (opacity: 1)
+                    transition: opacity .5s linear;  
                 }
             }
 
@@ -85,7 +85,7 @@ border: 1px solid red; //debug only
                     display: flex;
                     justify-content: space-around;
                     width: 100%;
-                    visibility: hidden;
+                    pointer-events: none; // prevent these links from being clicked prior to becoming visible
                     opacity: 0;
 
                     & > .btn-3d {

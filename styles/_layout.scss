@@ -41,7 +41,7 @@
     @include breakPoint(992px){
         display: grid;
         grid-template-columns: .5fr 1fr;
-        grid-template-rows: auto auto;
+        grid-template-rows: auto;
         grid-template-areas: 
             "m-header  m-about"
             "m-header  m-about"
@@ -52,6 +52,47 @@
 
 .sec-portfolio {
     grid-area: grid-portfolio;
+
+    // sec-portfolio Grid layout
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "p-heading"
+        "p-projects";
+
+    &__heading {
+        grid-area: p-heading;
+    }
+
+    &__projects {
+        grid-area: p-projects;
+    }
+
+    @include breakPoint(768px){
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: auto 2fr auto;
+        grid-template-areas: 
+            "p-heading  p-heading   p-heading"
+            "p-projects p-projects  p-projects"
+            "p-ctrl-prev p-details  p-ctrl-next";
+
+        &__carousel-ctrl-prev-button {
+            grid-area: p-ctrl-prev;
+        }
+
+        &__carousel-ctrl-details {
+            grid-area: p-details;
+        }
+
+        &__carousel-ctrl-next-button {
+            grid-area: p-ctrl-next;
+        }
+
+
+
+    } // End breakPoint(992px)
 }
 
 .sec-contact {

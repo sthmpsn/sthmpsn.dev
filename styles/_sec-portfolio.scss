@@ -43,7 +43,7 @@ border: 1px solid red; //debug only
                #{$self}__proj-cta {
                     visibility: visible;
                     opacity: 1;
-                    transition: visibility 1ms, opacity .5s linear;  // helps if on mobile mitigate accidental clicking of button when tap once
+                    transition: opacity .5s linear .3s;  // helps if on mobile mitigate accidental clicking of button when tap once
                 }
             }
 

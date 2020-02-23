@@ -406,8 +406,8 @@ body, h2 {
 .sec-portfolio__projects .sec-portfolio__proj-card:hover .sec-portfolio__proj-info .sec-portfolio__proj-cta {
   visibility: visible;
   opacity: 1;
-  -webkit-transition: visibility 1ms, opacity .5s linear;
-  transition: visibility 1ms, opacity .5s linear;
+  -webkit-transition: opacity .5s linear .3s;
+  transition: opacity .5s linear .3s;
 }
 
 .sec-portfolio__projects .sec-portfolio__proj-card:hover .sec-portfolio__proj-img {

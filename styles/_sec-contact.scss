@@ -1,0 +1,5 @@
+.sec-contact {
+$self: &;  // For Nested BEM support. Defines variable as ".sec-contact"
+border: 1px solid red; //debug only
+
+}

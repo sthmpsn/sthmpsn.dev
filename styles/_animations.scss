@@ -34,11 +34,33 @@
   @keyframes delay-pointer-events {
     0% {
       visibility: hidden;
+      
     }
     50% {
       visibility: hidden;
     }
     100% {
       visibility: visible;
+    }
+  }
+
+  // Elements that use this Animation
+  // .sec-projects__proj-cta - Project CTA Buttons ::before & ::after Tool Tips
+  @keyframes flash-tool-tip {
+    0% {
+      opacity: 0;
+
+    }
+    25% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
     }
   }

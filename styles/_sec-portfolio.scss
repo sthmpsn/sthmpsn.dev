@@ -46,10 +46,11 @@ $self: &; // For Nested BEM support. Defines variable as ".sec-portfolio"
                     pointer-events: auto;   // enables clicking of the links again (after animation runs)
                     animation: delay-pointer-events .5s linear; // Delays the link clickability for point 500ms
 
-                    & > .proj-cta-btn::before, & > .proj-cta-btn::after  {
-                        transition: opacity 1s linear;
-                        animation: flash-tool-tip 5s linear;
-                   }
+                    // Tool Tip Animation
+                //     & > .proj-cta-btn::before, & > .proj-cta-btn::after  {
+                //         transition: opacity 1s linear;
+                //         animation: flash-tool-tip 3s linear;
+                //    }
                 }  // proj_card hover impacting proj-info > cta elements
             }  // proj_card hover impacting proj-info elements
 
@@ -103,7 +104,6 @@ $self: &; // For Nested BEM support. Defines variable as ".sec-portfolio"
                         color: $btn-txt-color;
                         border: 2px solid $btn-txt-color;
                         border-radius: 5px;
-                        background-color: rgba(0,0,0,.2);  // slight shading for better contrast
                         margin: 2px 0;
                         top: -2px;
                         
@@ -114,66 +114,69 @@ $self: &; // For Nested BEM support. Defines variable as ".sec-portfolio"
                         &:active {
                             top: 0;
                         } 
+                        // *** Tool Tip - Common properties between ::before pseudo elements ***
+                        // &::before {
+                        //     position: absolute;
+                        //     width: 65px;
+                        //     height: 45px;
+                        //     background-color: $tool-tip-bg-color;
+                        //     border: 1px solid $btn-txt-color;
+                        //     border-radius: 5px;
+                        //     font-size: .8rem;
+                        //     font-weight: 500;
+                        //     color: $btn-txt-color;
+                        //     line-height: normal;  // reset the line-height from what was set on the "proj-view-code"
+                        //     z-index: 5;
+                        //     opacity: 0;
+                        //     pointer-events: none; // Prevents the ::before pseudo element from becoming clickable
+                        // }
 
-                        &::before {
-                            position: absolute;
-                            width: 65px;
-                            height: 45px;
-                            background-color: $tool-tip-bg-color;
-                            border: 1px solid $btn-txt-color;
-                            border-radius: 5px;
-                            font-size: .8rem;
-                            font-weight: 500;
-                            color: $btn-txt-color;
-                            line-height: normal;  // reset the line-height from what was set on the "proj-view-code"
-                            z-index: 5;
-                            opacity: 0;
-                            pointer-events: none; // Prevents the ::before pseudo element from becoming clickable
-                        }
-
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            width: 10px;
-                            height: 10px;
-                            background-color: $tool-tip-bg-color;
-                            border-bottom: 1px solid $btn-txt-color;
-                            border-right: 1px solid $btn-txt-color;
-                            transform: rotate(45deg);
-                            opacity: 0;
-                            z-index: 6;
-                            pointer-events: none;  // Prevents the ::after pseudo element from becoming clickable
-                        }
+                        // *** Tool Tip - Common properties between ::after pseudo elements ***
+                        // &::after {
+                        //     content: '';
+                        //     position: absolute;
+                        //     width: 10px;
+                        //     height: 10px;
+                        //     background-color: $tool-tip-bg-color;
+                        //     border-bottom: 1px solid $btn-txt-color;
+                        //     border-right: 1px solid $btn-txt-color;
+                        //     transform: rotate(45deg);
+                        //     opacity: 0;
+                        //     z-index: 6;
+                        //     pointer-events: none;  // Prevents the ::after pseudo element from becoming clickable
+                        // }
                     } // End .proj-cta-btn
                 
                     #{$self}__proj-view-code {
+                        // *** Tool Tip - View Code ***
+                        // &::before {
+                        //     content: 'View Code';
+                        //     top: -48px;
+                        //     left: -26px;
+                        //     padding: 3px;
+                        // }
 
-                        &::before {
-                            content: 'View Code';
-                            top: -48px;
-                            left: -26px;
-                            padding: 3px;
-                        }
-
-                        &::after {
-                            top: -8px;
-                            left: 15px;
-                        }
+                        // &::after {
+                        //     top: -8px;
+                        //     left: 15px;
+                        // }
                     }// End proj-view-code
                     
                     #{$self}__proj-run-app {
+                        // *** Tool Tip - Runn App ***
+                        // &::before {
+                        //     content: 'Run App';
+                        //     top: -48px;
+                        //     left: 25px;
+                        //     padding: 3px 5px;
+                        // }
 
-                        &::before {
-                            content: 'Run App';
-                            top: -48px;
-                            left: 25px;
-                            padding: 3px 5px;
-                        }
+                        // &::after {
+                        //     top: -8px;
+                        //     left: 44px;
+                        // }
 
-                        &::after {
-                            top: -8px;
-                            left: 44px;
-                        }
+
                     } // End proj-run-app
                 } // End proj-cta
             } // End proj-info

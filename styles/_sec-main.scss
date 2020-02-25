@@ -11,8 +11,14 @@
     // background-color: $primary-color;
 
     #{$self}__header-brand {
-      margin-right: 60px;
+      padding-right: 60px;
       text-align: left;
+
+      @include breakPoint(640px) {
+        // Mobile Landscape
+        padding-left: 20px;
+    }
+
 
       #{$self}__header-avatar {
         display: none;
@@ -20,6 +26,12 @@
     } // End header-brand
 
     #{$self}__header-nav {
+      
+      @include breakPoint(640px) {
+        // Mobile Landscape
+        padding-right: 20px;
+      }
+
       #{$self}__header-nav-menu-icon {
         font-size: 3rem;
         cursor: pointer;
@@ -92,6 +104,12 @@
       letter-spacing: 1px;
       text-align: justify;
       padding: 20px 0;
+
+      @include breakPoint(640px) {
+        // Mobile Landscape
+        padding: 20px 20px;
+    }
+
     } // End about-me
   } // End "about"
 

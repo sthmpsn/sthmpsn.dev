@@ -1,5 +1,165 @@
 .sec-contact {
 $self: &;  // For Nested BEM support. Defines variable as ".sec-contact"
+@include sectionContainer;
+
 border: 1px solid red; //debug only
 
-}
+    &__heading {
+        @include sectionHeading;
+
+        & > i {
+            display: none;
+        }
+    } // End of &__heading
+
+    &__footer {
+        #{$self}--contact-icon {
+            font-size: 2.5rem;
+        }        
+        
+        #{$self}__email-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2em;
+            
+            #{$self}__email-icon-cta {
+                display: block;
+                width: 80px;
+                height: 80px;
+                margin: 2.5em auto 1rem auto;
+                padding: 1.2rem; 
+                background-color: red;
+                transform: rotate(45deg);
+                animation: heartbeat 1.4s linear infinite;
+
+                #{$self}__email-icon {
+                    color: $btn-txt-color;
+                    transform: rotate(-45deg) translateY(-15px);
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #ff0000;
+                    transform: translateY(-50%);
+                    border-radius: 50%;
+                    z-index: -1;
+                  }
+            
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $red-color;
+                    transform: translatex(-50%);
+                    border-radius: 50%;
+                    z-index: -1;
+                  }
+            } // end Email-icon-cta
+           
+            #{$self}__email-address {
+                margin: 1em auto;
+                font-style: normal;
+                font-weight: bold;
+                letter-spacing: 0.3rem;
+                // text-transform: uppercase;
+            } // End email-address
+        } // End Email Container
+        
+        #{$self}__phone-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1em auto;
+
+            #{$self}__phone-icon-cta {
+                display: block;
+                height: 125px;
+                width: 125px;
+                margin: 1.5em auto;
+                position: relative;
+                border-radius: 50%;
+                background-color: $green-color;
+
+                #{$self}__phone-icon {
+                    width: 100%;
+                    text-align: center;
+                    line-height: 125px;
+                    color: $default-icon-color;
+                    transform: rotateY(180deg);
+                } // End phone-icon
+
+                &::before,
+                &::after {
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  top: 0;
+                  bottom: 0;
+                  border: 1px solid $green-color;
+                  border-radius: 50%;
+                  transform: scale(1.5);
+                  animation: pulse 1.8s linear infinite;
+                }
+        
+                &::after {
+                  animation-delay: 0.5s;
+                }
+
+            } // End phone-icon-cta
+
+            #{$self}__phone-num {
+                margin: 1em auto;
+                font-weight: bold;
+                letter-spacing: 0.3rem;
+            }
+
+
+        } // End phone_container    
+        
+        #{$self}__social-media {
+            width: 100%;
+            text-align: center;
+
+            #{$self}__icon {
+              font-size: 2.5rem;
+              margin: 0.6rem;
+              padding: 10px;
+            }
+
+            #{$self}__github-icon {
+                color: black;
+            }
+
+            #{$self}__linkedin-icon {
+                color: blue;
+            }
+
+            #{$self}__twitter-icon {
+                color: lightblue;
+            }
+
+            #{$self}__facebook-icon {
+                color: navy;
+            }
+
+            #{$self}__codepen-icon {
+                color: orangered;
+            }
+        } // End social-media
+
+
+
+    } // End of &__footer
+} // End of .sec-contact

@@ -69,8 +69,8 @@
         grid-area: p-projects;
     }
 
-    @include breakPoint(768px){
-        display: grid;
+    @include breakPoint(992px){
+        // display: grid;
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-rows: auto 2fr auto;
         grid-template-areas: 
@@ -97,6 +97,48 @@
 
 .sec-contact {
     grid-area: grid-contact;
+
+    // sec-contact Grid layout
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "c-heading"
+    "c-footer";
+
+    &__heading {
+        grid-area: "c-heading";    
+    }
+
+    &__footer {
+        grid-area: "c-footer";
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "c-email"
+        "c-phone"
+        "c-social";
+    
+        &__email-container {
+            grid-area: "c-email";
+        }
+    
+        &__phone-container {
+            grid-area: "c-phone";
+        }
+    
+        &__social-media {
+            grid-area: "c-social";
+        }
+
+    } // End &__footer
+
+    
+
+
+
 }
 
 .sec-skills {

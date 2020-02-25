@@ -6,8 +6,13 @@ $standout-color: #f6fe09;
 $btn-bg-color: linear-gradient($primary-color,#28137D);
 $btn-txt-color: #fff;
 $default-icon-color: #1d1d1d;
-$green-color: #00af00;
 $red-color: #ff0000;
+$green-color: #00af00;
+$purple-color: #800080;
+$skills-proficient-color: radial-gradient(circle at top right,#00af00, #9bbb9b);
+$skills-intermediate-color: radial-gradient(circle at top right,#800080, #c56fc5);
+$skills-advance-color: radial-gradient(circle at top right,#ff0000,#ff9191);
+
 
 // *** Basic reusable variables ***
 

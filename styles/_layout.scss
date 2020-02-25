@@ -11,7 +11,7 @@
         "grid-portfolio"
         "grid-contact"
         "grid-skills";
-}
+} // End .grid-wrapper
 
 .sec-main {
     // Site Grid Wrapper
@@ -48,7 +48,7 @@
             "m-header  m-footer";
 
     } // End breakPoint(992px)
-}
+} // End .sec-main
 
 .sec-portfolio {
     grid-area: grid-portfolio;
@@ -90,10 +90,8 @@
             grid-area: p-ctrl-next;
         }
 
-
-
     } // End breakPoint(992px)
-}
+} // End .sec-portfolio
 
 .sec-contact {
     grid-area: grid-contact;
@@ -107,11 +105,11 @@
     "c-footer";
 
     &__heading {
-        grid-area: "c-heading";    
+        grid-area: c-heading;    
     }
 
     &__footer {
-        grid-area: "c-footer";
+        grid-area: c-footer;
 
         display: grid;
         grid-template-columns: 1fr;
@@ -122,25 +120,48 @@
         "c-social";
     
         &__email-container {
-            grid-area: "c-email";
+            grid-area: c-email;
         }
     
         &__phone-container {
-            grid-area: "c-phone";
+            grid-area: c-phone;
         }
     
         &__social-media {
-            grid-area: "c-social";
+            grid-area: c-social;
         }
 
     } // End &__footer
-
-    
-
-
-
-}
+} // End .sec-contact
 
 .sec-skills {
     grid-area: grid-skills;
+
+    // sec-skills Grid layout
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "s-heading"
+    "s-chart";
+
+    &__heading {
+        grid-area: s-heading;
+    }
+
+    &__chart {
+        grid-area: s-chart;
+    }
+
+    @include breakPoint(992px){
+        grid-template-areas: 
+        "s-heading"
+        "s-showcase"
+        "s-chart";
+
+        &__showcase {
+            grid-area: s-showcase;
+        }
+    }
+
 }

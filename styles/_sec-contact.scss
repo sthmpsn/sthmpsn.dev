@@ -2,8 +2,6 @@
 $self: &;  // For Nested BEM support. Defines variable as ".sec-contact"
 @include sectionContainer;
 
-border: 1px solid red; //debug only
-
     &__heading {
         @include sectionHeading;
 
@@ -140,9 +138,107 @@ border: 1px solid red; //debug only
 
         } // End phone_container    
         
+        #{$self}__contact-form {
+            display: flex;
+            justify-content: center;
+            margin: 1em 0;
+
+            #{$self}__form {
+                width: 100%;
+                max-width: 600px;
+                min-width: 290px;
+                justify-self: center;
+                // background-color: rgba(112, 112, 255,1);
+                background-image: linear-gradient(to bottom left,#a48dff,$primary-color);
+                color: white;
+                border-radius: 5px;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                
+
+                & > * {
+                    margin: 10px 0;
+                }
+
+                & > label > * {
+                    border-radius: 5px;
+                    padding: 10px;
+                    display: block;
+                    background-color: $secondary-color;
+
+                    &:focus {
+                        background-color: white;
+                    }
+                }
+                
+                &-name-input {
+                    width: 75%;
+                }
+
+                &-email-input {
+                    width: 100%;
+                }
+
+                &-message-input {
+                    width: 100%;
+                    height: 100px;
+                }
+
+                &-submit-button {
+                    align-self: flex-end;
+                    border: 2px solid #0a3d62;
+                    background-color: $secondary-color;
+                    color: #0a3d62;
+                    top: -2px; 
+                    padding: 20px 40px;
+                    border-radius: 10px;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    transition: color 0.5s;
+                    position: relative;
+                    overflow: hidden;
+                    
+                    &:hover {
+                        color: white;
+                        border-color: white;
+                        z-index: 2;
+                    }
+
+                    &:active {
+                        top: 0;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 0%;  // want to later use for animate grow
+                        background: #0a3d62;
+                        z-index: -1;
+                        border-radius: 0 0 50% 50%;
+                        transition: height 1.2s;
+                    }
+
+                    &:hover::before {
+                        height: 190%;
+                    }
+
+                }
+            }
+
+
+        } // End .contact-form
+
         #{$self}__social-media {
             width: 100%;
             text-align: center;
+            margin: 1em 0;
 
             #{$self}__icon {
               font-size: 2.5rem;

@@ -4,6 +4,7 @@
 
   @include breakPoint(992px) {
     padding: 0;
+    height: 100vh;
   }
 
 
@@ -30,30 +31,44 @@
       }
 
       @include breakPoint(992px){
+        width: 100%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         font-size: 1.7rem;
         padding: 0;
+        margin: 15px;
       }
 
-      #{$self}__header-avatar-container {
+      #{$self}__header-avatar {
         display: none;
 
         @include breakPoint(992px){
           display: block;
+          border-radius: 50%;
+          transform: scale(0.8);
         }
 
-        #{$self}__header-avatar {
-          @include breakPoint(992px){
-            display: block;
-            border-radius: 50%;
-            transform: scale(0.8);
-          }
-        } // End header-avater
-      } //End header-avatar-container
+        @include breakPoint(1200px) {
+          transform: scale(1);
+        }
+      } //End header-avatar
+
 
       #{$self}__header-name {
 
         @include breakPoint(992px){
           text-align: center;
+          position: relative;
+          top: -10px;
+          font-size: 2rem;
+        }
+
+        @include breakPoint(1200px) {
+          font-size: 2.2rem;
+          position: inherit;
+          margin-top: .8rem;
         }
 
       } // End header-name
@@ -64,6 +79,10 @@
       @include breakPoint(640px) {
         // Mobile Landscape
         padding-right: 20px;
+      }
+
+      @include breakPoint(640px) {
+        height: 100%;
       }
 
       #{$self}__header-nav-menu-icon {
@@ -87,6 +106,11 @@
           background: none !important;
           box-shadow: none !important;
         }
+
+        @include breakPoint(992px){
+          font-size: 1.2rem;
+        }
+
       } // End header-nav-menu
 
       #{$self}__header-nav-menu--active {
@@ -129,7 +153,7 @@
 
   &__about {
     @include sectionBody;
-
+    
     @include breakPoint(992px) {
       @include sectionContainer;
       margin-top: 6rem;
@@ -138,12 +162,20 @@
     #{$self}__about-title {
       text-align: center;
 
+      @include breakPoint(992px) {
+        margin-bottom: 25px;
+      }
+
       #{$self}__about-title-primary {
         font-size: 1.9rem;
         letter-spacing: 3px;
         
         @include breakPoint(992px) {
           font-size: 2.2rem;
+        }
+
+        @include breakPoint(1200px) {
+          font-size: 2.4rem;
         }
       } // End about-title-primary
 
@@ -154,6 +186,10 @@
         @include breakPoint(992px) {
           font-size: 1.8rem;
         }
+
+        @include breakPoint(1200px) {
+          font-size: 2rem;
+        }
       } // End about-title-secondary
 
       #{$self}__about-title-ampersand {
@@ -162,13 +198,18 @@
         @include breakPoint(992px) {
           font-size: 1.8rem;
         }
+
+        @include breakPoint(1200px) {
+          font-size: 2rem;
+        }
+
       } // End about-title-ampersand
     } // End about-title
 
     #{$self}__about-me {
-      max-width: 60ch;
+      // max-width: 60ch;
       margin: auto;
-      padding: 20px 20px;
+      padding: 20px 0;
       font-size: 0.9rem;
       letter-spacing: 1px;
       text-align: justify;
@@ -176,12 +217,21 @@
 
       @include breakPoint(640px) {
         // Mobile Landscape
-        padding: 20px 0;
+        padding: 20px 20px;
+      }
+
+      @include breakPoint(768px) {
+        font-size: 1rem;
+        padding: 20px 0;     
       }
 
       @include breakPoint(992px) {
-        padding: 20px 20px;
-        font-size: 1rem;
+        // padding: 20px 0;     
+        letter-spacing: 3px;   
+      }
+
+      @include breakPoint(1200px) {
+        font-size: 1.2rem;
       }
 
     } // End about-me
@@ -191,17 +241,25 @@
     padding: 5px 0;
     text-align: center; // center the button
 
+    @include breakPoint(768px) {
+      text-align: right;
+    }
+
     @include breakPoint(992px) {
       @include sectionContainer;
-      text-align: right;
+      // margin: 0 10%;
+
     }
 
     #{$self}__cta-dl-resume {
       @include newButton(10px, 20px, normal, 1rem, 20px);
 
+      @include breakPoint(768px) {
+        @include newButton(12px, 22px, normal, 1.2rem, 22px);
+      }
+
       @include breakPoint(992px) {
         @include newButton(15px, 25px, normal, 1.3rem, 25px);
-        margin-right: 35px;
       }
 
     }

@@ -10,6 +10,12 @@
 @mixin sectionContainer {
   font-size: 1rem;
   padding: 0 20px 20px 20px; // left, right, and bottom padding for consistency spacing
+
+  @include breakPoint(768px){
+    // padding: 0 38px 20px 38px;
+    padding: 0 60px 20px 60px;
+  }
+
 }
 
 // Standardize on section HEADINGS styles for consistency
@@ -22,6 +28,11 @@
   background-color: $primary-color;
   color: $secondary-color;
   text-align: center;
+
+  @include breakPoint(768px){
+    margin: 0 -60px;
+  }
+
 }
 
 // Standardize on section body content styles for consistency

@@ -100,10 +100,13 @@
     } // End about-title
 
     #{$self}__about-me {
+      max-width: 60ch;
+      margin: auto;
+      padding: 20px 0;
       font-size: 0.9rem;
       letter-spacing: 1px;
       text-align: justify;
-      padding: 20px 0;
+
 
       @include breakPoint(640px) {
         // Mobile Landscape

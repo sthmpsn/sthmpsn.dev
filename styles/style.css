@@ -507,10 +507,12 @@ body, h2 {
 }
 
 .sec-main__about .sec-main__about-me {
+  max-width: 60ch;
+  margin: auto;
+  padding: 20px 0;
   font-size: 0.9rem;
   letter-spacing: 1px;
   text-align: justify;
-  padding: 20px 0;
 }
 
 @media only screen and (min-width: 640px) {

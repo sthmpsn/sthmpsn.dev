@@ -71,23 +71,15 @@
 
     @include breakPoint(992px){
         // display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-template-rows: auto 2fr auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr .5fr;
         grid-template-areas: 
-            "p-heading  p-heading   p-heading"
-            "p-projects p-projects  p-projects"
-            "p-ctrl-prev p-details  p-ctrl-next";
+            "p-heading"
+            "p-projects"
+            "p-controls";
 
-        &__carousel-ctrl-prev-button {
-            grid-area: p-ctrl-prev;
-        }
-
-        &__carousel-ctrl-details {
-            grid-area: p-details;
-        }
-
-        &__carousel-ctrl-next-button {
-            grid-area: p-ctrl-next;
+        &__carousel-controls {
+            grid-area: p-controls;
         }
 
     } // End breakPoint(992px)

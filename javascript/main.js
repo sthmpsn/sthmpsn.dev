@@ -1,6 +1,8 @@
 // [START] ON DOCUMENT LOAD
 (function() {
-  // [START] NAV MENU RELATED
+    console.log("...loaded main.js");
+
+    // [START] NAV MENU RELATED
 
     // ANIMATE OPEN AND CLOSE OF UL NAV LIST
     function AnimateMenuOpenClose() {
@@ -44,7 +46,8 @@
         });
     }
 
-// [END] NAV MENU RELATED
+    // [END] NAV MENU RELATED
+
 
 })();
 // [END] OF DOCUMENT LOAD

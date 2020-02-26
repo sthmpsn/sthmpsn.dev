@@ -53,3 +53,15 @@
     border-color:  $txt-color $btn-txt-color $btn-txt-color $txt-color;
   }
 }
+
+  // Project Card Carousel Zoom
+  @mixin zoomCard($zoom){
+    &:nth-child(1) { transform: rotateY(0deg) translateZ( $zoom); }
+    &:nth-child(2) { transform: rotateY(45deg) translateZ( $zoom); }
+    &:nth-child(3) { transform: rotateY(90deg) translateZ( $zoom); }
+    &:nth-child(4) { transform: rotateY(135deg) translateZ( $zoom); }
+    &:nth-child(5) { transform: rotateY(180deg) translateZ( $zoom); }
+    &:nth-child(6) { transform: rotateY(225deg) translateZ( $zoom); }
+    &:nth-child(7) { transform: rotateY(270deg) translateZ( $zoom); }
+    &:nth-child(8) { transform: rotateY(315deg) translateZ( $zoom); }
+  }

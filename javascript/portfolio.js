@@ -1,5 +1,7 @@
 // [START] ON DOCUMENT LOAD
 (function() {
+    console.log("...loaded portfolio.js");
+
     // [START] Carousel Controls
     let carousel = document.querySelector('.sec-portfolio__carousel');
     let projCount = 8;

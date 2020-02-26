@@ -101,26 +101,16 @@ body, h2 {
 
 @media only screen and (min-width: 992px) {
   .sec-portfolio {
-    -ms-grid-columns: 1fr 2fr 1fr;
-        grid-template-columns: 1fr 2fr 1fr;
-    -ms-grid-rows: auto 2fr auto;
-        grid-template-rows: auto 2fr auto;
-        grid-template-areas: "p-heading  p-heading   p-heading" "p-projects p-projects  p-projects" "p-ctrl-prev p-details  p-ctrl-next";
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto 1fr .5fr;
+        grid-template-rows: auto 1fr .5fr;
+        grid-template-areas: "p-heading" "p-projects" "p-controls";
   }
-  .sec-portfolio__carousel-ctrl-prev-button {
+  .sec-portfolio__carousel-controls {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
-    grid-area: p-ctrl-prev;
-  }
-  .sec-portfolio__carousel-ctrl-details {
-    -ms-grid-row: 3;
-    -ms-grid-column: 2;
-    grid-area: p-details;
-  }
-  .sec-portfolio__carousel-ctrl-next-button {
-    -ms-grid-row: 3;
-    -ms-grid-column: 3;
-    grid-area: p-ctrl-next;
+    grid-area: p-controls;
   }
 }
 
@@ -555,6 +545,12 @@ body, h2 {
   padding: 0 20px 20px 20px;
 }
 
+@media only screen and (min-width: 992px) {
+  .sec-portfolio {
+    min-height: 100vh;
+  }
+}
+
 .sec-portfolio__heading {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 -20px;
@@ -574,6 +570,13 @@ body, h2 {
   padding-top: 20px;
 }
 
+@media only screen and (min-width: 992px) {
+  .sec-portfolio__projects {
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+  }
+}
+
 .sec-portfolio__projects .sec-portfolio__carousel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -585,7 +588,24 @@ body, h2 {
           justify-content: center;
 }
 
-.sec-portfolio__projects .sec-portfolio__proj-card {
+@media only screen and (min-width: 992px) {
+  .sec-portfolio__projects .sec-portfolio__carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+  }
+}
+
+.sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card {
   min-width: 200px;
   max-width: 360px;
   height: 230px;
@@ -595,41 +615,105 @@ body, h2 {
   -webkit-box-shadow: 5px 10px 10px;
           box-shadow: 5px 10px 10px;
   position: relative;
-  overflow: hidden;
 }
 
 @media only screen and (min-width: 768px) {
-  .sec-portfolio__projects .sec-portfolio__proj-card {
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card {
     margin: 15px 15px;
   }
 }
 
-.sec-portfolio__projects .sec-portfolio__proj-card:hover .sec-portfolio__proj-info {
+@media only screen and (min-width: 992px) {
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card {
+    width: 265px;
+    height: 180px;
+    margin: 0;
+    position: absolute;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    overflow: visible;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+  }
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(1) {
+    -webkit-transform: rotateY(0deg) translateZ(340px);
+            transform: rotateY(0deg) translateZ(340px);
+  }
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(2) {
+    -webkit-transform: rotateY(45deg) translateZ(340px);
+            transform: rotateY(45deg) translateZ(340px);
+  }
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(3) {
+    -webkit-transform: rotateY(90deg) translateZ(340px);
+            transform: rotateY(90deg) translateZ(340px);
+  }
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(4) {
+    -webkit-transform: rotateY(135deg) translateZ(340px);
+            transform: rotateY(135deg) translateZ(340px);
+  }
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(5) {
+    -webkit-transform: rotateY(180deg) translateZ(340px);
+            transform: rotateY(180deg) translateZ(340px);
+  }
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(6) {
+    -webkit-transform: rotateY(225deg) translateZ(340px);
+            transform: rotateY(225deg) translateZ(340px);
+  }
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(7) {
+    -webkit-transform: rotateY(270deg) translateZ(340px);
+            transform: rotateY(270deg) translateZ(340px);
+  }
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(8) {
+    -webkit-transform: rotateY(315deg) translateZ(340px);
+            transform: rotateY(315deg) translateZ(340px);
+  }
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card::before {
+    content: "";
+    position: absolute;
+    width: 95%;
+    height: 4px;
+    bottom: -20px;
+    left: 2%;
+    -webkit-box-shadow: 0 0 20px inset #737373;
+            box-shadow: 0 0 20px inset #737373;
+    -webkit-transform: rotateX(85deg);
+            transform: rotateX(85deg);
+  }
+}
+
+.sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card .sec-portfolio__proj-card-container {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card .sec-portfolio__proj-card-container:hover .sec-portfolio__proj-info {
   opacity: 1;
 }
 
-.sec-portfolio__projects .sec-portfolio__proj-card:hover .sec-portfolio__proj-info .sec-portfolio__proj-cta {
+.sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card .sec-portfolio__proj-card-container:hover .sec-portfolio__proj-info .sec-portfolio__proj-cta {
   opacity: 1;
-  -webkit-transition: opacity .5s linear;
-  transition: opacity .5s linear;
+  -webkit-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
   pointer-events: auto;
-  -webkit-animation: delay-pointer-events .5s linear;
-          animation: delay-pointer-events .5s linear;
+  -webkit-animation: delay-pointer-events 0.5s linear;
+          animation: delay-pointer-events 0.5s linear;
 }
 
-.sec-portfolio__projects .sec-portfolio__proj-card:hover .sec-portfolio__proj-img {
+.sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card .sec-portfolio__proj-card-container:hover .sec-portfolio__proj-img {
   -webkit-transform: scale(1.3) rotate(15deg);
           transform: scale(1.3) rotate(15deg);
 }
 
-.sec-portfolio__projects .sec-portfolio__proj-card .sec-portfolio__proj-img {
+.sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card .sec-portfolio__proj-card-container .sec-portfolio__proj-img {
   width: 100%;
   height: 100%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-.sec-portfolio__projects .sec-portfolio__proj-card .sec-portfolio__proj-info {
+.sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card .sec-portfolio__proj-card-container .sec-portfolio__proj-info {
   position: absolute;
   top: 0;
   left: 0;
@@ -655,12 +739,12 @@ body, h2 {
   transition: 0.05s;
 }
 
-.sec-portfolio__projects .sec-portfolio__proj-card .sec-portfolio__proj-info .sec-portfolio__proj-title {
+.sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card .sec-portfolio__proj-card-container .sec-portfolio__proj-info .sec-portfolio__proj-title {
   padding: 5px;
   font-size: 1.3rem;
 }
 
-.sec-portfolio__projects .sec-portfolio__proj-card .sec-portfolio__proj-info .sec-portfolio__proj-cta {
+.sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card .sec-portfolio__proj-card-container .sec-portfolio__proj-info .sec-portfolio__proj-cta {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -672,7 +756,7 @@ body, h2 {
   opacity: 0;
 }
 
-.sec-portfolio__projects .sec-portfolio__proj-card .sec-portfolio__proj-info .sec-portfolio__proj-cta > .proj-cta-btn {
+.sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card .sec-portfolio__proj-card-container .sec-portfolio__proj-info .sec-portfolio__proj-cta > .proj-cta-btn {
   position: relative;
   display: inline-block;
   width: 60px;
@@ -686,16 +770,70 @@ body, h2 {
   top: -2px;
 }
 
-.sec-portfolio__projects .sec-portfolio__proj-card .sec-portfolio__proj-info .sec-portfolio__proj-cta > .proj-cta-btn:hover {
+.sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card .sec-portfolio__proj-card-container .sec-portfolio__proj-info .sec-portfolio__proj-cta > .proj-cta-btn:hover {
   border-color: lightgray;
 }
 
-.sec-portfolio__projects .sec-portfolio__proj-card .sec-portfolio__proj-info .sec-portfolio__proj-cta > .proj-cta-btn:active {
+.sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card .sec-portfolio__proj-card-container .sec-portfolio__proj-info .sec-portfolio__proj-cta > .proj-cta-btn:active {
   top: 0;
 }
 
 .sec-portfolio__carousel-controls {
   display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .sec-portfolio__carousel-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 100;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .sec-portfolio__carousel-controls .sec-portfolio__carousel-ctrl-prev-button {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-right: 50px solid #737373;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .sec-portfolio__carousel-controls .sec-portfolio__carousel-proj-details {
+    width: 400px;
+    height: 100px;
+    margin: 0 5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid #737373;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .sec-portfolio__carousel-controls .sec-portfolio__carousel-ctrl-next-button {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid #737373;
+    cursor: pointer;
+  }
 }
 
 .sec-contact {

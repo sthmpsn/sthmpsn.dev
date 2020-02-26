@@ -144,7 +144,7 @@
         grid-area: s-chart;
     }
 
-    @include breakPoint(992px){
+    @include breakPoint(768px){
         grid-template-areas: 
         "s-heading"
         "s-showcase"

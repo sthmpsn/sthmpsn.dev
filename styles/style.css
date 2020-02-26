@@ -189,7 +189,7 @@ body, h2 {
   grid-area: s-chart;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 768px) {
   .sec-skills {
         grid-template-areas: "s-heading" "s-showcase" "s-chart";
   }
@@ -1407,7 +1407,6 @@ body, h2 {
 .sec-skills {
   font-size: 1rem;
   padding: 0 20px 20px 20px;
-  border: 1px solid red;
 }
 
 .sec-skills__heading {
@@ -1567,7 +1566,23 @@ body, h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: center;
-  margin-bottom: 2.5em;
+  margin: 0 -20px 1.5em -20px;
+  padding: 1.5em 20px;
+  color: #eeeeee;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.sec-skills__chart .sec-skills__skill-legend::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
 }
 
 @media only screen and (min-width: 640px) {

@@ -1,104 +1,231 @@
 .sec-skills {
-    $self: &;  // For Nested BEM support. Defines variable as ".sec-skilss"
-    @include sectionContainer;
+  $self: &; // For Nested BEM support. Defines variable as ".sec-skilss"
+  @include sectionContainer;
 
-    border: 1px solid red; //debug only
+  border: 1px solid red; //debug only
 
-    &__heading {
-        @include sectionHeading;
+  &__heading {
+    @include sectionHeading;
 
-        & > i {
-            display: none;
+    & > i {
+      display: none;
+    }
+  } // End heading
+
+  // ORBITING SKILS
+  &__showcase {
+    display: none;
+
+    // Display the Orbiting Skills Animation on screens 768px width and up
+    @include breakPoint(768px) {
+      height: 400px;
+      width: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotateX($orbitAngle); // Gives the illusion of the orbit angle
+      transform-style: preserve-3d; // preserves all the content within this (skills) as 3D
+
+      /* Hidden orbit path of skills around the HTML image */
+      #{$self}__skill-orbit-path {
+        // border: 1px dashed purple;  // debug purposes
+        position: relative;
+        width: calc(300px * #{$orbitPathScale});
+        height: calc(300px * #{$orbitPathScale});
+        border-radius: 100%;
+        transform-style: preserve-3d;
+        animation: spin-right $spinRate linear infinite;
+
+        /* Skills image counter rotation to keep upright */
+        #{$self}--skill-rotate {
+          position: absolute;
+          height: 30px;
+          width: 30px;
+          border-radius: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transform: rotateX(-95deg);
+          transform-style: preserve-3d;
+          animation: spin-left $spinRate linear infinite;
         }
 
-    } // End heading
+        #{$self}--skill-rotate > img {
+          transform: scale($skillImgScale);
+        }
 
-    &__chart {
-        @include sectionBody;
+        #{$self}__skill-csharp {
+          bottom: 0;
+          left: 45%;
+        }
 
-        #{$self}__skill-legend { 
-            display: flex;
-            justify-content: space-between;
-            text-align: center;
-            margin-bottom: 2.5em;
+        #{$self}__skill-bootstrap {
+          bottom: 5%;
+          left: 20%;
+        }
 
-            @include breakPoint(640px) {
-                justify-content: space-evenly;
-            }
+        #{$self}__skill-javascript {
+          bottom: 28%;
+          left: 3%;
+        }
 
-            #{$self}__skill-legend-title {
-                margin-bottom: 1rem;
-                font-weight: 500;
-            }
+        #{$self}__skill-jquery {
+          top: 40%;
+          left: 0%;
+        }
 
-            #{$self}__skill-legend-icon {
-                width: 40px;
-                height: 40px;
-                line-height: 40px;
-                margin: 0 auto;
-                border-radius: 50%;
-                color: white;
-              }
+        #{$self}__skill-reactjs {
+          top: 16%;
+          left: 8%;
+        }
 
-            #{$self}--skill-legend-proficient-icon {
-                background-image: $skills-proficient-color;
-            }
-            #{$self}--skill-legend-intermediate-icon {
-                background-image: $skills-intermediate-color;
-            }
-            #{$self}--skill-legend-advance-icon {
-                background-image: $skills-advance-color;
-            }
-        } // End skill-legend
+        #{$self}__skill-atlassian {
+          top: 3%;
+          left: 27%;
+        }
 
-        #{$self}__skills { 
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+        #{$self}__skill-sass {
+          top: 0;
+          left: 50%;
+        }
 
-            #{$self}__skill-card { 
-                width: 280px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                border: 1px solid #d3d3d3;
-                border-radius: 5px;
-                padding: 1rem 0;
-                margin: 5px;
-                box-shadow: 5px 5px 5px #d3d3d3;
+        #{$self}__skill-mongodb {
+          top: 7%;
+          right: 21%;
+        }
 
-                #{$self}__skill-name {
-                    width: 50%;
-                    text-align: right;
-                    font-size: 1.2rem;
-                }
+        #{$self}__skill-git {
+          top: 26%;
+          right: 4%;
+        }
 
-                #{$self}__skill-level {
-                    width: 30px;
-                    height: 30px;
-                    line-height: 30px;
-                    text-align: center;
-                    margin: 0 auto;
-                    border-radius: 50%;
-                    color: white;
-                }
+        #{$self}__skill-css3 {
+          bottom: 43%;
+          right: 0%;
+        }
 
-                #{$self}--skill-level-proficient {
-                    background-image: $skills-proficient-color;
-                }
+        #{$self}__skill-nodejs {
+          bottom: 21%;
+          right: 9%;
+        }
 
-                #{$self}--skill-level-intermediate {
-                    background-image: $skills-intermediate-color;
-                }
+        #{$self}__skill-dotnetcore {
+          bottom: 3%;
+          right: 25%;
+        }
+      }
 
-                #{$self}--skill-level-advance {
-                    background-image: $skills-advance-color;
-                }
-            } // End skill-card
-        } // End skills
-    } // End chart
+      /* Center the HTML image at the center of orbit */
+      #{$self}__skill-html5 {
+        position: absolute;
+        transform: rotateX(-$orbitAngle) scale($skillImgScale + 0.2);
+      }
 
+      #{$self}__showcase-skill-names {
+        position: absolute;
+        bottom: -300px;
+        width: 100%;
+        text-align: center;
 
+        #{$self}--showcase-skill-names-scroll::before {
+          content: "C-Sharp";
+          font-size: 4rem;
+          letter-spacing: 0.4rem;
+          color: #333333;
+          animation: scroll-skill-names $spinRate infinite 1s;
+        }
+      } // End skill name Scroll 
+    } // End shocase 768px breakpoint
 
 
+
+
+
+  } // End showcase (Orbiting Skills)
+
+  &__chart {
+    @include sectionBody;
+
+    #{$self}__skill-legend {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      margin-bottom: 2.5em;
+
+      @include breakPoint(640px) {
+        justify-content: space-evenly;
+      }
+
+      #{$self}__skill-legend-title {
+        margin-bottom: 1rem;
+        font-weight: 500;
+      }
+
+      #{$self}__skill-legend-icon {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        margin: 0 auto;
+        border-radius: 50%;
+        color: white;
+      }
+
+      #{$self}--skill-legend-proficient-icon {
+        background-image: $skills-proficient-color;
+      }
+      #{$self}--skill-legend-intermediate-icon {
+        background-image: $skills-intermediate-color;
+      }
+      #{$self}--skill-legend-advance-icon {
+        background-image: $skills-advance-color;
+      }
+    } // End skill-legend
+
+    #{$self}__skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      #{$self}__skill-card {
+        width: 280px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #d3d3d3;
+        border-radius: 5px;
+        padding: 1rem 0;
+        margin: 5px;
+        box-shadow: 5px 5px 5px #d3d3d3;
+
+        #{$self}__skill-name {
+          width: 50%;
+          text-align: right;
+          font-size: 1.2rem;
+        }
+
+        #{$self}__skill-level {
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          margin: 0 auto;
+          border-radius: 50%;
+          color: white;
+        }
+
+        #{$self}--skill-level-proficient {
+          background-image: $skills-proficient-color;
+        }
+
+        #{$self}--skill-level-intermediate {
+          background-image: $skills-intermediate-color;
+        }
+
+        #{$self}--skill-level-advance {
+          background-image: $skills-advance-color;
+        }
+      } // End skill-card
+    } // End skills
+  } // End chart
 } // End .sec-skills

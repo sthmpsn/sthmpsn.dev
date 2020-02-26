@@ -382,6 +382,134 @@ body, h2 {
   }
 }
 
+@-webkit-keyframes spin-right {
+  0% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes spin-right {
+  0% {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes spin-left {
+  0% {
+    -webkit-transform: rotateX(-90deg) rotateY(-360deg) rotateZ(0deg);
+            transform: rotateX(-90deg) rotateY(-360deg) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+            transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
+@keyframes spin-left {
+  0% {
+    -webkit-transform: rotateX(-90deg) rotateY(-360deg) rotateZ(0deg);
+            transform: rotateX(-90deg) rotateY(-360deg) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+            transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
+@-webkit-keyframes scroll-skill-names {
+  0% {
+    content: 'C-Sharp';
+  }
+  8.3% {
+    content: '.Net Core';
+  }
+  16.6% {
+    content: 'NodeJS';
+  }
+  24.9% {
+    content: 'CSS';
+  }
+  33.2% {
+    content: 'Git';
+  }
+  41.5% {
+    content: 'MongoDB';
+  }
+  49.8% {
+    content: 'Sass';
+  }
+  58.1% {
+    content: 'Atlasian Admin';
+  }
+  66.4% {
+    content: 'React';
+  }
+  74.7% {
+    content: 'jQuery';
+  }
+  83% {
+    content: 'JavaScript';
+  }
+  91.3% {
+    content: 'Bootstrap';
+  }
+  100% {
+    content: 'C-Sharp';
+  }
+}
+
+@keyframes scroll-skill-names {
+  0% {
+    content: 'C-Sharp';
+  }
+  8.3% {
+    content: '.Net Core';
+  }
+  16.6% {
+    content: 'NodeJS';
+  }
+  24.9% {
+    content: 'CSS';
+  }
+  33.2% {
+    content: 'Git';
+  }
+  41.5% {
+    content: 'MongoDB';
+  }
+  49.8% {
+    content: 'Sass';
+  }
+  58.1% {
+    content: 'Atlasian Admin';
+  }
+  66.4% {
+    content: 'React';
+  }
+  74.7% {
+    content: 'jQuery';
+  }
+  83% {
+    content: 'JavaScript';
+  }
+  91.3% {
+    content: 'Bootstrap';
+  }
+  100% {
+    content: 'C-Sharp';
+  }
+}
+
 .sec-main {
   font-size: 1rem;
   padding: 0 20px 20px 20px;
@@ -1297,6 +1425,136 @@ body, h2 {
   display: none;
 }
 
+.sec-skills__showcase {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .sec-skills__showcase {
+    height: 400px;
+    width: 100%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform: rotateX(70deg);
+            transform: rotateX(70deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    /* Hidden orbit path of skills around the HTML image */
+    /* Center the HTML image at the center of orbit */
+  }
+  .sec-skills__showcase .sec-skills__skill-orbit-path {
+    position: relative;
+    width: calc(300px * 1.7);
+    height: calc(300px * 1.7);
+    border-radius: 100%;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-animation: spin-right 60s linear infinite;
+            animation: spin-right 60s linear infinite;
+    /* Skills image counter rotation to keep upright */
+  }
+  .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills--skill-rotate {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transform: rotateX(-95deg);
+            transform: rotateX(-95deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-animation: spin-left 60s linear infinite;
+            animation: spin-left 60s linear infinite;
+  }
+  .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills--skill-rotate > img {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-csharp {
+    bottom: 0;
+    left: 45%;
+  }
+  .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-bootstrap {
+    bottom: 5%;
+    left: 20%;
+  }
+  .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-javascript {
+    bottom: 28%;
+    left: 3%;
+  }
+  .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-jquery {
+    top: 40%;
+    left: 0%;
+  }
+  .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-reactjs {
+    top: 16%;
+    left: 8%;
+  }
+  .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-atlassian {
+    top: 3%;
+    left: 27%;
+  }
+  .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-sass {
+    top: 0;
+    left: 50%;
+  }
+  .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-mongodb {
+    top: 7%;
+    right: 21%;
+  }
+  .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-git {
+    top: 26%;
+    right: 4%;
+  }
+  .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-css3 {
+    bottom: 43%;
+    right: 0%;
+  }
+  .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-nodejs {
+    bottom: 21%;
+    right: 9%;
+  }
+  .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-dotnetcore {
+    bottom: 3%;
+    right: 25%;
+  }
+  .sec-skills__showcase .sec-skills__skill-html5 {
+    position: absolute;
+    -webkit-transform: rotateX(-70deg) scale(0.7);
+            transform: rotateX(-70deg) scale(0.7);
+  }
+  .sec-skills__showcase .sec-skills__showcase-skill-names {
+    position: absolute;
+    bottom: -300px;
+    width: 100%;
+    text-align: center;
+  }
+  .sec-skills__showcase .sec-skills__showcase-skill-names .sec-skills--showcase-skill-names-scroll::before {
+    content: "C-Sharp";
+    font-size: 4rem;
+    letter-spacing: 0.4rem;
+    color: #333333;
+    -webkit-animation: scroll-skill-names 60s infinite 1s;
+            animation: scroll-skill-names 60s infinite 1s;
+  }
+}
+
 .sec-skills__chart {
   padding-top: 20px;
 }
@@ -1424,9 +1682,5 @@ html {
 
 body {
   background-color: #737373;
-}
-
-.sec-skills img {
-  display: none;
 }
 /*# sourceMappingURL=style.css.map */

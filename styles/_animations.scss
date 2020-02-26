@@ -101,3 +101,71 @@
     opacity: 0;
   }
 }
+
+// Elements that use this Animation
+// Skills Showcase Orbiting Skills (the orbit rotation)
+@keyframes spin-right {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+// Elements that use this Animation
+// Skills Showcase Orbiting Skills ( counter rotation of the skills images )
+@keyframes spin-left {
+  0% {
+    transform: rotateX(-90deg) rotateY(-360deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
+// Elements that use this Animation
+// Skills Showcase Scrolling Skill Names
+@keyframes scroll-skill-names {
+// 12 skill divided by 100 = 8.3 which is the percent increment
+// Note state at 0% and 100% will be the same 
+  0% {
+      content:'C-Sharp';
+  }
+  8.3% {
+      content:'.Net Core';
+  }
+  16.6% {
+      content:'NodeJS';
+  }
+  24.9% {
+      content:'CSS';
+  }
+  33.2% {
+      content:'Git';
+  }
+  41.5% {
+      content:'MongoDB';
+  }
+  49.8% {
+      content:'Sass';
+  }
+  58.1% {
+      content:'Atlasian Admin';
+  }
+  66.4% {
+      content:'React';
+  }
+  74.7% {
+      content:'jQuery';
+  }
+  83% {
+      content:'JavaScript';
+  }
+  91.3%{
+      content:'Bootstrap';
+  }
+  100% {
+      content:'C-Sharp';
+  }
+}

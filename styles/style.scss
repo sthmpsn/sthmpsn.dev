@@ -46,8 +46,7 @@ body {
   background-color: $txt-color; // temp color for layout purposes
 }
 
+.grid-wrapper {
+  max-width: 1920px;
 
-// temp hide uncessary images while structuring layout
-// .sec-skills img {
-//   display: none;
-// }
+}

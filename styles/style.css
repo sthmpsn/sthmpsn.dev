@@ -521,6 +521,12 @@ body, h2 {
   }
 }
 
+@media only screen and (min-width: 1400px) {
+  .sec-main {
+    padding: 0 120px 20px 120px;
+  }
+}
+
 @media only screen and (min-width: 992px) {
   .sec-main {
     padding: 0;
@@ -551,6 +557,12 @@ body, h2 {
 @media only screen and (min-width: 768px) {
   .sec-main__header {
     margin: 0 -60px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .sec-main__header {
+    margin: 0 -120px;
   }
 }
 
@@ -704,17 +716,73 @@ body, h2 {
           animation: swing-out 0.5s linear;
 }
 
-.sec-main__header .sec-main__header-nav .sec-main__header-nav-item .sec-main__header-nav-link {
+.sec-main__header .sec-main__header-nav .sec-main__header-nav-item #nav-link-about {
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 992px) {
+  .sec-main__header .sec-main__header-nav .sec-main__header-nav-item #nav-link-about {
+    color: #f6fe09;
+  }
+}
+
+.sec-main__header .sec-main__header-nav .sec-main__header-nav-item .sec-main--header-nav-link {
   color: #737373;
   text-decoration: none;
   text-transform: uppercase;
+  letter-spacing: 3px;
   display: block;
   padding: 1.5rem 3rem;
 }
 
 @media only screen and (min-width: 992px) {
-  .sec-main__header .sec-main__header-nav .sec-main__header-nav-item .sec-main__header-nav-link {
+  .sec-main__header .sec-main__header-nav .sec-main__header-nav-item .sec-main--header-nav-link {
     color: #eeeeee;
+    position: relative;
+    padding: 5px 10px;
+    margin: 1.5rem 3rem;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  .sec-main__header .sec-main__header-nav .sec-main__header-nav-item .sec-main--header-nav-link:hover {
+    color: #4f25f9 !important;
+    background-color: #f6fe09;
+  }
+  .sec-main__header .sec-main__header-nav .sec-main__header-nav-item .sec-main--header-nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #f6fe09;
+    border-width: 0 0 3px 3px;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .sec-main__header .sec-main__header-nav .sec-main__header-nav-item .sec-main--header-nav-link:hover::before {
+    opacity: 1;
+    bottom: -8px;
+    left: -8px;
+  }
+  .sec-main__header .sec-main__header-nav .sec-main__header-nav-item .sec-main--header-nav-link::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #f6fe09;
+    border-width: 3px 3px 0 0;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .sec-main__header .sec-main__header-nav .sec-main__header-nav-item .sec-main--header-nav-link:hover::after {
+    opacity: 1;
+    top: -8px;
+    right: -8px;
   }
 }
 
@@ -733,6 +801,12 @@ body, h2 {
 @media only screen and (min-width: 992px) and (min-width: 768px) {
   .sec-main__about {
     padding: 0 60px 20px 60px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (min-width: 1400px) {
+  .sec-main__about {
+    padding: 0 120px 20px 120px;
   }
 }
 
@@ -853,6 +927,12 @@ body, h2 {
   }
 }
 
+@media only screen and (min-width: 992px) and (min-width: 1400px) {
+  .sec-main__aside {
+    padding: 0 120px 20px 120px;
+  }
+}
+
 .sec-main__aside .sec-main__cta-dl-resume {
   display: inline-block;
   padding: 10px 20px;
@@ -936,6 +1016,12 @@ body, h2 {
   }
 }
 
+@media only screen and (min-width: 1400px) {
+  .sec-portfolio {
+    padding: 0 120px 20px 120px;
+  }
+}
+
 @media only screen and (min-width: 992px) {
   .sec-portfolio {
     min-height: 100vh;
@@ -956,6 +1042,12 @@ body, h2 {
 @media only screen and (min-width: 768px) {
   .sec-portfolio__heading {
     margin: 0 -60px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .sec-portfolio__heading {
+    margin: 0 -120px;
   }
 }
 
@@ -1244,6 +1336,12 @@ body, h2 {
   }
 }
 
+@media only screen and (min-width: 1400px) {
+  .sec-contact {
+    padding: 0 120px 20px 120px;
+  }
+}
+
 .sec-contact__heading {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 -20px;
@@ -1258,6 +1356,12 @@ body, h2 {
 @media only screen and (min-width: 768px) {
   .sec-contact__heading {
     margin: 0 -60px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .sec-contact__heading {
+    margin: 0 -120px;
   }
 }
 
@@ -1564,6 +1668,12 @@ body, h2 {
   }
 }
 
+@media only screen and (min-width: 1400px) {
+  .sec-skills {
+    padding: 0 120px 20px 120px;
+  }
+}
+
 .sec-skills__heading {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 -20px;
@@ -1578,6 +1688,12 @@ body, h2 {
 @media only screen and (min-width: 768px) {
   .sec-skills__heading {
     margin: 0 -60px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .sec-skills__heading {
+    margin: 0 -120px;
   }
 }
 
@@ -1858,5 +1974,9 @@ html {
 
 body {
   background-color: #737373;
+}
+
+.grid-wrapper {
+  max-width: 1920px;
 }
 /*# sourceMappingURL=style.css.map */

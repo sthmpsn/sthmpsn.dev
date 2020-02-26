@@ -136,16 +136,72 @@
 
       #{$self}__header-nav-item {
         
-        #{$self}__header-nav-link {
+        #nav-link-about {
+          font-weight: 700;
+
+          @include breakPoint(992px){
+          color: $standout-color;  // When ever you can see the "About" link that means you're already on the About/Main section
+          }
+        }
+
+        #{$self}--header-nav-link {
           color: $txt-color;
           text-decoration: none;
           text-transform: uppercase;
+          letter-spacing: 3px;
           display: block;
           padding: 1.5rem 3rem;
 
           @include breakPoint(992px){
             color: $secondary-color;
-          }
+            position: relative;
+            padding: 5px 10px;
+            margin: 1.5rem 3rem;
+            transition: all .5s;
+
+            &:hover { 
+              color: $primary-color !important;
+              background-color: $standout-color;
+            }
+
+            &::before {
+              content: '';
+              position: absolute;
+              bottom: 12px;
+              left: 12px;
+              width: 12px;
+              height: 12px;
+              border: 3px solid $standout-color;
+              border-width: 0 0 3px 3px;
+              opacity: 0;
+              transition: all 0.3s;
+            }
+
+            &:hover::before{
+              opacity: 1;
+              bottom: -8px;
+              left: -8px;
+            }
+
+            &::after {
+              content: '';
+              position: absolute;
+              top: 12px;
+              right: 12px;
+              width: 12px;
+              height: 12px;
+              border: 3px solid $standout-color;
+              border-width: 3px 3px 0 0;
+              opacity: 0;
+              transition: all 0.3s;
+            }
+
+            &:hover::after {
+              opacity: 1;
+              top: -8px;
+              right: -8px;
+            }
+          } // End header-nav-link 992px breakpoint
         } // End header-nav-link
       } // End header-nav-item
     } // End header-nav

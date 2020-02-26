@@ -2,11 +2,21 @@
   $self: &; // For Nested BEM support. Defines variable as ".sec-main"
   @include sectionContainer;
 
+  @include breakPoint(992px) {
+    padding: 0;
+  }
+
+
   &__header {
     @include sectionHeading;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include breakPoint(992px) {
+      flex-direction: column;
+      margin: 0;
+    }
 
     // background-color: $primary-color;
 
@@ -17,12 +27,36 @@
       @include breakPoint(640px) {
         // Mobile Landscape
         padding-left: 20px;
-    }
+      }
 
+      @include breakPoint(992px){
+        font-size: 1.7rem;
+        padding: 0;
+      }
 
-      #{$self}__header-avatar {
+      #{$self}__header-avatar-container {
         display: none;
-      } //End header-avatar
+
+        @include breakPoint(992px){
+          display: block;
+        }
+
+        #{$self}__header-avatar {
+          @include breakPoint(992px){
+            display: block;
+            border-radius: 50%;
+            transform: scale(0.8);
+          }
+        } // End header-avater
+      } //End header-avatar-container
+
+      #{$self}__header-name {
+
+        @include breakPoint(992px){
+          text-align: center;
+        }
+
+      } // End header-name
     } // End header-brand
 
     #{$self}__header-nav {
@@ -35,6 +69,10 @@
       #{$self}__header-nav-menu-icon {
         font-size: 3rem;
         cursor: pointer;
+
+        @include breakPoint(992px) {
+          display: none;
+        }
       } // End header-nav-menu-icon
 
       #{$self}__header-nav-menu {
@@ -42,6 +80,13 @@
         list-style-type: none;
         font-size: 1rem;
         color: $txt-color;
+
+        @include breakPoint(992px){
+          display: block; 
+          position: relative !important;
+          background: none !important;
+          box-shadow: none !important;
+        }
       } // End header-nav-menu
 
       #{$self}__header-nav-menu--active {
@@ -66,13 +111,18 @@
       } // End header-nav-menu--deactivated
 
       #{$self}__header-nav-item {
+        
         #{$self}__header-nav-link {
           color: $txt-color;
           text-decoration: none;
           text-transform: uppercase;
           display: block;
           padding: 1.5rem 3rem;
-        }
+
+          @include breakPoint(992px){
+            color: $secondary-color;
+          }
+        } // End header-nav-link
       } // End header-nav-item
     } // End header-nav
   } // End header
@@ -80,29 +130,45 @@
   &__about {
     @include sectionBody;
 
+    @include breakPoint(992px) {
+      @include sectionContainer;
+      margin-top: 6rem;
+    }
+
     #{$self}__about-title {
       text-align: center;
 
       #{$self}__about-title-primary {
         font-size: 1.9rem;
         letter-spacing: 3px;
-      }
+        
+        @include breakPoint(992px) {
+          font-size: 2.2rem;
+        }
+      } // End about-title-primary
 
       #{$self}__about-title-secondary {
         font-weight: 600;
         letter-spacing: 3px;
-      }
+        
+        @include breakPoint(992px) {
+          font-size: 1.8rem;
+        }
+      } // End about-title-secondary
 
       #{$self}__about-title-ampersand {
         font-weight: 500;
 
-      }
+        @include breakPoint(992px) {
+          font-size: 1.8rem;
+        }
+      } // End about-title-ampersand
     } // End about-title
 
     #{$self}__about-me {
       max-width: 60ch;
       margin: auto;
-      padding: 20px 0;
+      padding: 20px 20px;
       font-size: 0.9rem;
       letter-spacing: 1px;
       text-align: justify;
@@ -110,8 +176,13 @@
 
       @include breakPoint(640px) {
         // Mobile Landscape
+        padding: 20px 0;
+      }
+
+      @include breakPoint(992px) {
         padding: 20px 20px;
-    }
+        font-size: 1rem;
+      }
 
     } // End about-me
   } // End "about"
@@ -120,8 +191,19 @@
     padding: 5px 0;
     text-align: center; // center the button
 
+    @include breakPoint(992px) {
+      @include sectionContainer;
+      text-align: right;
+    }
+
     #{$self}__cta-dl-resume {
       @include newButton(10px, 20px, normal, 1rem, 20px);
+
+      @include breakPoint(992px) {
+        @include newButton(15px, 25px, normal, 1.3rem, 25px);
+        margin-right: 35px;
+      }
+
     }
   } // End aside
 } // END .sec-main

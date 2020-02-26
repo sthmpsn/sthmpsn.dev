@@ -61,9 +61,17 @@
           box-shadow: none;
           overflow: visible;
           transform-style: preserve-3d;
-          @include zoomCard(
-            340px
-          ); // Increase this for more space between cards (also depends on width and height)
+          // @include zoomCard(340px); // Increase this for more space between cards (also depends on width)
+          @include zoomCard(320px); // Increase this for more space between cards (also depends on width)
+            // TOA (Tangent = Opposite / Adjacent) =  320px (rounded up from 319.88) with 8 carousel objects having a width of 265px
+            // 8/360 = 45deg  ( 8 cards / 360 degrees )
+            // 45/2 = 22.5deg ( divide this angle in half to solve for the adjacent angle )
+            // 265/2 = 132.5px  ( width of card / 2 will give you the px length opposite the 22.5deg angle )
+            // Tan (22.5) = 132.5 / A    [ Where "A" is the Adjacent angle ]
+            // .41421 = 132.5 / A
+            // A = 132.5 / .41421
+            // A = 319.88  ... Round up to 320px and fits perfectly.  Increase the pixel length for more space between cards
+
 
           // Card shadows while in carousel configuration
           &::before {

@@ -70,7 +70,7 @@ body, h2 {
         grid-template-columns: .5fr 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
-        grid-template-areas: "m-header  m-about" "m-header  m-about" "m-header  m-footer";
+        grid-template-areas: "m-header  m-about" "m-header  m-aside";
   }
 }
 
@@ -387,6 +387,12 @@ body, h2 {
   padding: 0 20px 20px 20px;
 }
 
+@media only screen and (min-width: 992px) {
+  .sec-main {
+    padding: 0;
+  }
+}
+
 .sec-main__header {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 -20px;
@@ -407,6 +413,16 @@ body, h2 {
           align-items: center;
 }
 
+@media only screen and (min-width: 992px) {
+  .sec-main__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+  }
+}
+
 .sec-main__header .sec-main__header-brand {
   padding-right: 60px;
   text-align: left;
@@ -418,8 +434,36 @@ body, h2 {
   }
 }
 
-.sec-main__header .sec-main__header-brand .sec-main__header-avatar {
+@media only screen and (min-width: 992px) {
+  .sec-main__header .sec-main__header-brand {
+    font-size: 1.7rem;
+    padding: 0;
+  }
+}
+
+.sec-main__header .sec-main__header-brand .sec-main__header-avatar-container {
   display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .sec-main__header .sec-main__header-brand .sec-main__header-avatar-container {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .sec-main__header .sec-main__header-brand .sec-main__header-avatar-container .sec-main__header-avatar {
+    display: block;
+    border-radius: 50%;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .sec-main__header .sec-main__header-brand .sec-main__header-name {
+    text-align: center;
+  }
 }
 
 @media only screen and (min-width: 640px) {
@@ -433,11 +477,27 @@ body, h2 {
   cursor: pointer;
 }
 
+@media only screen and (min-width: 992px) {
+  .sec-main__header .sec-main__header-nav .sec-main__header-nav-menu-icon {
+    display: none;
+  }
+}
+
 .sec-main__header .sec-main__header-nav .sec-main__header-nav-menu {
   display: none;
   list-style-type: none;
   font-size: 1rem;
   color: #737373;
+}
+
+@media only screen and (min-width: 992px) {
+  .sec-main__header .sec-main__header-nav .sec-main__header-nav-menu {
+    display: block;
+    position: relative !important;
+    background: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+  }
 }
 
 .sec-main__header .sec-main__header-nav .sec-main__header-nav-menu--active {
@@ -474,8 +534,22 @@ body, h2 {
   padding: 1.5rem 3rem;
 }
 
+@media only screen and (min-width: 992px) {
+  .sec-main__header .sec-main__header-nav .sec-main__header-nav-item .sec-main__header-nav-link {
+    color: #eeeeee;
+  }
+}
+
 .sec-main__about {
   padding-top: 20px;
+}
+
+@media only screen and (min-width: 992px) {
+  .sec-main__about {
+    font-size: 1rem;
+    padding: 0 20px 20px 20px;
+    margin-top: 6rem;
+  }
 }
 
 .sec-main__about .sec-main__about-title {
@@ -487,19 +561,37 @@ body, h2 {
   letter-spacing: 3px;
 }
 
+@media only screen and (min-width: 992px) {
+  .sec-main__about .sec-main__about-title .sec-main__about-title-primary {
+    font-size: 2.2rem;
+  }
+}
+
 .sec-main__about .sec-main__about-title .sec-main__about-title-secondary {
   font-weight: 600;
   letter-spacing: 3px;
+}
+
+@media only screen and (min-width: 992px) {
+  .sec-main__about .sec-main__about-title .sec-main__about-title-secondary {
+    font-size: 1.8rem;
+  }
 }
 
 .sec-main__about .sec-main__about-title .sec-main__about-title-ampersand {
   font-weight: 500;
 }
 
+@media only screen and (min-width: 992px) {
+  .sec-main__about .sec-main__about-title .sec-main__about-title-ampersand {
+    font-size: 1.8rem;
+  }
+}
+
 .sec-main__about .sec-main__about-me {
   max-width: 60ch;
   margin: auto;
-  padding: 20px 0;
+  padding: 20px 20px;
   font-size: 0.9rem;
   letter-spacing: 1px;
   text-align: justify;
@@ -507,13 +599,28 @@ body, h2 {
 
 @media only screen and (min-width: 640px) {
   .sec-main__about .sec-main__about-me {
+    padding: 20px 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .sec-main__about .sec-main__about-me {
     padding: 20px 20px;
+    font-size: 1rem;
   }
 }
 
 .sec-main__aside {
   padding: 5px 0;
   text-align: center;
+}
+
+@media only screen and (min-width: 992px) {
+  .sec-main__aside {
+    font-size: 1rem;
+    padding: 0 20px 20px 20px;
+    text-align: right;
+  }
 }
 
 .sec-main__aside .sec-main__cta-dl-resume {
@@ -538,6 +645,31 @@ body, h2 {
 
 .sec-main__aside .sec-main__cta-dl-resume:active {
   border-color: #737373 #fff #fff #737373;
+}
+
+@media only screen and (min-width: 992px) {
+  .sec-main__aside .sec-main__cta-dl-resume {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 1.3rem;
+    line-height: normal;
+    border-radius: 25px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#4f25f9), to(#28137D));
+    background: linear-gradient(#4f25f9, #28137D);
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff #737373 #737373 #fff;
+    margin-right: 35px;
+  }
+  .sec-main__aside .sec-main__cta-dl-resume:hover {
+    color: #f6fe09;
+  }
+  .sec-main__aside .sec-main__cta-dl-resume:active {
+    border-color: #737373 #fff #fff #737373;
+  }
 }
 
 .sec-portfolio {
@@ -636,36 +768,36 @@ body, h2 {
             transform-style: preserve-3d;
   }
   .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(1) {
-    -webkit-transform: rotateY(0deg) translateZ(340px);
-            transform: rotateY(0deg) translateZ(340px);
+    -webkit-transform: rotateY(0deg) translateZ(320px);
+            transform: rotateY(0deg) translateZ(320px);
   }
   .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(2) {
-    -webkit-transform: rotateY(45deg) translateZ(340px);
-            transform: rotateY(45deg) translateZ(340px);
+    -webkit-transform: rotateY(45deg) translateZ(320px);
+            transform: rotateY(45deg) translateZ(320px);
   }
   .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(3) {
-    -webkit-transform: rotateY(90deg) translateZ(340px);
-            transform: rotateY(90deg) translateZ(340px);
+    -webkit-transform: rotateY(90deg) translateZ(320px);
+            transform: rotateY(90deg) translateZ(320px);
   }
   .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(4) {
-    -webkit-transform: rotateY(135deg) translateZ(340px);
-            transform: rotateY(135deg) translateZ(340px);
+    -webkit-transform: rotateY(135deg) translateZ(320px);
+            transform: rotateY(135deg) translateZ(320px);
   }
   .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(5) {
-    -webkit-transform: rotateY(180deg) translateZ(340px);
-            transform: rotateY(180deg) translateZ(340px);
+    -webkit-transform: rotateY(180deg) translateZ(320px);
+            transform: rotateY(180deg) translateZ(320px);
   }
   .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(6) {
-    -webkit-transform: rotateY(225deg) translateZ(340px);
-            transform: rotateY(225deg) translateZ(340px);
+    -webkit-transform: rotateY(225deg) translateZ(320px);
+            transform: rotateY(225deg) translateZ(320px);
   }
   .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(7) {
-    -webkit-transform: rotateY(270deg) translateZ(340px);
-            transform: rotateY(270deg) translateZ(340px);
+    -webkit-transform: rotateY(270deg) translateZ(320px);
+            transform: rotateY(270deg) translateZ(320px);
   }
   .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(8) {
-    -webkit-transform: rotateY(315deg) translateZ(340px);
-            transform: rotateY(315deg) translateZ(340px);
+    -webkit-transform: rotateY(315deg) translateZ(320px);
+            transform: rotateY(315deg) translateZ(320px);
   }
   .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card::before {
     content: "";

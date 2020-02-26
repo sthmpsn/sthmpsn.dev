@@ -44,8 +44,7 @@
         grid-template-rows: auto;
         grid-template-areas: 
             "m-header  m-about"
-            "m-header  m-about"
-            "m-header  m-footer";
+            "m-header  m-aside";
 
     } // End breakPoint(992px)
 } // End .sec-main

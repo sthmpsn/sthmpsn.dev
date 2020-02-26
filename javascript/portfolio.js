@@ -10,7 +10,7 @@
 
 
     function rotateCarousel(){
-        let viewAngle = curProjIndex / projCount * -360;
+        let viewAngle = curProjIndex / projCount * -360;  // negative 360 since we want previous ctrl btn to turn right and vice versa
         carousel.style.transform = 'rotateY(' + viewAngle + 'deg)';
     }
 

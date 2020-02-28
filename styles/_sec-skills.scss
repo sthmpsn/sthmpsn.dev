@@ -2,12 +2,31 @@
   $self: &; // For Nested BEM support. Defines variable as ".sec-skilss"
   @include sectionContainer;
 
+  @include breakPoint(1200px) {
+    background-color: $primary-color;
+    background-image: url("../assets/images/backgrounds/skills-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
 
   &__heading {
     @include sectionHeading;
 
+    @include breakPoint(1200px){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: transparent;
+    } // End heading for 1200px
+
+
     & > i {
       display: none;
+      @include breakPoint(1200px){
+        display: inline-block;
+        color: $txt-color;
+        font-size: 3rem;
+      }
     }
   } // End heading
 
@@ -130,9 +149,15 @@
         #{$self}--showcase-skill-names-scroll::before {
           content: "C-Sharp";
           font-size: 4rem;
-          letter-spacing: 0.4rem;
+          font-weight: 600;
+          letter-spacing: 5px;
           color: #333333;
           animation: scroll-skill-names $spinRate infinite 1s;
+
+          @include breakPoint(1200px) {
+            color: $secondary-color;
+          }
+
         }
       } // End skill name Scroll 
     } // End showcase 768px breakpoint
@@ -144,6 +169,10 @@
   &__chart {
     @include sectionBody;
 
+    @include breakPoint(1200px) {
+      padding-top: 50px;
+    }
+
     #{$self}__skill-legend {
       display: flex;
       justify-content: space-between;
@@ -153,6 +182,10 @@
       color: $secondary-color;
       position: sticky;
       top: 0;
+
+      @include breakPoint(640px) {
+        justify-content: space-evenly;
+      }
 
       &::before {
         content: "";
@@ -165,25 +198,37 @@
         background-color: rgba(0, 0,0, 0.6);
         // background-color: rgba(40, 19, 125, 0.6);
         z-index: -1;
-      }
 
-      @include breakPoint(640px) {
-        justify-content: space-evenly;
-      }
+        @include breakPoint(1200px) {
+          display: none;
+        }
+      } // End &::before
 
       #{$self}__skill-legend-title {
         margin-bottom: 1rem;
         font-weight: 500;
-      }
+
+        @include breakPoint(768px) {
+          font-size: 1.2rem;
+        }
+
+        @include breakPoint(1200px) {
+          font-size: 1.5rem;
+        }
+      } // End skill-legend-title
 
       #{$self}__skill-legend-icon {
         width: 40px;
         height: 40px;
-        line-height: 40px;
+        line-height: 42px;
         margin: 0 auto;
         border-radius: 50%;
         color: white;
-      }
+
+        @include breakPoint(1200px) {
+          font-size: 1.2rem;
+        }
+      } // End skill-legend-icon
 
       #{$self}--skill-legend-proficient-icon {
         background-image: $skills-proficient-color;
@@ -209,8 +254,15 @@
         border: 1px solid #d3d3d3;
         border-radius: 5px;
         padding: 1rem 0;
-        margin: 5px;
+        margin: 10px;
         box-shadow: 5px 5px 5px #d3d3d3;
+        box-shadow: $boxShadow;
+
+        @include breakPoint(1200px) {
+          box-shadow: none;
+          background-color: $secondary-color;
+          color: $txt-color;
+        }
 
         #{$self}__skill-name {
           width: 50%;

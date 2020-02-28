@@ -1430,6 +1430,14 @@ body, h2 {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .sec-contact {
+    background-image: url("../assets/images/backgrounds/contact-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
 .sec-contact__heading {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 -20px;
@@ -1453,8 +1461,32 @@ body, h2 {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .sec-contact__heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: transparent;
+    color: #eeeeee;
+  }
+}
+
 .sec-contact__heading > i {
   display: none;
+}
+
+@media only screen and (min-width: 1200px) {
+  .sec-contact__heading > i {
+    display: inline-block;
+    color: #eeeeee;
+    font-size: 3rem;
+  }
 }
 
 .sec-contact__footer .sec-contact--contact-icon {
@@ -1478,6 +1510,15 @@ body, h2 {
   margin-top: 2em;
 }
 
+@media only screen and (min-width: 1200px) {
+  .sec-contact__footer .sec-contact__email-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .sec-contact__footer .sec-contact__email-container .sec-contact__email-icon-cta {
   display: block;
   width: 80px;
@@ -1489,6 +1530,12 @@ body, h2 {
           transform: rotate(45deg);
   -webkit-animation: heartbeat 1.4s linear infinite;
           animation: heartbeat 1.4s linear infinite;
+}
+
+@media only screen and (min-width: 1200px) {
+  .sec-contact__footer .sec-contact__email-container .sec-contact__email-icon-cta {
+    margin: 2.5em 2em 1rem 2em;
+  }
 }
 
 .sec-contact__footer .sec-contact__email-container .sec-contact__email-icon-cta .sec-contact__email-icon {
@@ -1539,6 +1586,13 @@ body, h2 {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .sec-contact__footer .sec-contact__email-container .sec-contact__email-address {
+    margin: 1.5em 2em;
+    color: #eeeeee;
+  }
+}
+
 .sec-contact__footer .sec-contact__phone-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1556,6 +1610,15 @@ body, h2 {
   margin: 1em auto;
 }
 
+@media only screen and (min-width: 1200px) {
+  .sec-contact__footer .sec-contact__phone-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .sec-contact__footer .sec-contact__phone-container .sec-contact__phone-icon-cta {
   display: block;
   height: 125px;
@@ -1564,6 +1627,12 @@ body, h2 {
   position: relative;
   border-radius: 50%;
   background-color: #00af00;
+}
+
+@media only screen and (min-width: 1200px) {
+  .sec-contact__footer .sec-contact__phone-container .sec-contact__phone-icon-cta {
+    margin: 3em 3em;
+  }
 }
 
 .sec-contact__footer .sec-contact__phone-container .sec-contact__phone-icon-cta .sec-contact__phone-icon {
@@ -1605,6 +1674,12 @@ body, h2 {
   .sec-contact__footer .sec-contact__phone-container .sec-contact__phone-num {
     font-size: 1.5rem;
     font-weight: 600;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .sec-contact__footer .sec-contact__phone-container .sec-contact__phone-num {
+    color: #eeeeee;
   }
 }
 
@@ -1768,6 +1843,15 @@ body, h2 {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .sec-skills {
+    background-color: #4f25f9;
+    background-image: url("../assets/images/backgrounds/skills-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
 .sec-skills__heading {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 -20px;
@@ -1791,8 +1875,31 @@ body, h2 {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .sec-skills__heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: transparent;
+  }
+}
+
 .sec-skills__heading > i {
   display: none;
+}
+
+@media only screen and (min-width: 1200px) {
+  .sec-skills__heading > i {
+    display: inline-block;
+    color: #737373;
+    font-size: 3rem;
+  }
 }
 
 .sec-skills__showcase {
@@ -1918,15 +2025,28 @@ body, h2 {
   .sec-skills__showcase .sec-skills__showcase-skill-names .sec-skills--showcase-skill-names-scroll::before {
     content: "C-Sharp";
     font-size: 4rem;
-    letter-spacing: 0.4rem;
+    font-weight: 600;
+    letter-spacing: 5px;
     color: #333333;
     -webkit-animation: scroll-skill-names 60s infinite 1s;
             animation: scroll-skill-names 60s infinite 1s;
   }
 }
 
+@media only screen and (min-width: 768px) and (min-width: 1200px) {
+  .sec-skills__showcase .sec-skills__showcase-skill-names .sec-skills--showcase-skill-names-scroll::before {
+    color: #eeeeee;
+  }
+}
+
 .sec-skills__chart {
   padding-top: 20px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .sec-skills__chart {
+    padding-top: 50px;
+  }
 }
 
 .sec-skills__chart .sec-skills__skill-legend {
@@ -1945,6 +2065,14 @@ body, h2 {
   top: 0;
 }
 
+@media only screen and (min-width: 640px) {
+  .sec-skills__chart .sec-skills__skill-legend {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
 .sec-skills__chart .sec-skills__skill-legend::before {
   content: "";
   width: 100%;
@@ -1956,11 +2084,9 @@ body, h2 {
   z-index: -1;
 }
 
-@media only screen and (min-width: 640px) {
-  .sec-skills__chart .sec-skills__skill-legend {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+@media only screen and (min-width: 1200px) {
+  .sec-skills__chart .sec-skills__skill-legend::before {
+    display: none;
   }
 }
 
@@ -1969,13 +2095,31 @@ body, h2 {
   font-weight: 500;
 }
 
+@media only screen and (min-width: 768px) {
+  .sec-skills__chart .sec-skills__skill-legend .sec-skills__skill-legend-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .sec-skills__chart .sec-skills__skill-legend .sec-skills__skill-legend-title {
+    font-size: 1.5rem;
+  }
+}
+
 .sec-skills__chart .sec-skills__skill-legend .sec-skills__skill-legend-icon {
   width: 40px;
   height: 40px;
-  line-height: 40px;
+  line-height: 42px;
   margin: 0 auto;
   border-radius: 50%;
   color: white;
+}
+
+@media only screen and (min-width: 1200px) {
+  .sec-skills__chart .sec-skills__skill-legend .sec-skills__skill-legend-icon {
+    font-size: 1.2rem;
+  }
 }
 
 .sec-skills__chart .sec-skills__skill-legend .sec-skills--skill-legend-proficient-icon {
@@ -2015,9 +2159,20 @@ body, h2 {
   border: 1px solid #d3d3d3;
   border-radius: 5px;
   padding: 1rem 0;
-  margin: 5px;
+  margin: 10px;
   -webkit-box-shadow: 5px 5px 5px #d3d3d3;
           box-shadow: 5px 5px 5px #d3d3d3;
+  -webkit-box-shadow: 5px 10px 10px;
+          box-shadow: 5px 10px 10px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .sec-skills__chart .sec-skills__skills .sec-skills__skill-card {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: #eeeeee;
+    color: #737373;
+  }
 }
 
 .sec-skills__chart .sec-skills__skills .sec-skills__skill-card .sec-skills__skill-name {

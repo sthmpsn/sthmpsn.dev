@@ -2,11 +2,30 @@
 $self: &;  // For Nested BEM support. Defines variable as ".sec-contact"
 @include sectionContainer;
 
+@include breakPoint(1200px) {
+    background-image: url("../assets/images/backgrounds/contact-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
     &__heading {
         @include sectionHeading;
 
+        @include breakPoint(1200px){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: transparent;
+            color: $secondary-color;
+        } // End heading for 1200px
+
         & > i {
             display: none;
+            @include breakPoint(1200px){
+                display: inline-block;
+                color: $secondary-color;
+                font-size: 3rem;
+            }
         }
     } // End of &__heading
 
@@ -21,6 +40,11 @@ $self: &;  // For Nested BEM support. Defines variable as ".sec-contact"
             justify-content: center;
             align-items: center;
             margin-top: 2em;
+
+            @include breakPoint(1200px) {
+                flex-direction: row;
+            }
+
             
             #{$self}__email-icon-cta {
                 display: block;
@@ -32,10 +56,14 @@ $self: &;  // For Nested BEM support. Defines variable as ".sec-contact"
                 transform: rotate(45deg);
                 animation: heartbeat 1.4s linear infinite;
 
+                @include breakPoint(1200px) {
+                    margin: 2.5em 2em 1rem 2em;
+                }
+
                 #{$self}__email-icon {
                     color: $btn-txt-color;
                     transform: rotate(-45deg) translateY(-15px);
-                }
+                } // End email-icon
 
                 &::before {
                     content: "";
@@ -74,7 +102,11 @@ $self: &;  // For Nested BEM support. Defines variable as ".sec-contact"
                     // Mobile Landscape
                     font-size: 1.5rem;
                     font-weight: 600;
+                }
 
+                @include breakPoint(1200px) {
+                    margin: 1.5em 2em;
+                    color: $secondary-color;
                 }
             } // End email-address
         } // End Email Container
@@ -86,6 +118,10 @@ $self: &;  // For Nested BEM support. Defines variable as ".sec-contact"
             align-items: center;
             margin: 1em auto;
 
+            @include breakPoint(1200px) {
+                flex-direction: row;
+            }
+
             #{$self}__phone-icon-cta {
                 display: block;
                 height: 125px;
@@ -94,6 +130,10 @@ $self: &;  // For Nested BEM support. Defines variable as ".sec-contact"
                 position: relative;
                 border-radius: 50%;
                 background-color: $green-color;
+
+                @include breakPoint(1200px) {
+                    margin: 3em 3em;
+                }
 
                 #{$self}__phone-icon {
                     width: 100%;
@@ -133,6 +173,11 @@ $self: &;  // For Nested BEM support. Defines variable as ".sec-contact"
                     font-size: 1.5rem;
                     font-weight: 600;
                 }
+
+                @include breakPoint(1200px) {
+                    color: $secondary-color;
+                }
+
             }
 
 

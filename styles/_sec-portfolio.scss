@@ -7,25 +7,33 @@
     min-height: 100vh;
   }
 
+  @include breakPoint(1200px) {
+    background-image: url("../assets/images/backgrounds/portfolio-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+
   &__heading {
     @include sectionHeading;
-
-    & > i {
-      display: none;
-    }
 
     @include breakPoint(1200px){
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: $secondary-color;
+      background-color: transparent;
       color: $txt-color;
+    } // End heading for 1200px
 
-      & > i {
+    & > i {
+      display: none;
+
+      @include breakPoint(1200px){
         display: inline-block;
+        color: $secondary-color;
+        font-size: 3rem;
       }
-    }
-
+    } // End heading > icon
   } // End heading
 
   &__projects {
@@ -96,6 +104,10 @@
             left: 2%;
             box-shadow: 0 0 20px inset $txt-color;
             transform: rotateX(85deg); // rotate the thin rectangle so that the shape gets mixed in with the shadow blur
+
+            @include breakPoint(1200px){
+              box-shadow: 0 0 20px inset $secondary-color;
+            }
           }
         }
 
@@ -194,14 +206,22 @@
       z-index: 100; // Ensure that the Controls are alway on top and accessible otherwise carousel transforms may block access and only apparent in dev tools
     }
 
+    #{$self}--carousel-ctrl-button {
+      // Common control button styles
+      width: 0;
+      height: 0;
+      border-top: 50px solid transparent;
+      border-bottom: 50px solid transparent;
+      cursor: pointer;
+    }
+    
     #{$self}__carousel-ctrl-prev-button {
       @include breakPoint(992px) {
-        width: 0;
-        height: 0;
-        border-top: 50px solid transparent;
-        border-bottom: 50px solid transparent;
         border-right: 50px solid $txt-color;
-        cursor: pointer;
+      }
+
+      @include breakPoint(1200px) {
+        border-right: 50px solid $secondary-color;
       }
     }
 
@@ -221,12 +241,11 @@
 
     #{$self}__carousel-ctrl-next-button {
       @include breakPoint(992px) {
-        width: 0;
-        height: 0;
-        border-top: 50px solid transparent;
-        border-bottom: 50px solid transparent;
         border-left: 50px solid $txt-color;
-        cursor: pointer;
+      }
+
+      @include breakPoint(1200px) {
+        border-left: 50px solid $secondary-color;
       }
     }
   } // End carousel-controls

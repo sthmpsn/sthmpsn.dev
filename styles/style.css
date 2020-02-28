@@ -1061,6 +1061,14 @@ body, h2 {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .sec-portfolio {
+    background-image: url("../assets/images/backgrounds/portfolio-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
 .sec-portfolio__heading {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 -20px;
@@ -1084,10 +1092,6 @@ body, h2 {
   }
 }
 
-.sec-portfolio__heading > i {
-  display: none;
-}
-
 @media only screen and (min-width: 1200px) {
   .sec-portfolio__heading {
     display: -webkit-box;
@@ -1099,11 +1103,20 @@ body, h2 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: #eeeeee;
+    background-color: transparent;
     color: #737373;
   }
+}
+
+.sec-portfolio__heading > i {
+  display: none;
+}
+
+@media only screen and (min-width: 1200px) {
   .sec-portfolio__heading > i {
     display: inline-block;
+    color: #eeeeee;
+    font-size: 3rem;
   }
 }
 
@@ -1222,6 +1235,13 @@ body, h2 {
   }
 }
 
+@media only screen and (min-width: 992px) and (min-width: 1200px) {
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card::before {
+    -webkit-box-shadow: 0 0 20px inset #eeeeee;
+            box-shadow: 0 0 20px inset #eeeeee;
+  }
+}
+
 .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card .sec-portfolio__proj-card-container {
   overflow: hidden;
   position: relative;
@@ -1335,14 +1355,23 @@ body, h2 {
   }
 }
 
+.sec-portfolio__carousel-controls .sec-portfolio--carousel-ctrl-button {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 992px) {
   .sec-portfolio__carousel-controls .sec-portfolio__carousel-ctrl-prev-button {
-    width: 0;
-    height: 0;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
     border-right: 50px solid #737373;
-    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .sec-portfolio__carousel-controls .sec-portfolio__carousel-ctrl-prev-button {
+    border-right: 50px solid #eeeeee;
   }
 }
 
@@ -1368,12 +1397,13 @@ body, h2 {
 
 @media only screen and (min-width: 992px) {
   .sec-portfolio__carousel-controls .sec-portfolio__carousel-ctrl-next-button {
-    width: 0;
-    height: 0;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
     border-left: 50px solid #737373;
-    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .sec-portfolio__carousel-controls .sec-portfolio__carousel-ctrl-next-button {
+    border-left: 50px solid #eeeeee;
   }
 }
 

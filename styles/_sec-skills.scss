@@ -47,7 +47,6 @@
 
       /* Hidden orbit path of skills around the HTML image */
       #{$self}__skill-orbit-path {
-        // border: 1px dashed purple;  // debug purposes
         position: relative;
         width: calc(300px * #{$orbitPathScale});
         height: calc(300px * #{$orbitPathScale});
@@ -151,19 +150,15 @@
           font-size: 4rem;
           font-weight: 600;
           letter-spacing: 5px;
-          color: #333333;
+          color: darken($txt-color,30%);  // Want some separation of color between this text and the Skill Legend background color
           animation: scroll-skill-names $spinRate infinite 1s;
 
           @include breakPoint(1200px) {
             color: $secondary-color;
           }
-
-        }
-      } // End skill name Scroll 
+        } // End showcase-skill-names-scroll::before
+      } // End showcase-skill-names 
     } // End showcase 768px breakpoint
-
-
-
   } // End showcase (Orbiting Skills)
 
   &__chart {
@@ -194,9 +189,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        // background-color: rgba(79, 37, 249, 0.8);
         background-color: rgba(0, 0,0, 0.6);
-        // background-color: rgba(40, 19, 125, 0.6);
         z-index: -1;
 
         @include breakPoint(1200px) {
@@ -223,7 +216,7 @@
         line-height: 42px;
         margin: 0 auto;
         border-radius: 50%;
-        color: white;
+        color: $secondary-color;
 
         @include breakPoint(1200px) {
           font-size: 1.2rem;
@@ -251,11 +244,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid #d3d3d3;
+        border: 1px solid $secondary-color;
         border-radius: 5px;
         padding: 1rem 0;
-        margin: 10px;
-        box-shadow: 5px 5px 5px #d3d3d3;
+        margin: 10px auto;
         box-shadow: $boxShadow;
 
         @include breakPoint(1200px) {
@@ -277,7 +269,7 @@
           text-align: center;
           margin: 0 auto;
           border-radius: 50%;
-          color: white;
+          color: $secondary-color;
         }
 
         #{$self}--skill-level-proficient {

@@ -12,19 +12,15 @@ $purple-color: #800080;
 $skills-proficient-color: radial-gradient(circle at top right,#00af00, #9bbb9b);
 $skills-intermediate-color: radial-gradient(circle at top right,#800080, #c56fc5);
 $skills-advance-color: radial-gradient(circle at top right,#ff0000,#ff9191);
-
+$submit-button-color: #0a3d62;
 
 // *** Basic reusable variables ***
 
 // Box Shadow Default
 $boxShadow: 5px 10px 10px;
 
-// Tool-tips
-$tool-tip-bg-color: #009cdc;
-
-
 // Skills Orbit Controls
 $orbitPathScale: 1.7;
 $orbitAngle: 70deg;
 $skillImgScale: .5;
-$spinRate: 60s;
+$spinRate: 30s;

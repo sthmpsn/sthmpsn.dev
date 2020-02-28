@@ -19,7 +19,6 @@ body, h2 {
 }
 
 .grid-wrapper {
-  border: 1px solid green;
   margin: 0 auto;
   background-color: #eeeeee;
   display: -ms-grid;
@@ -44,19 +43,19 @@ body, h2 {
       grid-template-areas: "m-header" "m-about" "m-aside";
 }
 
-.sec-main__header {
+.sec-main .sec-main__header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: m-header;
 }
 
-.sec-main__about-me {
+.sec-main .sec-main__about-me {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: m-about;
 }
 
-.sec-main__aside {
+.sec-main .sec-main__aside {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: m-aside;
@@ -87,13 +86,13 @@ body, h2 {
       grid-template-areas: "p-heading" "p-projects";
 }
 
-.sec-portfolio__heading {
+.sec-portfolio .sec-portfolio__heading {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: p-heading;
 }
 
-.sec-portfolio__projects {
+.sec-portfolio .sec-portfolio__projects {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: p-projects;
@@ -107,7 +106,7 @@ body, h2 {
         grid-template-rows: auto 1fr .5fr;
         grid-template-areas: "p-heading" "p-projects" "p-controls";
   }
-  .sec-portfolio__carousel-controls {
+  .sec-portfolio .sec-portfolio__carousel-controls {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     grid-area: p-controls;
@@ -127,13 +126,13 @@ body, h2 {
       grid-template-areas: "c-heading" "c-footer";
 }
 
-.sec-contact__heading {
+.sec-contact .sec-contact__heading {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: c-heading;
 }
 
-.sec-contact__footer {
+.sec-contact .sec-contact__footer {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: c-footer;
@@ -143,23 +142,39 @@ body, h2 {
       grid-template-columns: 1fr;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-      grid-template-areas: "c-email" "c-phone" "c-social";
+      grid-template-areas: "c-email" "c-phone" "c-form" "c-social";
 }
 
-.sec-contact__footer__email-container {
+@media only screen and (min-width: 992px) {
+  .sec-contact .sec-contact__footer {
+    -ms-grid-columns: .1fr 2fr;
+        grid-template-columns: .1fr 2fr;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "c-social c-email" "c-social c-phone" "c-form   c-form";
+  }
+}
+
+.sec-contact .sec-contact__footer .sec-contact__email-container {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: c-email;
 }
 
-.sec-contact__footer__phone-container {
+.sec-contact .sec-contact__footer .sec-contact__phone-container {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: c-phone;
 }
 
-.sec-contact__footer__social-media {
+.sec-contact .sec-contact__footer .sec-contact__form-container {
   -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: c-form;
+}
+
+.sec-contact .sec-contact__footer .sec-contact__social-media {
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: c-social;
 }
@@ -177,13 +192,13 @@ body, h2 {
       grid-template-areas: "s-heading" "s-chart";
 }
 
-.sec-skills__heading {
+.sec-skills .sec-skills__heading {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: s-heading;
 }
 
-.sec-skills__chart {
+.sec-skills .sec-skills__chart {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: s-chart;
@@ -193,7 +208,7 @@ body, h2 {
   .sec-skills {
         grid-template-areas: "s-heading" "s-showcase" "s-chart";
   }
-  .sec-skills__showcase {
+  .sec-skills .sec-skills__showcase {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: s-showcase;
@@ -1525,7 +1540,7 @@ body, h2 {
   height: 80px;
   margin: 2.5em auto 1rem auto;
   padding: 1.2rem;
-  background-color: red;
+  background-color: #ff0000;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-animation: heartbeat 1.4s linear infinite;
@@ -1683,7 +1698,7 @@ body, h2 {
   }
 }
 
-.sec-contact__footer .sec-contact__contact-form {
+.sec-contact__footer .sec-contact__form-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1693,14 +1708,14 @@ body, h2 {
   margin: 1em 0;
 }
 
-.sec-contact__footer .sec-contact__contact-form .sec-contact__form {
+.sec-contact__footer .sec-contact__form-container .sec-contact__form {
   width: 100%;
   max-width: 600px;
   min-width: 290px;
   justify-self: center;
   background-image: -webkit-gradient(linear, right top, left bottom, from(#a48dff), to(#4f25f9));
   background-image: linear-gradient(to bottom left, #a48dff, #4f25f9);
-  color: white;
+  color: #eeeeee;
   border-radius: 5px;
   padding: 20px;
   display: -webkit-box;
@@ -1712,35 +1727,35 @@ body, h2 {
           flex-direction: column;
 }
 
-.sec-contact__footer .sec-contact__contact-form .sec-contact__form > * {
+.sec-contact__footer .sec-contact__form-container .sec-contact__form > * {
   margin: 10px 0;
 }
 
-.sec-contact__footer .sec-contact__contact-form .sec-contact__form > label > * {
+.sec-contact__footer .sec-contact__form-container .sec-contact__form > label > * {
   border-radius: 5px;
   padding: 10px;
   display: block;
   background-color: #eeeeee;
 }
 
-.sec-contact__footer .sec-contact__contact-form .sec-contact__form > label > *:focus {
+.sec-contact__footer .sec-contact__form-container .sec-contact__form > label > *:focus {
   background-color: white;
 }
 
-.sec-contact__footer .sec-contact__contact-form .sec-contact__form-name-input {
+.sec-contact__footer .sec-contact__form-container .sec-contact__form-name-input {
   width: 75%;
 }
 
-.sec-contact__footer .sec-contact__contact-form .sec-contact__form-email-input {
+.sec-contact__footer .sec-contact__form-container .sec-contact__form-email-input {
   width: 100%;
 }
 
-.sec-contact__footer .sec-contact__contact-form .sec-contact__form-message-input {
+.sec-contact__footer .sec-contact__form-container .sec-contact__form-message-input {
   width: 100%;
   height: 100px;
 }
 
-.sec-contact__footer .sec-contact__contact-form .sec-contact__form-submit-button {
+.sec-contact__footer .sec-contact__form-container .sec-contact__form-submit-button {
   -ms-flex-item-align: end;
       align-self: flex-end;
   border: 2px solid #0a3d62;
@@ -1760,18 +1775,18 @@ body, h2 {
   overflow: hidden;
 }
 
-.sec-contact__footer .sec-contact__contact-form .sec-contact__form-submit-button:hover {
-  color: white;
-  border-color: white;
+.sec-contact__footer .sec-contact__form-container .sec-contact__form-submit-button:hover {
+  color: #eeeeee;
+  border-color: #eeeeee;
   z-index: 2;
 }
 
-.sec-contact__footer .sec-contact__contact-form .sec-contact__form-submit-button:active {
+.sec-contact__footer .sec-contact__form-container .sec-contact__form-submit-button:active {
   top: 0;
 }
 
-.sec-contact__footer .sec-contact__contact-form .sec-contact__form-submit-button::before {
-  content: '';
+.sec-contact__footer .sec-contact__form-container .sec-contact__form-submit-button::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -1784,14 +1799,37 @@ body, h2 {
   transition: height 1.2s;
 }
 
-.sec-contact__footer .sec-contact__contact-form .sec-contact__form-submit-button:hover::before {
+.sec-contact__footer .sec-contact__form-container .sec-contact__form-submit-button:hover::before {
   height: 190%;
 }
 
 .sec-contact__footer .sec-contact__social-media {
-  width: 100%;
   text-align: center;
   margin: 1em 0;
+}
+
+@media only screen and (min-width: 992px) {
+  .sec-contact__footer .sec-contact__social-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    left: 0;
+    background-color: rgba(79, 37, 249, 0.5);
+    border-radius: 0 15px 15px 0;
+    padding: 10px 25px;
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .sec-contact__footer .sec-contact__social-media {
+    background-color: white;
+  }
 }
 
 .sec-contact__footer .sec-contact__social-media .sec-contact__icon {
@@ -1934,8 +1972,8 @@ body, h2 {
     border-radius: 100%;
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
-    -webkit-animation: spin-right 60s linear infinite;
-            animation: spin-right 60s linear infinite;
+    -webkit-animation: spin-right 30s linear infinite;
+            animation: spin-right 30s linear infinite;
     /* Skills image counter rotation to keep upright */
   }
   .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills--skill-rotate {
@@ -1956,8 +1994,8 @@ body, h2 {
             transform: rotateX(-95deg);
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
-    -webkit-animation: spin-left 60s linear infinite;
-            animation: spin-left 60s linear infinite;
+    -webkit-animation: spin-left 30s linear infinite;
+            animation: spin-left 30s linear infinite;
   }
   .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills--skill-rotate > img {
     -webkit-transform: scale(0.5);
@@ -2027,9 +2065,9 @@ body, h2 {
     font-size: 4rem;
     font-weight: 600;
     letter-spacing: 5px;
-    color: #333333;
-    -webkit-animation: scroll-skill-names 60s infinite 1s;
-            animation: scroll-skill-names 60s infinite 1s;
+    color: #272727;
+    -webkit-animation: scroll-skill-names 30s infinite 1s;
+            animation: scroll-skill-names 30s infinite 1s;
   }
 }
 
@@ -2113,7 +2151,7 @@ body, h2 {
   line-height: 42px;
   margin: 0 auto;
   border-radius: 50%;
-  color: white;
+  color: #eeeeee;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -2156,12 +2194,10 @@ body, h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid #d3d3d3;
+  border: 1px solid #eeeeee;
   border-radius: 5px;
   padding: 1rem 0;
-  margin: 10px;
-  -webkit-box-shadow: 5px 5px 5px #d3d3d3;
-          box-shadow: 5px 5px 5px #d3d3d3;
+  margin: 10px auto;
   -webkit-box-shadow: 5px 10px 10px;
           box-shadow: 5px 10px 10px;
 }
@@ -2188,7 +2224,7 @@ body, h2 {
   text-align: center;
   margin: 0 auto;
   border-radius: 50%;
-  color: white;
+  color: #eeeeee;
 }
 
 .sec-skills__chart .sec-skills__skills .sec-skills__skill-card .sec-skills--skill-level-proficient {

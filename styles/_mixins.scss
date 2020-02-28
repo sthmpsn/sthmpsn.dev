@@ -4,7 +4,7 @@
   @media only screen and (min-width: $screenWidth) {
     @content;
   }
-}
+} // End breakPoint
 
 // Standardize on section container styles for consistency
 @mixin sectionContainer {
@@ -22,8 +22,7 @@
   @include breakPoint(1400px){
     padding: 0 120px 20px 120px;
   }
-
-}
+} // End sectionContainer
 
 // Standardize on section HEADINGS styles for consistency
 @mixin sectionHeading {
@@ -43,18 +42,12 @@
   @include breakPoint(1200px){
     margin: 0;
   }
-
-  @include breakPoint(1400px){
-    // margin: 0 -120px;
-  }
-
-}
+} // End sectionHeading
 
 // Standardize on section body content styles for consistency
 @mixin sectionBody {
   padding-top: 20px;  // since the sectionContainer & sectionHeading control a majority of the spacing only fine tune is needed
 }
-
 
 // Button Generator
 @mixin newButton($padding-height, $padding-width, $line-height, $font-size, $border-radius: 0) {
@@ -78,7 +71,7 @@
   &:active {
     border-color:  $txt-color $btn-txt-color $btn-txt-color $txt-color;
   }
-}
+} // End newButton
 
   // Project Card Carousel Zoom
   @mixin zoomCard($zoom){
@@ -90,4 +83,4 @@
     &:nth-child(6) { transform: rotateY(225deg) translateZ( $zoom); }
     &:nth-child(7) { transform: rotateY(270deg) translateZ( $zoom); }
     &:nth-child(8) { transform: rotateY(315deg) translateZ( $zoom); }
-  }
+  } // End zoomCard

@@ -13,7 +13,6 @@
     background-size: 100% 100%;
   }
 
-
   &__heading {
     @include sectionHeading;
 
@@ -66,7 +65,6 @@
         border-radius: 5px;
         box-shadow: $boxShadow;
         position: relative;
-        // overflow: hidden;  
         // No longer using overflow hidden since card shadow effect (::before) must overflow. 
         //Added another layer (proj-card-container) in order to contain the scaling and rotating image on hover
 
@@ -82,7 +80,6 @@
           box-shadow: none;
           overflow: visible;
           transform-style: preserve-3d;
-          // @include zoomCard(340px); // Increase this for more space between cards (also depends on width)
           @include zoomCard(320px); // Increase this for more space between cards (also depends on width)
             // TOA (Tangent = Opposite / Adjacent) =  320px (rounded up from 319.88) with 8 carousel objects having a width of 265px
             // 8/360 = 45deg  ( 8 cards / 360 degrees )
@@ -92,7 +89,6 @@
             // .41421 = 132.5 / A
             // A = 132.5 / .41421
             // A = 319.88  ... Round up to 320px and fits perfectly.  Increase the pixel length for more space between cards
-
 
           // Card shadows while in carousel configuration
           &::before {
@@ -108,8 +104,8 @@
             @include breakPoint(1200px){
               box-shadow: 0 0 20px inset $secondary-color;
             }
-          }
-        }
+          } // End &::before
+        } // End proj-card breakPoint 992px
 
         // The purpose of this container is to contain the rotating and scaling image effect while the card can "overflow" the drop shadow in the carousel
         #{$self}__proj-card-container {
@@ -213,7 +209,7 @@
       border-top: 50px solid transparent;
       border-bottom: 50px solid transparent;
       cursor: pointer;
-    }
+    } // End carousel-ctrl-button
     
     #{$self}__carousel-ctrl-prev-button {
       @include breakPoint(992px) {
@@ -223,7 +219,7 @@
       @include breakPoint(1200px) {
         border-right: 50px solid $secondary-color;
       }
-    }
+    } // End carousel-ctrl-prev-button
 
     #{$self}__carousel-proj-details {
       @include breakPoint(992px) {
@@ -237,7 +233,7 @@
         border-radius: 15px;
         border: 1px solid $txt-color;
       }
-    }
+    } // End carousel-proj-details
 
     #{$self}__carousel-ctrl-next-button {
       @include breakPoint(992px) {

@@ -1,318 +1,323 @@
 .sec-contact {
-$self: &;  // For Nested BEM support. Defines variable as ".sec-contact"
-@include sectionContainer;
+  $self: &; // For Nested BEM support. Defines variable as ".sec-contact"
+  @include sectionContainer;
 
-@include breakPoint(1200px) {
+  @include breakPoint(1200px) {
     background-image: url("../assets/images/backgrounds/contact-bg.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-}
+  }
 
-    &__heading {
-        @include sectionHeading;
+  &__heading {
+    @include sectionHeading;
 
-        @include breakPoint(1200px){
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: transparent;
-            color: $secondary-color;
-        } // End heading for 1200px
+    @include breakPoint(1200px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: transparent;
+      color: $secondary-color;
+    } // End heading for 1200px
 
-        & > i {
-            display: none;
-            @include breakPoint(1200px){
-                display: inline-block;
-                color: $secondary-color;
-                font-size: 3rem;
-            }
+    & > i {
+      display: none;
+      @include breakPoint(1200px) {
+        display: inline-block;
+        color: $secondary-color;
+        font-size: 3rem;
+      }
+    } // end of & > i (icon)
+  } // End of &__heading
+
+  &__footer {
+    #{$self}--contact-icon {
+      font-size: 2.5rem;
+    }
+
+    #{$self}__email-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2em;
+
+      @include breakPoint(1200px) {
+        flex-direction: row;
+      }
+
+      #{$self}__email-icon-cta {
+        display: block;
+        width: 80px;
+        height: 80px;
+        margin: 2.5em auto 1rem auto;
+        padding: 1.2rem;
+        background-color: $red-color;
+        transform: rotate(45deg);
+        animation: heartbeat 1.4s linear infinite;
+
+        @include breakPoint(1200px) {
+          margin: 2.5em 2em 1rem 2em;
         }
-    } // End of &__heading
 
-    &__footer {
-        #{$self}--contact-icon {
-            font-size: 2.5rem;
-        }        
-        
-        #{$self}__email-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: 2em;
+        #{$self}__email-icon {
+          color: $btn-txt-color;
+          transform: rotate(-45deg) translateY(-15px);
+        } // End email-icon
 
-            @include breakPoint(1200px) {
-                flex-direction: row;
-            }
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: $red-color;
+          transform: translateY(-50%);
+          border-radius: 50%;
+          z-index: -1;
+        }
 
-            
-            #{$self}__email-icon-cta {
-                display: block;
-                width: 80px;
-                height: 80px;
-                margin: 2.5em auto 1rem auto;
-                padding: 1.2rem; 
-                background-color: red;
-                transform: rotate(45deg);
-                animation: heartbeat 1.4s linear infinite;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: $red-color;
+          transform: translatex(-50%);
+          border-radius: 50%;
+          z-index: -1;
+        }
+      } // end Email-icon-cta
 
-                @include breakPoint(1200px) {
-                    margin: 2.5em 2em 1rem 2em;
-                }
+      #{$self}__email-address {
+        margin: 1.5em auto;
+        font-style: normal;
+        font-weight: bold;
+        letter-spacing: 0.3rem;
 
-                #{$self}__email-icon {
-                    color: $btn-txt-color;
-                    transform: rotate(-45deg) translateY(-15px);
-                } // End email-icon
+        @include breakPoint(640px) {
+          // Mobile Landscape
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
 
-                &::before {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: #ff0000;
-                    transform: translateY(-50%);
-                    border-radius: 50%;
-                    z-index: -1;
-                  }
-            
-                  &::after {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: $red-color;
-                    transform: translatex(-50%);
-                    border-radius: 50%;
-                    z-index: -1;
-                  }
-            } // end Email-icon-cta
-           
-            #{$self}__email-address {
-                margin: 1.5em auto;
-                font-style: normal;
-                font-weight: bold;
-                letter-spacing: 0.3rem;
+        @include breakPoint(1200px) {
+          margin: 1.5em 2em;
+          color: $secondary-color;
+        }
+      } // End email-address
+    } // End Email Container
 
-                @include breakPoint(640px) {
-                    // Mobile Landscape
-                    font-size: 1.5rem;
-                    font-weight: 600;
-                }
+    #{$self}__phone-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 1em auto;
 
-                @include breakPoint(1200px) {
-                    margin: 1.5em 2em;
-                    color: $secondary-color;
-                }
-            } // End email-address
-        } // End Email Container
-        
-        #{$self}__phone-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 1em auto;
+      @include breakPoint(1200px) {
+        flex-direction: row;
+      }
 
-            @include breakPoint(1200px) {
-                flex-direction: row;
-            }
+      #{$self}__phone-icon-cta {
+        display: block;
+        height: 125px;
+        width: 125px;
+        margin: 1.5em auto;
+        position: relative;
+        border-radius: 50%;
+        background-color: $green-color;
 
-            #{$self}__phone-icon-cta {
-                display: block;
-                height: 125px;
-                width: 125px;
-                margin: 1.5em auto;
-                position: relative;
-                border-radius: 50%;
-                background-color: $green-color;
+        @include breakPoint(1200px) {
+          margin: 3em 3em;
+        }
 
-                @include breakPoint(1200px) {
-                    margin: 3em 3em;
-                }
+        #{$self}__phone-icon {
+          width: 100%;
+          text-align: center;
+          line-height: 125px;
+          color: $default-icon-color;
+          transform: rotateY(180deg);
+        } // End phone-icon
 
-                #{$self}__phone-icon {
-                    width: 100%;
-                    text-align: center;
-                    line-height: 125px;
-                    color: $default-icon-color;
-                    transform: rotateY(180deg);
-                } // End phone-icon
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          border: 1px solid $green-color;
+          border-radius: 50%;
+          transform: scale(1.5);
+          animation: pulse 1.8s linear infinite;
+        }
 
-                &::before,
-                &::after {
-                  content: "";
-                  position: absolute;
-                  left: 0;
-                  right: 0;
-                  top: 0;
-                  bottom: 0;
-                  border: 1px solid $green-color;
-                  border-radius: 50%;
-                  transform: scale(1.5);
-                  animation: pulse 1.8s linear infinite;
-                }
-        
-                &::after {
-                  animation-delay: 0.5s;
-                }
+        &::after {
+          animation-delay: 0.5s;
+        }
+      } // End phone-icon-cta
 
-            } // End phone-icon-cta
+      #{$self}__phone-num {
+        margin: 1em auto;
+        font-weight: bold;
+        letter-spacing: 0.3rem;
 
-            #{$self}__phone-num {
-                margin: 1em auto;
-                font-weight: bold;
-                letter-spacing: 0.3rem;
+        @include breakPoint(640px) {
+          // Mobile Landscape
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
 
-                @include breakPoint(640px) {
-                    // Mobile Landscape
-                    font-size: 1.5rem;
-                    font-weight: 600;
-                }
+        @include breakPoint(1200px) {
+          color: $secondary-color;
+        }
+      } // End phone-num
+    } // End phone_container
 
-                @include breakPoint(1200px) {
-                    color: $secondary-color;
-                }
+    #{$self}__form-container {
+      display: flex;
+      justify-content: center;
+      margin: 1em 0;
 
-            }
+      #{$self}__form {
+        width: 100%;
+        max-width: 600px;
+        min-width: 290px;
+        justify-self: center;
+        background-image: linear-gradient(
+          to bottom left,
+          #a48dff,
+          $primary-color
+        );
+        color: $secondary-color;
+        border-radius: 5px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
 
+        & > * {
+          margin: 10px 0;
+        }
 
-        } // End phone_container    
-        
-        #{$self}__contact-form {
-            display: flex;
-            justify-content: center;
-            margin: 1em 0;
+        & > label > * {
+          border-radius: 5px;
+          padding: 10px;
+          display: block;
+          background-color: $secondary-color;
 
-            #{$self}__form {
-                width: 100%;
-                max-width: 600px;
-                min-width: 290px;
-                justify-self: center;
-                // background-color: rgba(112, 112, 255,1);
-                background-image: linear-gradient(to bottom left,#a48dff,$primary-color);
-                color: white;
-                border-radius: 5px;
-                padding: 20px;
-                display: flex;
-                flex-direction: column;
-                
+          &:focus {
+            background-color: white;
+          }
+        } // End & > label > *  (child elements of the labels / input fields)
 
-                & > * {
-                    margin: 10px 0;
-                }
+        &-name-input {
+          width: 75%;
+        }
 
-                & > label > * {
-                    border-radius: 5px;
-                    padding: 10px;
-                    display: block;
-                    background-color: $secondary-color;
+        &-email-input {
+          width: 100%;
+        }
 
-                    &:focus {
-                        background-color: white;
-                    }
-                }
-                
-                &-name-input {
-                    width: 75%;
-                }
+        &-message-input {
+          width: 100%;
+          height: 100px;
+        }
 
-                &-email-input {
-                    width: 100%;
-                }
+        &-submit-button {
+          align-self: flex-end;
+          border: 2px solid $submit-button-color;
+          background-color: $secondary-color;
+          color: $submit-button-color;
+          top: -2px;
+          padding: 20px 40px;
+          border-radius: 10px;
+          font-size: 1.2rem;
+          font-weight: bold;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: color 0.5s;
+          position: relative;
+          overflow: hidden;
 
-                &-message-input {
-                    width: 100%;
-                    height: 100px;
-                }
+          &:hover {
+            color: $secondary-color;
+            border-color: $secondary-color;
+            z-index: 2;
+          }
 
-                &-submit-button {
-                    align-self: flex-end;
-                    border: 2px solid #0a3d62;
-                    background-color: $secondary-color;
-                    color: #0a3d62;
-                    top: -2px; 
-                    padding: 20px 40px;
-                    border-radius: 10px;
-                    font-size: 1.2rem;
-                    font-weight: bold;
-                    letter-spacing: 3px;
-                    text-transform: uppercase;
-                    cursor: pointer;
-                    transition: color 0.5s;
-                    position: relative;
-                    overflow: hidden;
-                    
-                    &:hover {
-                        color: white;
-                        border-color: white;
-                        z-index: 2;
-                    }
+          &:active {
+            top: 0;
+          }
 
-                    &:active {
-                        top: 0;
-                    }
-
-                    &::before {
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 0%;  // want to later use for animate grow
-                        background: #0a3d62;
-                        z-index: -1;
-                        border-radius: 0 0 50% 50%;
-                        transition: height 1.2s;
-                    }
-
-                    &:hover::before {
-                        height: 190%;
-                    }
-
-                }
-            }
-
-
-        } // End .contact-form
-
-        #{$self}__social-media {
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            text-align: center;
-            margin: 1em 0;
+            height: 0%; // want to later use for animate grow
+            background: $submit-button-color;
+            z-index: -1;
+            border-radius: 0 0 50% 50%;
+            transition: height 1.2s;
+          }
 
-            #{$self}__icon {
-              font-size: 2.5rem;
-              margin: 0.6rem 1.5rem;
-              padding: 10px;
-            }
+          &:hover::before {
+            height: 190%;
+          }
+        } // End Submit Button
+      } // End form
+    } // End .contact-form-container
 
-            #{$self}__github-icon {
-                color: black;
-            }
+    #{$self}__social-media {
+      text-align: center;
+      margin: 1em 0;
 
-            #{$self}__linkedin-icon {
-                color: blue;
-            }
+      @include breakPoint(992px) {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        background-color: rgba($primary-color, 0.5);
+        border-radius: 0 15px 15px 0;
+        padding: 10px 25px;
+        margin-top: 40px;
+      }
 
-            #{$self}__twitter-icon {
-                color: lightblue;
-            }
+      @include breakPoint(1200px) {
+        background-color: white;
+      }
 
-            #{$self}__facebook-icon {
-                color: navy;
-            }
+      #{$self}__icon {
+        font-size: 2.5rem;
+        margin: 0.6rem 1.5rem;
+        padding: 10px;
+      }
 
-            #{$self}__codepen-icon {
-                color: orangered;
-            }
-        } // End social-media
+      #{$self}__github-icon {
+        color: black;
+      }
 
+      #{$self}__linkedin-icon {
+        color: blue;
+      }
 
+      #{$self}__twitter-icon {
+        color: lightblue;
+      }
 
-    } // End of &__footer
+      #{$self}__facebook-icon {
+        color: navy;
+      }
+
+      #{$self}__codepen-icon {
+        color: orangered;
+      }
+    } // End social-media
+  } // End of &__footer
 } // End of .sec-contact

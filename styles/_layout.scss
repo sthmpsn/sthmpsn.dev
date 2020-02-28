@@ -1,6 +1,4 @@
 .grid-wrapper {
-    // width: 95%;  //debug purpose
-    border: 1px solid green;
     margin: 0 auto;
     background-color: $secondary-color;
     display: grid;
@@ -26,15 +24,15 @@
         "m-about"
         "m-aside";
 
-    &__header {
+    .sec-main__header {
         grid-area: m-header;
     }
 
-    &__about-me {
+    .sec-main__about-me {
         grid-area: m-about;
     }
 
-    &__aside {
+    .sec-main__aside {
         grid-area: m-aside;
     }
 
@@ -60,16 +58,15 @@
         "p-heading"
         "p-projects";
 
-    &__heading {
+    .sec-portfolio__heading {
         grid-area: p-heading;
     }
 
-    &__projects {
+    .sec-portfolio__projects {
         grid-area: p-projects;
     }
 
     @include breakPoint(992px){
-        // display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr .5fr;
         grid-template-areas: 
@@ -77,10 +74,9 @@
             "p-projects"
             "p-controls";
 
-        &__carousel-controls {
+        .sec-portfolio__carousel-controls {
             grid-area: p-controls;
         }
-
     } // End breakPoint(992px)
 } // End .sec-portfolio
 
@@ -95,11 +91,11 @@
     "c-heading"
     "c-footer";
 
-    &__heading {
+    .sec-contact__heading {
         grid-area: c-heading;    
     }
 
-    &__footer {
+    .sec-contact__footer {
         grid-area: c-footer;
 
         display: grid;
@@ -108,20 +104,33 @@
         grid-template-areas: 
         "c-email"
         "c-phone"
+        "c-form"
         "c-social";
+
+        @include breakPoint(992px){
+            grid-template-columns: .1fr 2fr;
+            grid-template-rows: auto auto ;
+            grid-template-areas: 
+            "c-social c-email"
+            "c-social c-phone"
+            "c-form   c-form";
+        }
     
-        &__email-container {
+        .sec-contact__email-container {
             grid-area: c-email;
         }
     
-        &__phone-container {
+        .sec-contact__phone-container {
             grid-area: c-phone;
         }
     
-        &__social-media {
-            grid-area: c-social;
+        .sec-contact__form-container {
+            grid-area: c-form;
         }
 
+        .sec-contact__social-media {
+            grid-area: c-social;
+        }
     } // End &__footer
 } // End .sec-contact
 
@@ -136,11 +145,11 @@
     "s-heading"
     "s-chart";
 
-    &__heading {
+    .sec-skills__heading {
         grid-area: s-heading;
     }
 
-    &__chart {
+    .sec-skills__chart {
         grid-area: s-chart;
     }
 
@@ -150,9 +159,8 @@
         "s-showcase"
         "s-chart";
 
-        &__showcase {
+        .sec-skills__showcase {
             grid-area: s-showcase;
         }
-    }
-
-}
+    } // .sec-skills breakpoint 768px
+} // End .sec-skills

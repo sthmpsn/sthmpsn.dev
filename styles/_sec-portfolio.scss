@@ -13,6 +13,19 @@
     & > i {
       display: none;
     }
+
+    @include breakPoint(1200px){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $secondary-color;
+      color: $txt-color;
+
+      & > i {
+        display: inline-block;
+      }
+    }
+
   } // End heading
 
   &__projects {

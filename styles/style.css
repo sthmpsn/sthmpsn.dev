@@ -2075,7 +2075,7 @@ body, h2 {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .sec-skills {
     background-color: #4f25f9;
     background-image: url("../assets/images/backgrounds/skills-bg.svg");
@@ -2107,7 +2107,7 @@ body, h2 {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .sec-skills__heading {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2126,7 +2126,7 @@ body, h2 {
   display: none;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .sec-skills__heading > i {
     display: inline-block;
     color: #737373;
@@ -2265,7 +2265,7 @@ body, h2 {
   }
 }
 
-@media only screen and (min-width: 768px) and (min-width: 1200px) {
+@media only screen and (min-width: 768px) and (min-width: 992px) {
   .sec-skills__showcase .sec-skills__showcase-skill-names .sec-skills--showcase-skill-names-scroll::before {
     color: #eeeeee;
   }
@@ -2275,7 +2275,7 @@ body, h2 {
   padding-top: 20px;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .sec-skills__chart {
     padding-top: 50px;
   }
@@ -2316,7 +2316,7 @@ body, h2 {
   z-index: -1;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .sec-skills__chart .sec-skills__skill-legend::before {
     display: none;
   }
@@ -2396,7 +2396,7 @@ body, h2 {
           box-shadow: 5px 10px 10px;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .sec-skills__chart .sec-skills__skills .sec-skills__skill-card {
     -webkit-box-shadow: none;
             box-shadow: none;

@@ -2,7 +2,7 @@
   $self: &; // For Nested BEM support. Defines variable as ".sec-skilss"
   @include sectionContainer;
 
-  @include breakPoint(1200px) {
+  @include breakPoint(992px) {
     background-color: $primary-color;
     background-image: url("../assets/images/backgrounds/skills-bg.svg");
     background-repeat: no-repeat;
@@ -12,7 +12,7 @@
   &__heading {
     @include sectionHeading;
 
-    @include breakPoint(1200px){
+    @include breakPoint(992px){
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -22,7 +22,7 @@
 
     & > i {
       display: none;
-      @include breakPoint(1200px){
+      @include breakPoint(992px){
         display: inline-block;
         color: $txt-color;
         font-size: 3rem;
@@ -153,7 +153,7 @@
           color: darken($txt-color,30%);  // Want some separation of color between this text and the Skill Legend background color
           animation: scroll-skill-names $spinRate infinite 1s;
 
-          @include breakPoint(1200px) {
+          @include breakPoint(992px) {
             color: $secondary-color;
           }
         } // End showcase-skill-names-scroll::before
@@ -164,7 +164,7 @@
   &__chart {
     @include sectionBody;
 
-    @include breakPoint(1200px) {
+    @include breakPoint(992px) {
       padding-top: 50px;
     }
 
@@ -192,7 +192,7 @@
         background-color: rgba(0, 0,0, 0.6);
         z-index: -1;
 
-        @include breakPoint(1200px) {
+        @include breakPoint(992px) {
           display: none;
         }
       } // End &::before
@@ -250,7 +250,7 @@
         margin: 10px auto;
         box-shadow: $boxShadow;
 
-        @include breakPoint(1200px) {
+        @include breakPoint(992px) {
           box-shadow: none;
           background-color: $secondary-color;
           color: $txt-color;

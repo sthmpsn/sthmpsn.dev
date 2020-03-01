@@ -1832,30 +1832,80 @@ body, h2 {
   }
 }
 
-.sec-contact__footer .sec-contact__social-media .sec-contact__icon {
+.sec-contact__footer .sec-contact__social-media .sec-contact--icon-container {
   font-size: 2.5rem;
   margin: 0.6rem 1.5rem;
   padding: 10px;
 }
 
 .sec-contact__footer .sec-contact__social-media .sec-contact__github-icon {
-  color: black;
+  color: #24292E;
 }
 
 .sec-contact__footer .sec-contact__social-media .sec-contact__linkedin-icon {
-  color: blue;
+  color: #2177B4;
 }
 
 .sec-contact__footer .sec-contact__social-media .sec-contact__twitter-icon {
-  color: lightblue;
+  color: #30A1F2;
 }
 
-.sec-contact__footer .sec-contact__social-media .sec-contact__facebook-icon {
-  color: navy;
+.sec-contact__footer .sec-contact__social-media .sec-contact--facebook-container {
+  position: relative;
+  width: 65px;
+  height: 65px;
+  background-color: transparent;
+  border-radius: 50%;
+  margin: 0.6rem 1.5rem;
+  padding: 10px;
+  -webkit-transition: background-color 1s linear;
+  transition: background-color 1s linear;
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--facebook-container:hover {
+  background-color: #4267B2;
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--facebook-container:hover .sec-contact__facebook-icon {
+  opacity: 0;
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--facebook-container:hover .sec-contact__facebook-thumbs-up-icon {
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--facebook-container .sec-contact__facebook-icon {
+  color: #4267B2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  line-height: 65px;
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--facebook-container .sec-contact__facebook-thumbs-up-icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  line-height: 65px;
+  color: #fff;
+  font-size: 1.8rem;
+  opacity: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all .7s ease-out;
+  transition: all .7s ease-out;
 }
 
 .sec-contact__footer .sec-contact__social-media .sec-contact__codepen-icon {
-  color: orangered;
+  color: #131417;
 }
 
 .sec-skills {

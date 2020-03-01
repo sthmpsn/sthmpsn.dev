@@ -293,31 +293,80 @@
         background-color: white;
       }
 
-      #{$self}__icon {
+      #{$self}--icon-container {
         font-size: 2.5rem;
         margin: 0.6rem 1.5rem;
         padding: 10px;
       }
 
       #{$self}__github-icon {
-        color: black;
+        color: #24292E;
       }
 
       #{$self}__linkedin-icon {
-        color: blue;
+        color: #2177B4;
       }
 
       #{$self}__twitter-icon {
-        color: lightblue;
+        color: #30A1F2;
+        // color: #71C9F8  // Lighter blue
       }
 
-      #{$self}__facebook-icon {
-        color: navy;
+
+      #{$self}--facebook-container {
+        position: relative;
+        width: 65px;
+        height: 65px;
+        background-color: transparent;
+        border-radius: 50%;
+        margin: 0.6rem 1.5rem;
+        padding: 10px;
+        transition: background-color 1s linear;
+
+        &:hover {
+          background-color: #4267B2;
+        }
+
+        &:hover #{$self}__facebook-icon {
+          opacity: 0;
+        }
+
+        &:hover #{$self}__facebook-thumbs-up-icon {
+          opacity: 1;
+          transform: rotate(0deg);
+        }
+
+        #{$self}__facebook-icon {
+          color: #4267B2;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          line-height: 65px;
+          transition: opacity 1s linear;
+        }
+        
+        #{$self}__facebook-thumbs-up-icon {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          line-height: 65px;
+          color: #fff;
+          font-size: 1.8rem;
+          opacity: 0;
+          transform: rotate(45deg);
+          transition: all .7s ease-out;
+        }
       }
 
       #{$self}__codepen-icon {
-        color: orangered;
+        color: #131417;
+        // color: #FFFFFF // Company icon color
       }
     } // End social-media
   } // End of &__footer
 } // End of .sec-contact
+

@@ -7,7 +7,7 @@
     height: 100vh;
   }
 
-  @include breakPoint(1200px) {
+  @include breakPoint(992px) {
     background-image: url("../assets/images/backgrounds/main-bg.svg");
     background-repeat: no-repeat;
     background-size: 38% 100%;
@@ -41,7 +41,7 @@
         flex-direction: column;
         align-items: center;
         font-size: 1.7rem;
-        padding: 0;
+        padding: 0 0 0 32px;
         margin: 15px;
       }
 

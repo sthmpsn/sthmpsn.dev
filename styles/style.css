@@ -65,8 +65,8 @@ body, h2 {
   .sec-main {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: .5fr 1fr;
-        grid-template-columns: .5fr 1fr;
+    -ms-grid-columns: 33% auto;
+        grid-template-columns: 33% auto;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
         grid-template-areas: "m-header  m-about" "m-header  m-aside";
@@ -147,11 +147,21 @@ body, h2 {
 
 @media only screen and (min-width: 992px) {
   .sec-contact .sec-contact__footer {
-    -ms-grid-columns: .1fr 2fr;
-        grid-template-columns: .1fr 2fr;
+    -ms-grid-columns: auto 1fr;
+        grid-template-columns: auto 1fr;
     -ms-grid-rows: auto auto;
         grid-template-rows: auto auto;
-        grid-template-areas: "c-social c-email" "c-social c-phone" "c-form   c-form";
+        grid-template-areas: "c-social c-email" "c-social c-phone" "c-social c-form";
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .sec-contact .sec-contact__footer {
+    -ms-grid-columns: auto 1fr;
+        grid-template-columns: auto 1fr;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "c-social c-email" "c-social c-phone" "c-social c-form";
   }
 }
 
@@ -536,6 +546,12 @@ body, h2 {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .sec-main {
+    padding: 0 60px 20px 80px;
+  }
+}
+
 @media only screen and (min-width: 1200px) {
   .sec-main {
     padding: 0 90px 20px 90px;
@@ -555,7 +571,7 @@ body, h2 {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .sec-main {
     background-image: url("../assets/images/backgrounds/main-bg.svg");
     background-repeat: no-repeat;
@@ -632,7 +648,7 @@ body, h2 {
         -ms-flex-align: center;
             align-items: center;
     font-size: 1.7rem;
-    padding: 0;
+    padding: 0 0 0 32px;
     margin: 15px;
   }
 }
@@ -834,6 +850,12 @@ body, h2 {
   }
 }
 
+@media only screen and (min-width: 992px) and (min-width: 768px) {
+  .sec-main__about {
+    padding: 0 60px 20px 80px;
+  }
+}
+
 @media only screen and (min-width: 992px) and (min-width: 1200px) {
   .sec-main__about {
     padding: 0 90px 20px 90px;
@@ -963,6 +985,12 @@ body, h2 {
   }
 }
 
+@media only screen and (min-width: 992px) and (min-width: 768px) {
+  .sec-main__aside {
+    padding: 0 60px 20px 80px;
+  }
+}
+
 @media only screen and (min-width: 992px) and (min-width: 1200px) {
   .sec-main__aside {
     padding: 0 90px 20px 90px;
@@ -1058,6 +1086,12 @@ body, h2 {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .sec-portfolio {
+    padding: 0 60px 20px 80px;
+  }
+}
+
 @media only screen and (min-width: 1200px) {
   .sec-portfolio {
     padding: 0 90px 20px 90px;
@@ -1076,7 +1110,7 @@ body, h2 {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .sec-portfolio {
     background-image: url("../assets/images/backgrounds/portfolio-bg.svg");
     background-repeat: no-repeat;
@@ -1107,7 +1141,7 @@ body, h2 {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .sec-portfolio__heading {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1127,7 +1161,7 @@ body, h2 {
   display: none;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .sec-portfolio__heading > i {
     display: inline-block;
     color: #eeeeee;
@@ -1250,7 +1284,7 @@ body, h2 {
   }
 }
 
-@media only screen and (min-width: 992px) and (min-width: 1200px) {
+@media only screen and (min-width: 992px) and (min-width: 992px) {
   .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card::before {
     -webkit-box-shadow: 0 0 20px inset #eeeeee;
             box-shadow: 0 0 20px inset #eeeeee;
@@ -1380,12 +1414,6 @@ body, h2 {
 
 @media only screen and (min-width: 992px) {
   .sec-portfolio__carousel-controls .sec-portfolio__carousel-ctrl-prev-button {
-    border-right: 50px solid #737373;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .sec-portfolio__carousel-controls .sec-portfolio__carousel-ctrl-prev-button {
     border-right: 50px solid #eeeeee;
   }
 }
@@ -1412,12 +1440,6 @@ body, h2 {
 
 @media only screen and (min-width: 992px) {
   .sec-portfolio__carousel-controls .sec-portfolio__carousel-ctrl-next-button {
-    border-left: 50px solid #737373;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .sec-portfolio__carousel-controls .sec-portfolio__carousel-ctrl-next-button {
     border-left: 50px solid #eeeeee;
   }
 }
@@ -1433,6 +1455,12 @@ body, h2 {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .sec-contact {
+    padding: 0 60px 20px 80px;
+  }
+}
+
 @media only screen and (min-width: 1200px) {
   .sec-contact {
     padding: 0 90px 20px 90px;
@@ -1445,7 +1473,7 @@ body, h2 {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .sec-contact {
     background-image: url("../assets/images/backgrounds/contact-bg.svg");
     background-repeat: no-repeat;
@@ -1476,7 +1504,7 @@ body, h2 {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .sec-contact__heading {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1496,7 +1524,7 @@ body, h2 {
   display: none;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .sec-contact__heading > i {
     display: inline-block;
     color: #eeeeee;
@@ -1525,7 +1553,7 @@ body, h2 {
   margin-top: 2em;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .sec-contact__footer .sec-contact__email-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1547,7 +1575,7 @@ body, h2 {
           animation: heartbeat 1.4s linear infinite;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .sec-contact__footer .sec-contact__email-container .sec-contact__email-icon-cta {
     margin: 2.5em 2em 1rem 2em;
   }
@@ -1601,7 +1629,7 @@ body, h2 {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .sec-contact__footer .sec-contact__email-container .sec-contact__email-address {
     margin: 1.5em 2em;
     color: #eeeeee;
@@ -1625,7 +1653,7 @@ body, h2 {
   margin: 1em auto;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .sec-contact__footer .sec-contact__phone-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1644,7 +1672,7 @@ body, h2 {
   background-color: #00af00;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .sec-contact__footer .sec-contact__phone-container .sec-contact__phone-icon-cta {
     margin: 3em 3em;
   }
@@ -1692,7 +1720,7 @@ body, h2 {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 992px) {
   .sec-contact__footer .sec-contact__phone-container .sec-contact__phone-num {
     color: #eeeeee;
   }
@@ -1821,12 +1849,19 @@ body, h2 {
     left: 0;
     background-color: rgba(79, 37, 249, 0.5);
     border-radius: 0 15px 15px 0;
-    padding: 10px 25px;
+    padding: 10px 10px;
     margin-top: 40px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
+  .sec-contact__footer .sec-contact__social-media {
+    padding: 10px 25px;
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
   .sec-contact__footer .sec-contact__social-media {
     background-color: white;
   }
@@ -1838,16 +1873,119 @@ body, h2 {
   padding: 10px;
 }
 
-.sec-contact__footer .sec-contact__social-media .sec-contact__github-icon {
+.sec-contact__footer .sec-contact__social-media .sec-contact--github-container {
+  position: relative;
+  width: 65px;
+  height: 65px;
+  margin: 0.6rem 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  -webkit-transition: all 1.5s linear;
+  transition: all 1.5s linear;
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--github-container:hover {
+  background-color: #24292E;
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--github-container:hover .sec-contact__github-icon {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  opacity: 0;
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--github-container:hover .sec-contact__github-git-icon {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  opacity: 1;
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--github-container .sec-contact__github-icon {
   color: #24292E;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  line-height: 65px;
+  opacity: 1;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--github-container .sec-contact__github-git-icon {
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  line-height: 65px;
+  opacity: 0;
+  -webkit-transition: all 1s linear .2s;
+  transition: all 1s linear .2s;
 }
 
 .sec-contact__footer .sec-contact__social-media .sec-contact__linkedin-icon {
   color: #2177B4;
 }
 
-.sec-contact__footer .sec-contact__social-media .sec-contact__twitter-icon {
+.sec-contact__footer .sec-contact__social-media .sec-contact--twitter-container {
+  position: relative;
+  width: 65px;
+  height: 65px;
+  background-color: transparent;
+  border-radius: 50%;
+  margin: 0.6rem 1.5rem;
+  padding: 10px;
+  -webkit-transition: background-color 1s linear .5s, -webkit-transform 1s linear;
+  transition: background-color 1s linear .5s, -webkit-transform 1s linear;
+  transition: background-color 1s linear .5s, transform 1s linear;
+  transition: background-color 1s linear .5s, transform 1s linear, -webkit-transform 1s linear;
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--twitter-container:hover {
+  background-color: #30A1F2;
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--twitter-container:hover .sec-contact__twitter-icon {
+  opacity: 0;
+  -webkit-transform: translate(70px, -20px);
+          transform: translate(70px, -20px);
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--twitter-container:hover .sec-contact__twitter-icon-fly-in {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--twitter-container .sec-contact__twitter-icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  line-height: 65px;
   color: #30A1F2;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--twitter-container .sec-contact__twitter-icon-fly-in {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  line-height: 65px;
+  color: #fff;
+  opacity: 0;
+  -webkit-transform: translate(-70px, 20px);
+          transform: translate(-70px, 20px);
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
 }
 
 .sec-contact__footer .sec-contact__social-media .sec-contact--facebook-container {
@@ -1916,6 +2054,12 @@ body, h2 {
 @media only screen and (min-width: 768px) {
   .sec-skills {
     padding: 0 60px 20px 60px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .sec-skills {
+    padding: 0 60px 20px 80px;
   }
 }
 

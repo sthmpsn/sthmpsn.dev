@@ -2,7 +2,7 @@
   $self: &; // For Nested BEM support. Defines variable as ".sec-contact"
   @include sectionContainer;
 
-  @include breakPoint(1200px) {
+  @include breakPoint(992px) {
     background-image: url("../assets/images/backgrounds/contact-bg.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -11,7 +11,7 @@
   &__heading {
     @include sectionHeading;
 
-    @include breakPoint(1200px) {
+    @include breakPoint(992px) {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -21,7 +21,7 @@
 
     & > i {
       display: none;
-      @include breakPoint(1200px) {
+      @include breakPoint(992px) {
         display: inline-block;
         color: $secondary-color;
         font-size: 3rem;
@@ -41,7 +41,7 @@
       align-items: center;
       margin-top: 2em;
 
-      @include breakPoint(1200px) {
+      @include breakPoint(992px) {
         flex-direction: row;
       }
 
@@ -55,7 +55,7 @@
         transform: rotate(45deg);
         animation: heartbeat 1.4s linear infinite;
 
-        @include breakPoint(1200px) {
+        @include breakPoint(992px) {
           margin: 2.5em 2em 1rem 2em;
         }
 
@@ -103,7 +103,7 @@
           font-weight: 600;
         }
 
-        @include breakPoint(1200px) {
+        @include breakPoint(992px) {
           margin: 1.5em 2em;
           color: $secondary-color;
         }
@@ -117,7 +117,7 @@
       align-items: center;
       margin: 1em auto;
 
-      @include breakPoint(1200px) {
+      @include breakPoint(992px) {
         flex-direction: row;
       }
 
@@ -130,7 +130,7 @@
         border-radius: 50%;
         background-color: $green-color;
 
-        @include breakPoint(1200px) {
+        @include breakPoint(992px) {
           margin: 3em 3em;
         }
 
@@ -172,7 +172,7 @@
           font-weight: 600;
         }
 
-        @include breakPoint(1200px) {
+        @include breakPoint(992px) {
           color: $secondary-color;
         }
       } // End phone-num
@@ -285,11 +285,16 @@
         left: 0;
         background-color: rgba($primary-color, 0.5);
         border-radius: 0 15px 15px 0;
-        padding: 10px 25px;
+        padding: 10px 10px;
         margin-top: 40px;
       }
 
       @include breakPoint(1200px) {
+        padding: 10px 25px;
+        margin-top: 40px;
+      }
+
+      @include breakPoint(992px) {
         background-color: white;
       }
 
@@ -299,19 +304,108 @@
         padding: 10px;
       }
 
-      #{$self}__github-icon {
-        color: #24292E;
+      #{$self}--github-container {
+        position: relative;
+        width: 65px;
+        height: 65px;
+        margin: 0.6rem 1.5rem;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: transparent;
+        transition: all 1.5s linear;
+
+        &:hover {
+          background-color: #24292E;
+        }
+
+        &:hover #{$self}__github-icon {
+          transform: rotateY(180deg);
+          opacity: 0;
+        }
+
+        &:hover #{$self}__github-git-icon {
+          transform: rotateY(180deg);
+          opacity: 1;
+        }
+
+        #{$self}__github-icon {
+          color: #24292E;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          line-height: 65px;
+          opacity: 1;
+          transition: all 1s linear;
+        }
+
+        #{$self}__github-git-icon {
+          color: #fff;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          line-height: 65px;
+          opacity: 0;
+          transition: all 1s linear .2s;
+        }
       }
 
       #{$self}__linkedin-icon {
         color: #2177B4;
       }
 
-      #{$self}__twitter-icon {
-        color: #30A1F2;
-        // color: #71C9F8  // Lighter blue
-      }
+      #{$self}--twitter-container {
+        position: relative;
+        width: 65px;
+        height: 65px;
+        background-color: transparent;
+        border-radius: 50%;
+        margin: 0.6rem 1.5rem;
+        padding: 10px;
+        transition: background-color 1s linear .5s, transform 1s linear;
 
+        &:hover {
+          background-color: #30A1F2;
+        }
+
+        &:hover #{$self}__twitter-icon {
+          opacity: 0;
+          transform: translate(70px, -20px);
+        }
+
+        &:hover #{$self}__twitter-icon-fly-in {
+          opacity: 1;
+          transform: translate(0, 0);
+        }
+
+        #{$self}__twitter-icon {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          line-height: 65px;
+          color: #30A1F2;
+          transition: all 1s linear;
+        }
+
+        #{$self}__twitter-icon-fly-in {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          line-height: 65px;
+          color: #fff;
+          // color: #71C9F8;  // Lighter blue
+          opacity: 0;
+          transform: translate(-70px, 20px);
+          transition: all 1s linear;
+        }
+      }
 
       #{$self}--facebook-container {
         position: relative;

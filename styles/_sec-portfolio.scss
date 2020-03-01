@@ -7,7 +7,7 @@
     min-height: 100vh;
   }
 
-  @include breakPoint(1200px) {
+  @include breakPoint(992px) {
     background-image: url("../assets/images/backgrounds/portfolio-bg.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -16,7 +16,7 @@
   &__heading {
     @include sectionHeading;
 
-    @include breakPoint(1200px){
+    @include breakPoint(992px){
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -27,7 +27,7 @@
     & > i {
       display: none;
 
-      @include breakPoint(1200px){
+      @include breakPoint(992px){
         display: inline-block;
         color: $secondary-color;
         font-size: 3rem;
@@ -101,7 +101,7 @@
             box-shadow: 0 0 20px inset $txt-color;
             transform: rotateX(85deg); // rotate the thin rectangle so that the shape gets mixed in with the shadow blur
 
-            @include breakPoint(1200px){
+            @include breakPoint(992px){
               box-shadow: 0 0 20px inset $secondary-color;
             }
           } // End &::before
@@ -212,11 +212,8 @@
     } // End carousel-ctrl-button
     
     #{$self}__carousel-ctrl-prev-button {
-      @include breakPoint(992px) {
-        border-right: 50px solid $txt-color;
-      }
 
-      @include breakPoint(1200px) {
+      @include breakPoint(992px) {
         border-right: 50px solid $secondary-color;
       }
     } // End carousel-ctrl-prev-button
@@ -236,11 +233,8 @@
     } // End carousel-proj-details
 
     #{$self}__carousel-ctrl-next-button {
-      @include breakPoint(992px) {
-        border-left: 50px solid $txt-color;
-      }
 
-      @include breakPoint(1200px) {
+      @include breakPoint(992px) {
         border-left: 50px solid $secondary-color;
       }
     }

@@ -353,8 +353,36 @@
         }
       }
 
-      #{$self}__linkedin-icon {
-        color: #2177B4;
+      #{$self}--linkedin-container {
+        position: relative;
+        width: 65px;
+        height: 65px;
+        margin: 0.6rem 1.5rem;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: transparent;
+        transition: all .5s linear;
+
+        &:hover {
+          background-color: #2177B4;
+        }
+
+        &:hover #{$self}__linkedin-icon {
+          font-size: 1.8rem;
+          color: #fff;
+        }
+
+        #{$self}__linkedin-icon {
+          color: #2177B4;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          line-height: 65px;
+          opacity: 1;
+          transition: all .5s linear .2s;
+        }
       }
 
       #{$self}--twitter-container {

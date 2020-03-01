@@ -1927,8 +1927,38 @@ body, h2 {
   transition: all 1s linear .2s;
 }
 
-.sec-contact__footer .sec-contact__social-media .sec-contact__linkedin-icon {
+.sec-contact__footer .sec-contact__social-media .sec-contact--linkedin-container {
+  position: relative;
+  width: 65px;
+  height: 65px;
+  margin: 0.6rem 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--linkedin-container:hover {
+  background-color: #2177B4;
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--linkedin-container:hover .sec-contact__linkedin-icon {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--linkedin-container .sec-contact__linkedin-icon {
   color: #2177B4;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  line-height: 65px;
+  opacity: 1;
+  -webkit-transition: all .5s linear .2s;
+  transition: all .5s linear .2s;
 }
 
 .sec-contact__footer .sec-contact__social-media .sec-contact--twitter-container {

@@ -219,6 +219,8 @@
     } // End carousel-ctrl-prev-button
 
     #{$self}__carousel-proj-details {
+      visibility: hidden;  // Hiding carousel-proj-details for now. Will implement along with my javascript and DB portion of my training
+      // so that it will auto populate with skills used for each project  
       @include breakPoint(992px) {
         width: 400px;
         height: 100px;

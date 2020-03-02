@@ -1418,6 +1418,10 @@ body, h2 {
   }
 }
 
+.sec-portfolio__carousel-controls .sec-portfolio__carousel-proj-details {
+  visibility: hidden;
+}
+
 @media only screen and (min-width: 992px) {
   .sec-portfolio__carousel-controls .sec-portfolio__carousel-proj-details {
     width: 400px;

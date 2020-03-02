@@ -193,7 +193,7 @@
 
       #{$self}__showcase-skill-names {
         position: absolute;
-        bottom: -300px;
+        bottom: -350px;
         width: 100%;
         text-align: center;
 
@@ -360,7 +360,6 @@
         box-shadow: none;
       }
     }
-    
 
     #{$self}--certs > img {
       width: 100%;
@@ -386,13 +385,8 @@
       #{$self}__mba-text {
         font-size: 3rem;
         font-weight: 500;
+        text-decoration: none;
       }
-
-    }
-
-
-
-
+    } // End mba-container
   } // End certs
-
 } // End .sec-skills

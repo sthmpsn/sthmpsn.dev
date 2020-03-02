@@ -2361,7 +2361,7 @@ body, h2 {
   }
   .sec-skills__showcase .sec-skills__showcase-skill-names {
     position: absolute;
-    bottom: -300px;
+    bottom: -350px;
     width: 100%;
     text-align: center;
   }
@@ -2610,6 +2610,7 @@ body, h2 {
 .sec-skills__certs .sec-skills__mba-container .sec-skills__mba-text {
   font-size: 3rem;
   font-weight: 500;
+  text-decoration: none;
 }
 
 html {

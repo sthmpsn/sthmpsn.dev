@@ -1969,10 +1969,8 @@ body, h2 {
   border-radius: 50%;
   margin: 0.6rem 1.5rem;
   padding: 10px;
-  -webkit-transition: background-color 1s linear .5s, -webkit-transform 1s linear;
-  transition: background-color 1s linear .5s, -webkit-transform 1s linear;
-  transition: background-color 1s linear .5s, transform 1s linear;
-  transition: background-color 1s linear .5s, transform 1s linear, -webkit-transform 1s linear;
+  -webkit-transition: background-color 1s linear;
+  transition: background-color 1s linear;
 }
 
 .sec-contact__footer .sec-contact__social-media .sec-contact--twitter-container:hover {
@@ -1999,8 +1997,8 @@ body, h2 {
   left: 0;
   line-height: 65px;
   color: #30A1F2;
-  -webkit-transition: all 1s linear;
-  transition: all 1s linear;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
 }
 
 .sec-contact__footer .sec-contact__social-media .sec-contact--twitter-container .sec-contact__twitter-icon-fly-in {
@@ -2014,8 +2012,8 @@ body, h2 {
   opacity: 0;
   -webkit-transform: translate(-70px, 20px);
           transform: translate(-70px, 20px);
-  -webkit-transition: all 1s linear;
-  transition: all 1s linear;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
 }
 
 .sec-contact__footer .sec-contact__social-media .sec-contact--facebook-container {
@@ -2072,8 +2070,35 @@ body, h2 {
   transition: all .7s ease-out;
 }
 
-.sec-contact__footer .sec-contact__social-media .sec-contact__codepen-icon {
+.sec-contact__footer .sec-contact__social-media .sec-contact--codepen-container {
+  position: relative;
+  width: 65px;
+  height: 65px;
+  line-height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  margin: 0.6rem 1.5rem;
+  padding: 10px;
+  -webkit-transition: background-color 1s linear;
+  transition: background-color 1s linear;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--codepen-container:hover {
+  background-color: #000;
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--codepen-container:hover .sec-contact__codepen-icon {
+  color: #fff;
+  -webkit-transform: translateZ(50px) rotateX(180deg) rotateY(180deg) rotateZ(-180deg);
+          transform: translateZ(50px) rotateX(180deg) rotateY(180deg) rotateZ(-180deg);
+}
+
+.sec-contact__footer .sec-contact__social-media .sec-contact--codepen-container .sec-contact__codepen-icon {
   color: #131417;
+  -webkit-transition: all 1.5s linear;
+  transition: all 1.5s linear;
 }
 
 .sec-skills {

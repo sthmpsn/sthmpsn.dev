@@ -393,7 +393,7 @@
         border-radius: 50%;
         margin: 0.6rem 1.5rem;
         padding: 10px;
-        transition: background-color 1s linear .5s, transform 1s linear;
+        transition: background-color 1s linear;
 
         &:hover {
           background-color: #30A1F2;
@@ -417,7 +417,7 @@
           left: 0;
           line-height: 65px;
           color: #30A1F2;
-          transition: all 1s linear;
+          transition: all .5s linear;
         }
 
         #{$self}__twitter-icon-fly-in {
@@ -428,10 +428,9 @@
           left: 0;
           line-height: 65px;
           color: #fff;
-          // color: #71C9F8;  // Lighter blue
           opacity: 0;
           transform: translate(-70px, 20px);
-          transition: all 1s linear;
+          transition: all .5s linear;
         }
       }
 
@@ -484,9 +483,31 @@
         }
       }
 
-      #{$self}__codepen-icon {
-        color: #131417;
-        // color: #FFFFFF // Company icon color
+      #{$self}--codepen-container {
+        position: relative;
+        width: 65px;
+        height: 65px;
+        line-height: 50px;
+        background-color: transparent;
+        border-radius: 50%;
+        margin: 0.6rem 1.5rem;
+        padding: 10px;
+        transition: background-color 1s linear;
+        perspective: 500px;
+
+        &:hover {
+          background-color: #000;
+        }
+
+        &:hover #{$self}__codepen-icon {
+          color: #fff;
+          transform: translateZ(50px) rotateX(180deg) rotateY(180deg) rotateZ(-180deg);
+        }
+
+        #{$self}__codepen-icon {
+          color: #131417;
+          transition: all 1.5s linear;
+        }
       }
     } // End social-media
   } // End of &__footer

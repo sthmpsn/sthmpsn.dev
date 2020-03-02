@@ -152,7 +152,8 @@
     grid-template-rows: auto;
     grid-template-areas: 
     "s-heading"
-    "s-chart";
+    "s-chart"
+    "s-certs";
 
     .sec-skills__heading {
         grid-area: s-heading;
@@ -162,11 +163,16 @@
         grid-area: s-chart;
     }
 
+    .sec-skills__certs {
+        grid-area: s-certs;
+    }
+
     @include breakPoint(768px){
         grid-template-areas: 
         "s-heading"
         "s-showcase"
-        "s-chart";
+        "s-chart"
+        "s-certs";
 
         .sec-skills__showcase {
             grid-area: s-showcase;

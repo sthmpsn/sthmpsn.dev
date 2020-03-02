@@ -199,7 +199,7 @@ body, h2 {
       grid-template-columns: 1fr;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-      grid-template-areas: "s-heading" "s-chart";
+      grid-template-areas: "s-heading" "s-chart" "s-certs";
 }
 
 .sec-skills .sec-skills__heading {
@@ -214,9 +214,15 @@ body, h2 {
   grid-area: s-chart;
 }
 
+.sec-skills .sec-skills__certs {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: s-certs;
+}
+
 @media only screen and (min-width: 768px) {
   .sec-skills {
-        grid-template-areas: "s-heading" "s-showcase" "s-chart";
+        grid-template-areas: "s-heading" "s-showcase" "s-chart" "s-certs";
   }
   .sec-skills .sec-skills__showcase {
     -ms-grid-row: 2;
@@ -2536,6 +2542,74 @@ body, h2 {
 
 .sec-skills__chart .sec-skills__skills .sec-skills__skill-card .sec-skills--skill-level-advance {
   background-image: radial-gradient(circle at top right, #ff0000, #ff9191);
+}
+
+.sec-skills__certs {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 2em;
+}
+
+.sec-skills__certs .sec-skills--certs {
+  height: 100px;
+  width: 190px;
+  border-radius: 10px;
+  background-color: #fff;
+  margin: .7em;
+  padding: 15px;
+  -webkit-box-shadow: 5px 10px 10px;
+          box-shadow: 5px 10px 10px;
+}
+
+@media only screen and (min-width: 992px) {
+  .sec-skills__certs .sec-skills--certs {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+.sec-skills__certs .sec-skills--certs > img {
+  width: 100%;
+  height: 100%;
+}
+
+.sec-skills__certs .sec-skills__mba-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sec-skills__certs .sec-skills__mba-container .sec-skills__mba-icon {
+  font-size: 2rem;
+  line-height: 0;
+  position: relative;
+  top: 17px;
+  left: 44px;
+  -webkit-transform: rotate(33deg);
+          transform: rotate(33deg);
+  color: #b99c00;
+}
+
+.sec-skills__certs .sec-skills__mba-container .sec-skills__mba-text {
+  font-size: 3rem;
+  font-weight: 500;
 }
 
 html {

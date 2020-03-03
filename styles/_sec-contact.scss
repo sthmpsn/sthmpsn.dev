@@ -162,19 +162,20 @@
       } // End phone-icon-cta
 
       #{$self}__phone-num {
-        margin: 1em auto;
-        font-weight: bold;
-        letter-spacing: 0.3rem;
+        display:none;
+      //   margin: 1em auto;
+      //   font-weight: bold;
+      //   letter-spacing: 0.3rem;
 
-        @include breakPoint(640px) {
-          // Mobile Landscape
-          font-size: 1.5rem;
-          font-weight: 600;
-        }
+      //   @include breakPoint(640px) {
+      //     // Mobile Landscape
+      //     font-size: 1.5rem;
+      //     font-weight: 600;
+      //   }
 
-        @include breakPoint(992px) {
-          color: $secondary-color;
-        }
+      //   @include breakPoint(992px) {
+      //     color: $secondary-color;
+      //   }
       } // End phone-num
     } // End phone_container
 
@@ -276,6 +277,7 @@
 
     #{$self}__social-media {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       text-align: center;
       margin: 1em 0;

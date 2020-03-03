@@ -151,3 +151,18 @@
       content:'C-Sharp';
   }
 } // End scroll-skill-names animation
+
+
+// Elements that use this Animation
+// Scroll to top of page link at bottom of the site
+@keyframes slow-blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+} // End slow-blink animation

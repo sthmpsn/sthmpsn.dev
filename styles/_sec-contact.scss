@@ -275,11 +275,12 @@
     } // End .contact-form-container
 
     #{$self}__social-media {
+      display: flex;
+      justify-content: center;
       text-align: center;
       margin: 1em 0;
 
       @include breakPoint(992px) {
-        display: flex;
         flex-direction: column;
         position: absolute;
         left: 0;

@@ -1842,15 +1842,18 @@ body, h2 {
 }
 
 .sec-contact__footer .sec-contact__social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   margin: 1em 0;
 }
 
 @media only screen and (min-width: 992px) {
   .sec-contact__footer .sec-contact__social-media {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

@@ -2333,7 +2333,7 @@ body, h2 {
   .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-mongodb {
     top: 6%;
     right: 18%;
-    background-image: url("../assets/images/skills/logo-mongodb.svg");
+    background-image: url("../assets/images/skills/logo-mongoDB.svg");
     background-repeat: no-repeat;
     background-size: contain;
   }

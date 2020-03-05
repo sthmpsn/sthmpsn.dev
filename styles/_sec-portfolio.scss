@@ -84,23 +84,26 @@
         }
 
         @include breakPoint(992px) {
-          width: 265px;
-          height: 180px;
+          // width: 265px;
+          // height: 180px;
+          width: 290px;
+          height: 220px;
           margin: 0;
           position: absolute;
           box-shadow: none;
           overflow: visible;
           border: none;
           transform-style: preserve-3d;
-          @include zoomCard(320px); // Increase this for more space between cards (also depends on width)
+          @include zoomCard(350px);
+          // @include zoomCard(320px); // Increase this for more space between cards (also depends on width)
             // TOA (Tangent = Opposite / Adjacent) =  320px (rounded up from 319.88) with 8 carousel objects having a width of 265px
             // 8/360 = 45deg  ( 8 cards / 360 degrees )
             // 45/2 = 22.5deg ( divide this angle in half to solve for the adjacent angle )
-            // 265/2 = 132.5px  ( width of card / 2 will give you the px length opposite the 22.5deg angle )
-            // Tan (22.5) = 132.5 / A    [ Where "A" is the Adjacent angle ]
-            // .41421 = 132.5 / A
-            // A = 132.5 / .41421
-            // A = 319.88  ... Round up to 320px and fits perfectly.  Increase the pixel length for more space between cards
+            // 290/2 = 145px  ( width of card / 2 will give you the px length opposite the 22.5deg angle )
+            // Tan (22.5) = 145 / A    [ Where "A" is the Adjacent angle ]
+            // .41421 = 145 / A
+            // A = 145 / .41421
+            // A = 350.06  ... Round up to 350px and fits perfectly.  Increase the pixel length for more space between cards
 
           // Card shadows while in carousel configuration
           &::before {
@@ -120,6 +123,13 @@
             }
           } // End &::before
         } // End proj-card breakPoint 992px
+
+        @include breakPoint(1200px) {
+          width: 350px;
+          // height: 215px;
+          height: 250px;
+          @include zoomCard(422px);
+        }
 
         // The purpose of this container is to contain the rotating and scaling image effect while the card can "overflow" the drop shadow in the carousel
         #{$self}__proj-card-container {
@@ -215,6 +225,10 @@
       justify-content: center;
       align-items: center;
       z-index: 100; // Ensure that the Controls are alway on top and accessible otherwise carousel transforms may block access and only apparent in dev tools
+    }
+
+    @include breakPoint(1200px) {
+      padding: 50px 0;
     }
 
     #{$self}--carousel-ctrl-button {

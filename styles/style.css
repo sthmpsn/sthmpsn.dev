@@ -100,8 +100,8 @@ body, h2 {
   .sec-portfolio {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: auto 1fr .5fr;
-        grid-template-rows: auto 1fr .5fr;
+    -ms-grid-rows: auto 1fr auto;
+        grid-template-rows: auto 1fr auto;
         grid-template-areas: "p-heading" "p-projects" "p-controls";
   }
   .sec-portfolio .sec-portfolio__carousel-controls {
@@ -1267,8 +1267,8 @@ body, h2 {
 
 @media only screen and (min-width: 992px) {
   .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card {
-    width: 265px;
-    height: 180px;
+    width: 290px;
+    height: 220px;
     margin: 0;
     position: absolute;
     -webkit-box-shadow: none;
@@ -1279,36 +1279,36 @@ body, h2 {
             transform-style: preserve-3d;
   }
   .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(1) {
-    -webkit-transform: rotateY(0deg) translateZ(320px);
-            transform: rotateY(0deg) translateZ(320px);
+    -webkit-transform: rotateY(0deg) translateZ(350px);
+            transform: rotateY(0deg) translateZ(350px);
   }
   .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(2) {
-    -webkit-transform: rotateY(45deg) translateZ(320px);
-            transform: rotateY(45deg) translateZ(320px);
+    -webkit-transform: rotateY(45deg) translateZ(350px);
+            transform: rotateY(45deg) translateZ(350px);
   }
   .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(3) {
-    -webkit-transform: rotateY(90deg) translateZ(320px);
-            transform: rotateY(90deg) translateZ(320px);
+    -webkit-transform: rotateY(90deg) translateZ(350px);
+            transform: rotateY(90deg) translateZ(350px);
   }
   .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(4) {
-    -webkit-transform: rotateY(135deg) translateZ(320px);
-            transform: rotateY(135deg) translateZ(320px);
+    -webkit-transform: rotateY(135deg) translateZ(350px);
+            transform: rotateY(135deg) translateZ(350px);
   }
   .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(5) {
-    -webkit-transform: rotateY(180deg) translateZ(320px);
-            transform: rotateY(180deg) translateZ(320px);
+    -webkit-transform: rotateY(180deg) translateZ(350px);
+            transform: rotateY(180deg) translateZ(350px);
   }
   .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(6) {
-    -webkit-transform: rotateY(225deg) translateZ(320px);
-            transform: rotateY(225deg) translateZ(320px);
+    -webkit-transform: rotateY(225deg) translateZ(350px);
+            transform: rotateY(225deg) translateZ(350px);
   }
   .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(7) {
-    -webkit-transform: rotateY(270deg) translateZ(320px);
-            transform: rotateY(270deg) translateZ(320px);
+    -webkit-transform: rotateY(270deg) translateZ(350px);
+            transform: rotateY(270deg) translateZ(350px);
   }
   .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(8) {
-    -webkit-transform: rotateY(315deg) translateZ(320px);
-            transform: rotateY(315deg) translateZ(320px);
+    -webkit-transform: rotateY(315deg) translateZ(350px);
+            transform: rotateY(315deg) translateZ(350px);
   }
   .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card::before {
     content: "";
@@ -1323,6 +1323,45 @@ body, h2 {
     opacity: .2;
     -webkit-transform: rotateX(85deg);
             transform: rotateX(85deg);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card {
+    width: 350px;
+    height: 250px;
+  }
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(1) {
+    -webkit-transform: rotateY(0deg) translateZ(422px);
+            transform: rotateY(0deg) translateZ(422px);
+  }
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(2) {
+    -webkit-transform: rotateY(45deg) translateZ(422px);
+            transform: rotateY(45deg) translateZ(422px);
+  }
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(3) {
+    -webkit-transform: rotateY(90deg) translateZ(422px);
+            transform: rotateY(90deg) translateZ(422px);
+  }
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(4) {
+    -webkit-transform: rotateY(135deg) translateZ(422px);
+            transform: rotateY(135deg) translateZ(422px);
+  }
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(5) {
+    -webkit-transform: rotateY(180deg) translateZ(422px);
+            transform: rotateY(180deg) translateZ(422px);
+  }
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(6) {
+    -webkit-transform: rotateY(225deg) translateZ(422px);
+            transform: rotateY(225deg) translateZ(422px);
+  }
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(7) {
+    -webkit-transform: rotateY(270deg) translateZ(422px);
+            transform: rotateY(270deg) translateZ(422px);
+  }
+  .sec-portfolio__projects .sec-portfolio__carousel .sec-portfolio__proj-card:nth-child(8) {
+    -webkit-transform: rotateY(315deg) translateZ(422px);
+            transform: rotateY(315deg) translateZ(422px);
   }
 }
 
@@ -1439,6 +1478,12 @@ body, h2 {
         -ms-flex-align: center;
             align-items: center;
     z-index: 100;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .sec-portfolio__carousel-controls {
+    padding: 50px 0;
   }
 }
 

@@ -32,12 +32,16 @@
 @mixin sectionHeading {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 -20px;
-  padding: 30px 20px;  // All around padding
+  padding: 15px 20px;  // All around padding
   font-size: 2rem;
   font-weight: bold;
   background-color: $primary-color;
   color: $secondary-color;
   text-align: center;
+
+  @include breakPoint(768px){
+    padding: 30px 20px;
+  }
 
   @include breakPoint(768px){
     margin: 0 -60px;

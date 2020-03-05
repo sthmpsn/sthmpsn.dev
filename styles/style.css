@@ -483,7 +483,7 @@ body, h2 {
     content: 'Atlasian Admin';
   }
   66.4% {
-    content: 'React';
+    content: 'ReactJS';
   }
   74.7% {
     content: 'jQuery';
@@ -525,7 +525,7 @@ body, h2 {
     content: 'Atlasian Admin';
   }
   66.4% {
-    content: 'React';
+    content: 'ReactJS';
   }
   74.7% {
     content: 'jQuery';
@@ -612,7 +612,7 @@ body, h2 {
 .sec-main__header {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 -20px;
-  padding: 30px 20px;
+  padding: 15px 20px;
   font-size: 2rem;
   font-weight: bold;
   background-color: #4f25f9;
@@ -628,6 +628,12 @@ body, h2 {
       -ms-flex-align: center;
           align-items: center;
   z-index: 2;
+}
+
+@media only screen and (min-width: 768px) {
+  .sec-main__header {
+    padding: 30px 20px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -989,7 +995,7 @@ body, h2 {
 
 @media only screen and (min-width: 1200px) {
   .sec-main__about .sec-main__about-me {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -1153,12 +1159,18 @@ body, h2 {
 .sec-portfolio__heading {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 -20px;
-  padding: 30px 20px;
+  padding: 15px 20px;
   font-size: 2rem;
   font-weight: bold;
   background-color: #4f25f9;
   color: #eeeeee;
   text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .sec-portfolio__heading {
+    padding: 30px 20px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -1178,9 +1190,9 @@ body, h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1196,8 +1208,9 @@ body, h2 {
 @media only screen and (min-width: 992px) {
   .sec-portfolio__heading > i {
     display: inline-block;
-    color: #eeeeee;
+    color: #737373;
     font-size: 3rem;
+    margin: 0 2rem;
   }
 }
 
@@ -1520,12 +1533,18 @@ body, h2 {
 .sec-contact__heading {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 -20px;
-  padding: 30px 20px;
+  padding: 15px 20px;
   font-size: 2rem;
   font-weight: bold;
   background-color: #4f25f9;
   color: #eeeeee;
   text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .sec-contact__heading {
+    padding: 30px 20px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -1545,9 +1564,9 @@ body, h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: flex;
+        -ms-flex-pack: flex;
+            justify-content: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1565,6 +1584,7 @@ body, h2 {
     display: inline-block;
     color: #eeeeee;
     font-size: 3rem;
+    margin: 0 2rem;
   }
 }
 
@@ -1796,12 +1816,13 @@ body, h2 {
 }
 
 .sec-contact__footer .sec-contact__form-container .sec-contact__form-email-input {
-  width: 100%;
+  width: 75%;
 }
 
 .sec-contact__footer .sec-contact__form-container .sec-contact__form-message-input {
   width: 100%;
   height: 100px;
+  resize: none;
 }
 
 .sec-contact__footer .sec-contact__form-container .sec-contact__form-submit-button {
@@ -1811,7 +1832,7 @@ body, h2 {
   background-color: #eeeeee;
   color: #0a3d62;
   top: -2px;
-  padding: 20px 40px;
+  padding: 15px 25px;
   border-radius: 10px;
   font-size: 1.2rem;
   font-weight: bold;
@@ -2169,12 +2190,18 @@ body, h2 {
 .sec-skills__heading {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 -20px;
-  padding: 30px 20px;
+  padding: 15px 20px;
   font-size: 2rem;
   font-weight: bold;
   background-color: #4f25f9;
   color: #eeeeee;
   text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .sec-skills__heading {
+    padding: 30px 20px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -2194,9 +2221,9 @@ body, h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -2211,8 +2238,9 @@ body, h2 {
 @media only screen and (min-width: 992px) {
   .sec-skills__heading > i {
     display: inline-block;
-    color: #737373;
+    color: #eeeeee;
     font-size: 3rem;
+    margin: 0 2rem;
   }
 }
 
@@ -2440,7 +2468,7 @@ body, h2 {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: -1;
 }
 

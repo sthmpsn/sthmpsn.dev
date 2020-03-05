@@ -283,7 +283,7 @@
 
       @include breakPoint(768px) {
         font-size: 1rem;
-        padding: 20px 0;     
+        padding: 20px 0;    
       }
 
       @include breakPoint(992px) {
@@ -291,7 +291,7 @@
       }
 
       @include breakPoint(1200px) {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
       }
     } // End about-me
   } // End "about"

@@ -18,7 +18,7 @@
 
     @include breakPoint(992px){
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
       background-color: transparent;
       color: $txt-color;
@@ -29,8 +29,9 @@
 
       @include breakPoint(992px){
         display: inline-block;
-        color: $secondary-color;
+        color: $txt-color;
         font-size: 3rem;
+        margin: 0 2rem;
       }
     } // End heading > icon
   } // End heading

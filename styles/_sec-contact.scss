@@ -13,7 +13,7 @@
 
     @include breakPoint(992px) {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex;
       align-items: center;
       background-color: transparent;
       color: $secondary-color;
@@ -25,6 +25,7 @@
         display: inline-block;
         color: $secondary-color;
         font-size: 3rem;
+        margin: 0 2rem;
       }
     } // end of & > i (icon)
   } // End of &__heading
@@ -220,12 +221,13 @@
         }
 
         &-email-input {
-          width: 100%;
+          width: 75%;
         }
 
         &-message-input {
           width: 100%;
           height: 100px;
+          resize: none;
         }
 
         &-submit-button {
@@ -234,7 +236,7 @@
           background-color: $secondary-color;
           color: $submit-button-color;
           top: -2px;
-          padding: 20px 40px;
+          padding: 15px 25px;
           border-radius: 10px;
           font-size: 1.2rem;
           font-weight: bold;

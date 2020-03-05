@@ -15,7 +15,7 @@
 
     @include breakPoint(992px){
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
       background-color: transparent;
     } // End heading for 1200px
@@ -25,13 +25,14 @@
       display: none;
       @include breakPoint(992px){
         display: inline-block;
-        color: $txt-color;
+        color: $secondary-color;
         font-size: 3rem;
+        margin: 0 2rem;
       }
     }
   } // End heading
 
-  // ORBITING SKILS
+  // ORBITING SKILSS
   &__showcase {
     display: none;
 
@@ -242,7 +243,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-color: rgba(0, 0,0, 0.6);
+        background-color: rgba(0, 0,0, 0.8);
         z-index: -1;
 
         @include breakPoint(992px) {

@@ -13,6 +13,14 @@
   &__heading {
     @include sectionHeading;
 
+    @include breakPoint(768px){
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // background-color: transparent;
+      color: $secondary-color;
+    } // End heading for 768px
+
     @include breakPoint(992px){
       display: flex;
       justify-content: flex-end;
@@ -23,6 +31,14 @@
 
     & > i {
       display: none;
+
+      @include breakPoint(768px){
+        display: inline-block;
+        color: $secondary-color;
+        font-size: 2.5rem;
+        margin: 0 2rem;
+      }
+
       @include breakPoint(992px){
         display: inline-block;
         color: $secondary-color;
@@ -234,6 +250,10 @@
 
       @include breakPoint(640px) {
         justify-content: space-evenly;
+      }
+ 
+      @include breakPoint(992px) {
+        position: relative;
       }
 
       &::before {

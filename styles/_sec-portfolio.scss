@@ -16,22 +16,32 @@
   &__heading {
     @include sectionHeading;
 
-    @include breakPoint(992px){
+    @include breakPoint(768px){
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
+      // background-color: transparent;
+      color: $secondary-color;
+    } // End heading for 768px
+
+    @include breakPoint(992px){
+      justify-content: flex-end;
       background-color: transparent;
       color: $txt-color;
-    } // End heading for 1200px
+    } // End heading for 992px
 
     & > i {
       display: none;
 
-      @include breakPoint(992px){
+      @include breakPoint(768px){
         display: inline-block;
-        color: $txt-color;
-        font-size: 3rem;
+        color: $secondary-color;
+        font-size: 2.5rem;
         margin: 0 2rem;
+      }
+
+      @include breakPoint(992px){
+        color: $txt-color;
       }
     } // End heading > icon
   } // End heading
@@ -80,6 +90,7 @@
           position: absolute;
           box-shadow: none;
           overflow: visible;
+          border: none;
           transform-style: preserve-3d;
           @include zoomCard(320px); // Increase this for more space between cards (also depends on width)
             // TOA (Tangent = Opposite / Adjacent) =  320px (rounded up from 319.88) with 8 carousel objects having a width of 265px
@@ -96,14 +107,16 @@
             content: "";
             position: absolute;
             width: 95%;
-            height: 4px;
-            bottom: -20px;
-            left: 2%;
-            box-shadow: 0 0 20px inset $txt-color;
+            height: 10px;
+            bottom: -45px;
+            left: 4%;
+            border-radius: 5px;
+            box-shadow: 0 0 20px inset black;
+            opacity: .2;
             transform: rotateX(85deg); // rotate the thin rectangle so that the shape gets mixed in with the shadow blur
 
             @include breakPoint(992px){
-              box-shadow: 0 0 20px inset $secondary-color;
+              // box-shadow: 0 0 20px inset $secondary-color;
             }
           } // End &::before
         } // End proj-card breakPoint 992px
@@ -200,6 +213,7 @@
     @include breakPoint(992px) {
       display: flex;
       justify-content: center;
+      align-items: center;
       z-index: 100; // Ensure that the Controls are alway on top and accessible otherwise carousel transforms may block access and only apparent in dev tools
     }
 

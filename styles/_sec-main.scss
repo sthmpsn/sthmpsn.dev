@@ -218,14 +218,23 @@
     
     @include breakPoint(992px) {
       @include sectionContainer;
-      margin-top: 6rem;
+      // margin-top: 6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
     }
+
+    @include breakPoint(1200px) {
+      padding: 0 10em;
+    }
+
+
 
     #{$self}__about-title {
       text-align: center;
 
       @include breakPoint(992px) {
-        margin-bottom: 25px;
+        // margin-bottom: 25px;
       }
 
       #{$self}__about-title-primary {
@@ -269,7 +278,6 @@
     } // End about-title
 
     #{$self}__about-me {
-      margin: auto;
       padding: 20px 0;
       font-size: 0.9rem;
       letter-spacing: 1px;
@@ -287,7 +295,9 @@
       }
 
       @include breakPoint(992px) {
-        letter-spacing: 3px;   
+        letter-spacing: 3px;  
+        position: relative;
+        top: -5%; 
       }
 
       @include breakPoint(1200px) {
@@ -302,10 +312,6 @@
 
     @include breakPoint(768px) {
       text-align: right;
-    }
-
-    @include breakPoint(992px) {
-      @include sectionContainer;
     }
 
     #{$self}__cta-dl-resume {

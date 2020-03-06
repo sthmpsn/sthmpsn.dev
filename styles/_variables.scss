@@ -1,22 +1,21 @@
 // Theme Colors
-// $primary-color: #4f25f9; // Original color
-$primary-color: #042C71; // Option 1
+$primary-color: #042C71; 
 $secondary-color: #eeeeee;
 $txt-color: #737373;
-// $standout-color: #f6fe09; // Original
 $standout-color: #F8D605;
 $heading-bg-color: linear-gradient(to top right, $primary-color,#6A8AC1);
 $btn-bg-color: #CE4912;
 $btn-carousel-color: #F36B1C;
 $btn-txt-color: #fff;
-$default-icon-color: #1d1d1d;
 $red-color: #ff0000;
-$green-color: #00af00;
+$green-color: #008a00;
 $purple-color: #800080;
-$skills-proficient-color: radial-gradient(circle at top right,#00af00, #9bbb9b);
-$skills-intermediate-color: radial-gradient(circle at top right,#800080, #c56fc5);
-$skills-advance-color: radial-gradient(circle at top right,#ff0000,#ff9191);
-$submit-button-color: #0a3d62;
+$skills-banner-color: #0B6AB0;
+$skills-proficient-color: radial-gradient(circle at top right, $btn-carousel-color,$btn-bg-color);
+$skills-intermediate-color: radial-gradient(circle at top right,#c56fc5,$purple-color);
+$skills-advance-color: radial-gradient(circle at top right,#9bbb9b, $green-color);
+$form-bg-color: linear-gradient(to bottom left,$skills-banner-color,$primary-color);
+// $form-submit-color: #0a3d62;
 
 // *** Basic reusable variables ***
 

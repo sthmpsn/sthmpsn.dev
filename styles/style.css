@@ -1806,7 +1806,7 @@ body, h2 {
   margin: 1.5em auto;
   position: relative;
   border-radius: 50%;
-  background-color: #00af00;
+  background-color: #008a00;
 }
 
 @media only screen and (min-width: 992px) {
@@ -1819,7 +1819,7 @@ body, h2 {
   width: 100%;
   text-align: center;
   line-height: 125px;
-  color: #1d1d1d;
+  color: #fff;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
@@ -1831,7 +1831,7 @@ body, h2 {
   right: 0;
   top: 0;
   bottom: 0;
-  border: 1px solid #00af00;
+  border: 1px solid #008a00;
   border-radius: 50%;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
@@ -1863,8 +1863,8 @@ body, h2 {
   max-width: 600px;
   min-width: 290px;
   justify-self: center;
-  background-image: -webkit-gradient(linear, right top, left bottom, from(#a48dff), to(#042C71));
-  background-image: linear-gradient(to bottom left, #a48dff, #042C71);
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#0B6AB0), to(#042C71));
+  background-image: linear-gradient(to bottom left, #0B6AB0, #042C71);
   color: #eeeeee;
   border-radius: 5px;
   padding: 20px;
@@ -1909,9 +1909,9 @@ body, h2 {
 .sec-contact__footer .sec-contact__form-container .sec-contact__form-submit-button {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  border: 2px solid #0a3d62;
+  border: 2px solid #042C71;
   background-color: #eeeeee;
-  color: #0a3d62;
+  color: #042C71;
   top: -2px;
   padding: 15px 25px;
   border-radius: 10px;
@@ -1927,8 +1927,8 @@ body, h2 {
 }
 
 .sec-contact__footer .sec-contact__form-container .sec-contact__form-submit-button:hover {
-  color: #eeeeee;
-  border-color: #eeeeee;
+  color: #fff;
+  border-color: #fff;
   z-index: 2;
 }
 
@@ -1943,7 +1943,7 @@ body, h2 {
   left: 0;
   width: 100%;
   height: 0%;
-  background: #0a3d62;
+  background: #CE4912;
   z-index: -1;
   border-radius: 0 0 50% 50%;
   -webkit-transition: height 1.2s;
@@ -1978,7 +1978,7 @@ body, h2 {
             justify-content: center;
     position: absolute;
     left: 0;
-    background-color: white;
+    background-color: #fff;
     border-radius: 0 15px 15px 0;
     padding: 10px 10px;
     margin-top: 40px;
@@ -2513,14 +2513,14 @@ body, h2 {
   }
   .sec-skills__showcase .sec-skills__showcase-skill-names {
     position: absolute;
-    bottom: -350px;
+    bottom: -400px;
     width: 100%;
     text-align: center;
   }
   .sec-skills__showcase .sec-skills__showcase-skill-names .sec-skills--showcase-skill-names-scroll::before {
     content: "C-Sharp";
     font-size: 4rem;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 5px;
     color: #272727;
     -webkit-animation: scroll-skill-names 30s infinite 1s;
@@ -2552,7 +2552,7 @@ body, h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: center;
-  margin: 0 -20px 1.5em -20px;
+  margin: 4em -20px 1.5em -20px;
   padding: 1.5em 20px;
   background-color: #0B6AB0;
   color: #eeeeee;
@@ -2583,7 +2583,7 @@ body, h2 {
   position: absolute;
   bottom: -15px;
   left: 0;
-  background-color: #09568e;
+  background-color: #09538a;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%);
   z-index: -1;
@@ -2596,7 +2596,7 @@ body, h2 {
   position: absolute;
   bottom: -15px;
   right: 0;
-  background-color: #09568e;
+  background-color: #09538a;
   -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
           clip-path: polygon(0 0, 100% 0, 0 100%);
   z-index: -1;
@@ -2635,15 +2635,15 @@ body, h2 {
 }
 
 .sec-skills__chart .sec-skills__skill-legend .sec-skills--skill-legend-proficient-icon {
-  background-image: radial-gradient(circle at top right, #00af00, #9bbb9b);
+  background-image: radial-gradient(circle at top right, #F36B1C, #CE4912);
 }
 
 .sec-skills__chart .sec-skills__skill-legend .sec-skills--skill-legend-intermediate-icon {
-  background-image: radial-gradient(circle at top right, #800080, #c56fc5);
+  background-image: radial-gradient(circle at top right, #c56fc5, #800080);
 }
 
 .sec-skills__chart .sec-skills__skill-legend .sec-skills--skill-legend-advance-icon {
-  background-image: radial-gradient(circle at top right, #ff0000, #ff9191);
+  background-image: radial-gradient(circle at top right, #9bbb9b, #008a00);
 }
 
 .sec-skills__chart .sec-skills__skills {
@@ -2702,15 +2702,15 @@ body, h2 {
 }
 
 .sec-skills__chart .sec-skills__skills .sec-skills__skill-card .sec-skills--skill-level-proficient {
-  background-image: radial-gradient(circle at top right, #00af00, #9bbb9b);
+  background-image: radial-gradient(circle at top right, #F36B1C, #CE4912);
 }
 
 .sec-skills__chart .sec-skills__skills .sec-skills__skill-card .sec-skills--skill-level-intermediate {
-  background-image: radial-gradient(circle at top right, #800080, #c56fc5);
+  background-image: radial-gradient(circle at top right, #c56fc5, #800080);
 }
 
 .sec-skills__chart .sec-skills__skills .sec-skills__skill-card .sec-skills--skill-level-advance {
-  background-image: radial-gradient(circle at top right, #ff0000, #ff9191);
+  background-image: radial-gradient(circle at top right, #9bbb9b, #008a00);
 }
 
 .sec-skills__certs {

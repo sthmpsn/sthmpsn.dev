@@ -211,14 +211,14 @@
 
       #{$self}__showcase-skill-names {
         position: absolute;
-        bottom: -350px;
+        bottom: -400px;
         width: 100%;
         text-align: center;
 
         #{$self}--showcase-skill-names-scroll::before {
           content: "C-Sharp";
           font-size: 4rem;
-          font-weight: 600;
+          font-weight: 500;
           letter-spacing: 5px;
           color: darken($txt-color,30%);  // Want some separation of color between this text and the Skill Legend background color
           animation: scroll-skill-names $spinRate infinite 1s;
@@ -242,9 +242,9 @@
       display: flex;
       justify-content: space-between;
       text-align: center;
-      margin: 0 -20px 1.5em -20px;
+      margin: 4em -20px 1.5em -20px;
       padding: 1.5em 20px;
-      background-color: #0B6AB0;
+      background-color: $skills-banner-color;
       color: $secondary-color;
       position: sticky;
       top: 0;
@@ -265,7 +265,7 @@
         position: absolute;
         bottom: -15px;
         left: 0;
-        background-color: darken(#0B6AB0, 7%);
+        background-color: darken($skills-banner-color, 8%);
         clip-path: polygon(0 0, 100% 0, 100% 100%);
         z-index: -1;
       } // End &::before
@@ -277,7 +277,7 @@
         position: absolute;
         bottom: -15px;
         right: 0;
-        background-color: darken(#0B6AB0, 7%);
+        background-color: darken($skills-banner-color, 8%);
         clip-path: polygon(0 0, 100% 0, 0 100%);
         z-index: -1;
       } // End &::after

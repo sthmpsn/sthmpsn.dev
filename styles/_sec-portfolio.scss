@@ -27,7 +27,8 @@
     @include breakPoint(992px){
       justify-content: flex-end;
       background-color: transparent;
-      color: $txt-color;
+      color: $primary-color;
+
     } // End heading for 992px
 
     & > i {
@@ -41,7 +42,7 @@
       }
 
       @include breakPoint(992px){
-        color: $txt-color;
+        color: $primary-color;
       }
     } // End heading > icon
   } // End heading
@@ -233,8 +234,6 @@
 
     #{$self}--carousel-ctrl-button {
       // Common control button styles
-      width: 0;
-      height: 0;
       border-top: 50px solid transparent;
       border-bottom: 50px solid transparent;
       cursor: pointer;
@@ -243,7 +242,8 @@
     #{$self}__carousel-ctrl-prev-button {
 
       @include breakPoint(992px) {
-        border-right: 50px solid $secondary-color;
+        border-right: 50px solid $btn-carousel-color;
+        clip-path: ellipse(74% 50% at 76% 50%); // clip so that edges look slightly rounded. Take sharpness off the triangle
       }
     } // End carousel-ctrl-prev-button
 
@@ -262,11 +262,12 @@
         border: 1px solid $txt-color;
       }
     } // End carousel-proj-details
-
+    
     #{$self}__carousel-ctrl-next-button {
 
       @include breakPoint(992px) {
-        border-left: 50px solid $secondary-color;
+        border-left: 50px solid $btn-carousel-color;
+        clip-path: ellipse(74% 50% at 24% 50%);  // clip so that edges look slightly rounded. Take sharpness off the triangle
       }
     }
   } // End carousel-controls

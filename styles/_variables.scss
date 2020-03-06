@@ -1,9 +1,13 @@
 // Theme Colors
-$primary-color: #4f25f9;
+// $primary-color: #4f25f9; // Original color
+$primary-color: #042C71; // Option 1
 $secondary-color: #eeeeee;
 $txt-color: #737373;
-$standout-color: #f6fe09;
-$btn-bg-color: linear-gradient($primary-color,#28137D);
+// $standout-color: #f6fe09; // Original
+$standout-color: #F8D605;
+// $btn-bg-color: linear-gradient($primary-color,#28137D); // original
+$btn-bg-color: #CE4912;
+$btn-carousel-color: #F36B1C;
 $btn-txt-color: #fff;
 $default-icon-color: #1d1d1d;
 $red-color: #ff0000;

@@ -613,7 +613,7 @@ body, h2 {
   padding: 15px 20px;
   font-size: 2rem;
   font-weight: bold;
-  background-color: #4f25f9;
+  background-color: #042C71;
   color: #eeeeee;
   text-align: center;
   display: -webkit-box;
@@ -803,7 +803,7 @@ body, h2 {
 
 @media only screen and (min-width: 992px) {
   .sec-main__header .sec-main__header-nav .sec-main__header-nav-item #nav-link-about {
-    color: #f6fe09;
+    color: #F8D605;
   }
 }
 
@@ -827,8 +827,8 @@ body, h2 {
     transition: all .5s;
   }
   .sec-main__header .sec-main__header-nav .sec-main__header-nav-item .sec-main--header-nav-link:hover {
-    color: #4f25f9 !important;
-    background-color: #f6fe09;
+    color: #042C71 !important;
+    background-color: #F8D605;
     border: none;
   }
   .sec-main__header .sec-main__header-nav .sec-main__header-nav-item .sec-main--header-nav-link::before {
@@ -838,7 +838,7 @@ body, h2 {
     left: 12px;
     width: 12px;
     height: 12px;
-    border: 3px solid #f6fe09;
+    border: 3px solid #F8D605;
     border-width: 0 0 3px 3px;
     opacity: 0;
     -webkit-transition: all 0.3s;
@@ -856,7 +856,7 @@ body, h2 {
     right: 12px;
     width: 12px;
     height: 12px;
-    border: 3px solid #f6fe09;
+    border: 3px solid #F8D605;
     border-width: 3px 3px 0 0;
     opacity: 0;
     -webkit-transition: all 0.3s;
@@ -1025,8 +1025,7 @@ body, h2 {
   font-size: 1rem;
   line-height: normal;
   border-radius: 20px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#4f25f9), to(#28137D));
-  background: linear-gradient(#4f25f9, #28137D);
+  background: #CE4912;
   color: #fff;
   text-decoration: none;
   text-align: center;
@@ -1036,7 +1035,7 @@ body, h2 {
 }
 
 .sec-main__aside .sec-main__cta-dl-resume:hover {
-  color: #f6fe09;
+  color: #F8D605;
 }
 
 .sec-main__aside .sec-main__cta-dl-resume:active {
@@ -1050,8 +1049,7 @@ body, h2 {
     font-size: 1.2rem;
     line-height: normal;
     border-radius: 22px;
-    background: -webkit-gradient(linear, left top, left bottom, from(#4f25f9), to(#28137D));
-    background: linear-gradient(#4f25f9, #28137D);
+    background: #CE4912;
     color: #fff;
     text-decoration: none;
     text-align: center;
@@ -1060,7 +1058,7 @@ body, h2 {
     border-color: #fff #737373 #737373 #fff;
   }
   .sec-main__aside .sec-main__cta-dl-resume:hover {
-    color: #f6fe09;
+    color: #F8D605;
   }
   .sec-main__aside .sec-main__cta-dl-resume:active {
     border-color: #737373 #fff #fff #737373;
@@ -1074,8 +1072,7 @@ body, h2 {
     font-size: 1.3rem;
     line-height: normal;
     border-radius: 25px;
-    background: -webkit-gradient(linear, left top, left bottom, from(#4f25f9), to(#28137D));
-    background: linear-gradient(#4f25f9, #28137D);
+    background: #CE4912;
     color: #fff;
     text-decoration: none;
     text-align: center;
@@ -1084,7 +1081,7 @@ body, h2 {
     border-color: #fff #737373 #737373 #fff;
   }
   .sec-main__aside .sec-main__cta-dl-resume:hover {
-    color: #f6fe09;
+    color: #F8D605;
   }
   .sec-main__aside .sec-main__cta-dl-resume:active {
     border-color: #737373 #fff #fff #737373;
@@ -1140,7 +1137,7 @@ body, h2 {
   padding: 15px 20px;
   font-size: 2rem;
   font-weight: bold;
-  background-color: #4f25f9;
+  background-color: #042C71;
   color: #eeeeee;
   text-align: center;
 }
@@ -1185,7 +1182,7 @@ body, h2 {
         -ms-flex-pack: end;
             justify-content: flex-end;
     background-color: transparent;
-    color: #737373;
+    color: #042C71;
   }
 }
 
@@ -1204,7 +1201,7 @@ body, h2 {
 
 @media only screen and (min-width: 992px) {
   .sec-portfolio__heading > i {
-    color: #737373;
+    color: #042C71;
   }
 }
 
@@ -1488,8 +1485,6 @@ body, h2 {
 }
 
 .sec-portfolio__carousel-controls .sec-portfolio--carousel-ctrl-button {
-  width: 0;
-  height: 0;
   border-top: 50px solid transparent;
   border-bottom: 50px solid transparent;
   cursor: pointer;
@@ -1497,7 +1492,9 @@ body, h2 {
 
 @media only screen and (min-width: 992px) {
   .sec-portfolio__carousel-controls .sec-portfolio__carousel-ctrl-prev-button {
-    border-right: 50px solid #eeeeee;
+    border-right: 50px solid #F36B1C;
+    -webkit-clip-path: ellipse(74% 50% at 76% 50%);
+            clip-path: ellipse(74% 50% at 76% 50%);
   }
 }
 
@@ -1527,7 +1524,9 @@ body, h2 {
 
 @media only screen and (min-width: 992px) {
   .sec-portfolio__carousel-controls .sec-portfolio__carousel-ctrl-next-button {
-    border-left: 50px solid #eeeeee;
+    border-left: 50px solid #F36B1C;
+    -webkit-clip-path: ellipse(74% 50% at 24% 50%);
+            clip-path: ellipse(74% 50% at 24% 50%);
   }
 }
 
@@ -1574,7 +1573,7 @@ body, h2 {
   padding: 15px 20px;
   font-size: 2rem;
   font-weight: bold;
-  background-color: #4f25f9;
+  background-color: #042C71;
   color: #eeeeee;
   text-align: center;
 }
@@ -1839,8 +1838,8 @@ body, h2 {
   max-width: 600px;
   min-width: 290px;
   justify-self: center;
-  background-image: -webkit-gradient(linear, right top, left bottom, from(#a48dff), to(#4f25f9));
-  background-image: linear-gradient(to bottom left, #a48dff, #4f25f9);
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#a48dff), to(#042C71));
+  background-image: linear-gradient(to bottom left, #a48dff, #042C71);
   color: #eeeeee;
   border-radius: 5px;
   padding: 20px;
@@ -1951,7 +1950,7 @@ body, h2 {
             flex-direction: column;
     position: absolute;
     left: 0;
-    background-color: rgba(79, 37, 249, 0.5);
+    background-color: rgba(4, 44, 113, 0.5);
     border-radius: 0 15px 15px 0;
     padding: 10px 10px;
     margin-top: 40px;
@@ -2237,7 +2236,7 @@ body, h2 {
 
 @media only screen and (min-width: 992px) {
   .sec-skills {
-    background-color: #4f25f9;
+    background-color: #042C71;
     background-image: url("../assets/images/backgrounds/skills-bg.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -2250,7 +2249,7 @@ body, h2 {
   padding: 15px 20px;
   font-size: 2rem;
   font-weight: bold;
-  background-color: #4f25f9;
+  background-color: #042C71;
   color: #eeeeee;
   text-align: center;
 }

@@ -35,7 +35,8 @@
   padding: 15px 20px;  // All around padding
   font-size: 2rem;
   font-weight: bold;
-  background-color: $primary-color;
+  background-color: $primary-color; // fall back
+  background-image: $heading-bg-color;
   color: $secondary-color;
   text-align: center;
 
@@ -46,6 +47,7 @@
 
   @include breakPoint(992px){
     padding: 30px 20px;
+    background-image: none;
   }
 
   @include breakPoint(1200px){

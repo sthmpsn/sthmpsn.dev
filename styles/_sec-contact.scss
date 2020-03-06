@@ -315,8 +315,8 @@
       }
 
       #{$self}--social-icon-container {
-        width: 55px;
-        height: 55px;
+        width: 45px;
+        height: 45px;
         font-size: 1.5rem;
         position: relative;
         border-radius: 50%;
@@ -342,7 +342,7 @@
           height: 100%;
           top: 0;
           left: 0;
-          line-height: 55px;
+          line-height: 45px;
           color: #fff;
 
           @include breakPoint(768px) {

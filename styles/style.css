@@ -876,6 +876,18 @@ body, h2 {
   padding-top: 20px;
 }
 
+@media only screen and (min-width: 640px) {
+  .sec-main__about {
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .sec-main__about {
+    margin: 2rem auto;
+  }
+}
+
 @media only screen and (min-width: 992px) {
   .sec-main__about {
     font-size: 1rem;
@@ -982,11 +994,14 @@ body, h2 {
   font-size: 0.9rem;
   letter-spacing: 1px;
   text-align: justify;
+  max-width: 60ch;
+  margin: auto;
 }
 
 @media only screen and (min-width: 640px) {
   .sec-main__about .sec-main__about-me {
     padding: 20px 20px;
+    margin: 1rem auto;
   }
 }
 
@@ -994,6 +1009,7 @@ body, h2 {
   .sec-main__about .sec-main__about-me {
     font-size: 1rem;
     padding: 20px 0;
+    margin: 2rem auto;
   }
 }
 
@@ -1016,7 +1032,7 @@ body, h2 {
   text-align: center;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 640px) {
   .sec-main__aside {
     text-align: right;
   }
@@ -1977,8 +1993,8 @@ body, h2 {
 }
 
 .sec-contact__footer .sec-contact__social-media .sec-contact--social-icon-container {
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   font-size: 1.5rem;
   position: relative;
   border-radius: 50%;
@@ -2008,7 +2024,7 @@ body, h2 {
   height: 100%;
   top: 0;
   left: 0;
-  line-height: 55px;
+  line-height: 45px;
   color: #fff;
 }
 
@@ -2538,6 +2554,7 @@ body, h2 {
   text-align: center;
   margin: 0 -20px 1.5em -20px;
   padding: 1.5em 20px;
+  background-color: #0B6AB0;
   color: #eeeeee;
   position: -webkit-sticky;
   position: sticky;
@@ -2555,24 +2572,34 @@ body, h2 {
 @media only screen and (min-width: 992px) {
   .sec-skills__chart .sec-skills__skill-legend {
     position: relative;
+    background-color: transparent;
   }
 }
 
 .sec-skills__chart .sec-skills__skill-legend::before {
   content: "";
-  width: 100%;
-  height: 100%;
+  width: 25px;
+  height: 15px;
   position: absolute;
-  top: 0;
+  bottom: -15px;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #09568e;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%);
   z-index: -1;
 }
 
-@media only screen and (min-width: 992px) {
-  .sec-skills__chart .sec-skills__skill-legend::before {
-    display: none;
-  }
+.sec-skills__chart .sec-skills__skill-legend::after {
+  content: "";
+  width: 25px;
+  height: 15px;
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  background-color: #09568e;
+  -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 0 100%);
+  z-index: -1;
 }
 
 .sec-skills__chart .sec-skills__skill-legend .sec-skills__skill-legend-title {
@@ -2644,7 +2671,7 @@ body, h2 {
   border: 1px solid #eeeeee;
   border-radius: 5px;
   padding: 1rem 0;
-  margin: 10px auto;
+  margin: 10px 5px;
   -webkit-box-shadow: 5px 10px 10px;
           box-shadow: 5px 10px 10px;
 }

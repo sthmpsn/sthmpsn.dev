@@ -1,5 +1,5 @@
 .sec-skills {
-  $self: &; // For Nested BEM support. Defines variable as ".sec-skilss"
+  $self: &; // For Nested BEM support. Defines variable as ".sec-skills"
   @include sectionContainer;
   position: relative;
 

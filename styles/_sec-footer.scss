@@ -1,0 +1,51 @@
+.sec-footer {
+    $self: &; // For Nested BEM support. Defines variable as ".sec-footer"
+    @include sectionContainer;
+    padding-bottom: 0 !important;
+    background-color: $txt-color;
+    align-content: center;
+    min-height: 120px;
+    
+
+    &__copyright{
+        color: $secondary-color;
+        font-size: .7rem;
+        text-align: center;
+        margin: .5rem 0;
+
+        @include breakPoint(768px){
+            font-size: .9rem;
+            margin: auto;
+        }
+        
+    }
+
+    &__contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: .5rem 0;
+
+        @include breakPoint(768px){
+            justify-content: center;
+        }
+        
+        #{$self}--icon-container {
+            color: $secondary-color;
+            text-decoration: none ;
+            font-size: 1.5rem;
+            margin: auto 10px;
+
+            @include breakPoint(640px){
+                font-size: 2rem;
+            }
+
+            @include breakPoint(768px){
+                margin: auto 15px;
+            }
+        }
+
+
+    }
+
+}

@@ -8,7 +8,8 @@
         "grid-main"
         "grid-portfolio"
         "grid-contact"
-        "grid-skills";
+        "grid-skills"
+        "grid-footer";
 } // End .grid-wrapper
 
 .sec-main {
@@ -177,3 +178,25 @@
         }
     } // .sec-skills breakpoint 768px
 } // End .sec-skills
+
+.sec-footer {
+    grid-area: grid-footer;
+
+    // sec-footer Grid layout
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "f-contact"
+    "f-copyright";
+
+    .sec-footer__copyright {
+        grid-area: f-copyright;
+    }
+
+    .sec-footer__contact {
+        grid-area: f-contact;
+    }
+
+} // End .sec-footer
+

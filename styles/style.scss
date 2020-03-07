@@ -13,6 +13,7 @@
 @import "sec-portfolio";
 @import "sec-contact";
 @import "sec-skills";
+@import "sec-footer";
 
 // ********* [END] IMPORT OF PARTIALS *********
 
@@ -43,7 +44,9 @@ html {
 }
 
 body {
-  background-color: $txt-color; // temp color for layout purposes
+  background-color: $txt-color;
+  overflow-x: hidden;
+
 }
 
 .grid-wrapper {

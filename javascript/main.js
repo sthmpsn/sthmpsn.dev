@@ -2,6 +2,11 @@
 (function() {
     console.log("...loaded main.js");
 
+    // Get and display current year for copyright
+    document.getElementById('currentYear').innerHTML = new Date().getFullYear();
+    // End Get Copyright year 
+
+
     // [START] NAV MENU RELATED
 
     // ANIMATE OPEN AND CLOSE OF UL NAV LIST

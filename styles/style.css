@@ -1069,7 +1069,7 @@ body, h2 {
   font-size: 1rem;
   line-height: normal;
   border-radius: 20px;
-  background: #CE4912;
+  background: #0B6AB0;
   color: #fff;
   text-decoration: none;
   text-align: center;
@@ -1093,7 +1093,7 @@ body, h2 {
     font-size: 1.2rem;
     line-height: normal;
     border-radius: 22px;
-    background: #CE4912;
+    background: #0B6AB0;
     color: #fff;
     text-decoration: none;
     text-align: center;
@@ -1116,7 +1116,7 @@ body, h2 {
     font-size: 1.3rem;
     line-height: normal;
     border-radius: 25px;
-    background: #CE4912;
+    background: #0B6AB0;
     color: #fff;
     text-decoration: none;
     text-align: center;
@@ -1539,7 +1539,7 @@ body, h2 {
 
 @media only screen and (min-width: 992px) {
   .sec-portfolio__carousel-controls .sec-portfolio__carousel-ctrl-prev-button {
-    border-right: 50px solid #F36B1C;
+    border-right: 50px solid #F8D605;
     -webkit-clip-path: ellipse(74% 50% at 76% 50%);
             clip-path: ellipse(74% 50% at 76% 50%);
   }
@@ -1571,7 +1571,7 @@ body, h2 {
 
 @media only screen and (min-width: 992px) {
   .sec-portfolio__carousel-controls .sec-portfolio__carousel-ctrl-next-button {
-    border-left: 50px solid #F36B1C;
+    border-left: 50px solid #F8D605;
     -webkit-clip-path: ellipse(74% 50% at 24% 50%);
             clip-path: ellipse(74% 50% at 24% 50%);
   }
@@ -1964,7 +1964,7 @@ body, h2 {
   left: 0;
   width: 100%;
   height: 0%;
-  background: #CE4912;
+  background: #0B6AB0;
   z-index: -1;
   border-radius: 0 0 50% 50%;
   -webkit-transition: height 1.2s;
@@ -2656,7 +2656,7 @@ body, h2 {
 }
 
 .sec-skills__chart .sec-skills__skill-legend .sec-skills--skill-legend-proficient-icon {
-  background-image: radial-gradient(circle at top right, #F36B1C, #CE4912);
+  background-image: radial-gradient(circle at top right, #F8D605, #0B6AB0);
 }
 
 .sec-skills__chart .sec-skills__skill-legend .sec-skills--skill-legend-intermediate-icon {
@@ -2723,7 +2723,7 @@ body, h2 {
 }
 
 .sec-skills__chart .sec-skills__skills .sec-skills__skill-card .sec-skills--skill-level-proficient {
-  background-image: radial-gradient(circle at top right, #F36B1C, #CE4912);
+  background-image: radial-gradient(circle at top right, #F8D605, #0B6AB0);
 }
 
 .sec-skills__chart .sec-skills__skills .sec-skills__skill-card .sec-skills--skill-level-intermediate {

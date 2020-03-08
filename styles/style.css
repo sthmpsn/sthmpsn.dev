@@ -2719,7 +2719,7 @@ body, h2 {
 }
 
 .sec-skills__chart .sec-skills__skill-legend .sec-skills--skill-legend-proficient-icon {
-  background-image: radial-gradient(circle at top right, #F8D605, #0B6AB0);
+  background-image: radial-gradient(circle at top right, #F36B1C, #a34813);
 }
 
 .sec-skills__chart .sec-skills__skill-legend .sec-skills--skill-legend-intermediate-icon {
@@ -2786,7 +2786,7 @@ body, h2 {
 }
 
 .sec-skills__chart .sec-skills__skills .sec-skills__skill-card .sec-skills--skill-level-proficient {
-  background-image: radial-gradient(circle at top right, #F8D605, #0B6AB0);
+  background-image: radial-gradient(circle at top right, #F36B1C, #a34813);
 }
 
 .sec-skills__chart .sec-skills__skills .sec-skills__skill-card .sec-skills--skill-level-intermediate {

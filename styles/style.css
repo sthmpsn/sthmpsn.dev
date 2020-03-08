@@ -588,6 +588,28 @@ body, h2 {
   }
 }
 
+@-webkit-keyframes slide-in-from-right {
+  0% {
+    opacity: 0;
+    right: -300px;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+@keyframes slide-in-from-right {
+  0% {
+    opacity: 0;
+    right: -300px;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+
 .sec-main {
   font-size: 1rem;
   padding: 0 20px 20px 20px;
@@ -666,6 +688,16 @@ body, h2 {
   .sec-main__header {
     padding: 30px 20px;
     background-image: none;
+    overflow-x: hidden;
+    position: relative;
+  }
+  .sec-main__header > i, .sec-main__header > h2 {
+    position: relative;
+    right: -300px;
+  }
+  .sec-main__header .slide-in-from-right {
+    -webkit-animation: slide-in-from-right .5s linear forwards;
+            animation: slide-in-from-right .5s linear forwards;
   }
 }
 
@@ -1199,6 +1231,16 @@ body, h2 {
   .sec-portfolio__heading {
     padding: 30px 20px;
     background-image: none;
+    overflow-x: hidden;
+    position: relative;
+  }
+  .sec-portfolio__heading > i, .sec-portfolio__heading > h2 {
+    position: relative;
+    right: -300px;
+  }
+  .sec-portfolio__heading .slide-in-from-right {
+    -webkit-animation: slide-in-from-right .5s linear forwards;
+            animation: slide-in-from-right .5s linear forwards;
   }
 }
 
@@ -1611,6 +1653,7 @@ body, h2 {
     background-image: url("../assets/images/backgrounds/contact-bg.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    position: relative;
   }
 }
 
@@ -1638,6 +1681,16 @@ body, h2 {
   .sec-contact__heading {
     padding: 30px 20px;
     background-image: none;
+    overflow-x: hidden;
+    position: relative;
+  }
+  .sec-contact__heading > i, .sec-contact__heading > h2 {
+    position: relative;
+    right: -300px;
+  }
+  .sec-contact__heading .slide-in-from-right {
+    -webkit-animation: slide-in-from-right .5s linear forwards;
+            animation: slide-in-from-right .5s linear forwards;
   }
 }
 
@@ -2311,6 +2364,16 @@ body, h2 {
   .sec-skills__heading {
     padding: 30px 20px;
     background-image: none;
+    overflow-x: hidden;
+    position: relative;
+  }
+  .sec-skills__heading > i, .sec-skills__heading > h2 {
+    position: relative;
+    right: -300px;
+  }
+  .sec-skills__heading .slide-in-from-right {
+    -webkit-animation: slide-in-from-right .5s linear forwards;
+            animation: slide-in-from-right .5s linear forwards;
   }
 }
 
@@ -2931,7 +2994,7 @@ html {
 }
 
 body {
-  background-color: #737373;
+  background-color: #686868;
   overflow-x: hidden;
 }
 

@@ -166,3 +166,16 @@
     opacity: 1;
   }
 } // End slow-blink animation
+
+
+
+@keyframes slide-in-from-right {
+  0% {
+    opacity: 0;
+    right: -300px
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}

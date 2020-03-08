@@ -40,6 +40,7 @@
   color: $secondary-color;
   text-align: center;
 
+
   @include breakPoint(768px){
     padding: 20px 20px;
     margin: 0 -60px;
@@ -48,6 +49,19 @@
   @include breakPoint(992px){
     padding: 30px 20px;
     background-image: none;
+    // testing slide in
+    overflow-x: hidden;
+    position: relative;
+
+    & > i, & > h2 {
+      position: relative;
+      right: -300px;
+      
+    }
+
+    .slide-in-from-right{
+      animation: slide-in-from-right .5s linear forwards;
+    }
   }
 
   @include breakPoint(1200px){

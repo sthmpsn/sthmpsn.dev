@@ -243,7 +243,7 @@
 
       @include breakPoint(992px) {
         border-right: 50px solid $btn-carousel-color;
-        clip-path: ellipse(74% 50% at 76% 50%); // clip so that edges look slightly rounded. Take sharpness off the triangle
+        clip-path: ellipse(74% 50% at 77% 50%); // clip so that edges look slightly rounded. Take sharpness off the triangle
       }
     } // End carousel-ctrl-prev-button
 
@@ -267,7 +267,7 @@
 
       @include breakPoint(992px) {
         border-left: 50px solid $btn-carousel-color;
-        clip-path: ellipse(74% 50% at 24% 50%);  // clip so that edges look slightly rounded. Take sharpness off the triangle
+        clip-path: ellipse(74% 50% at 23% 50%);  // clip so that edges look slightly rounded. Take sharpness off the triangle
       }
     }
   } // End carousel-controls

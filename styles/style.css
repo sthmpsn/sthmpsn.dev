@@ -1540,8 +1540,8 @@ body, h2 {
 @media only screen and (min-width: 992px) {
   .sec-portfolio__carousel-controls .sec-portfolio__carousel-ctrl-prev-button {
     border-right: 50px solid #F8D605;
-    -webkit-clip-path: ellipse(74% 50% at 76% 50%);
-            clip-path: ellipse(74% 50% at 76% 50%);
+    -webkit-clip-path: ellipse(74% 50% at 77% 50%);
+            clip-path: ellipse(74% 50% at 77% 50%);
   }
 }
 
@@ -1572,8 +1572,8 @@ body, h2 {
 @media only screen and (min-width: 992px) {
   .sec-portfolio__carousel-controls .sec-portfolio__carousel-ctrl-next-button {
     border-left: 50px solid #F8D605;
-    -webkit-clip-path: ellipse(74% 50% at 24% 50%);
-            clip-path: ellipse(74% 50% at 24% 50%);
+    -webkit-clip-path: ellipse(74% 50% at 23% 50%);
+            clip-path: ellipse(74% 50% at 23% 50%);
   }
 }
 

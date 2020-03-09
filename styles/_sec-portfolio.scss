@@ -4,10 +4,6 @@
   @include sectionContainer;
 
   @include breakPoint(992px) {
-    min-height: 100vh;
-  }
-
-  @include breakPoint(992px) {
     background-image: url("../assets/images/backgrounds/portfolio-bg.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -227,11 +223,16 @@
 
     &--carousel-ctrl-button {
       // Common control button styles
-      font-size: 4rem;
-      color: $secondary-color;
-      z-index: 5;
-      margin: auto 0;
-      position: relative;
+      display: none;
+
+      @include breakPoint(992px){
+        display: inherit;
+        font-size: 4rem;
+        color: $secondary-color;
+        z-index: 5;
+        margin: auto 0;
+        position: relative;
+      }
 
       @include breakPoint(1200px){
         margin: auto;
@@ -252,9 +253,11 @@
     } // End carousel-ctrl-prev-button
 
     &__carousel-proj-details {
+      display: none;
       visibility: hidden;  // Hiding carousel-proj-details for now. Will implement along with my javascript and DB portion of my training
       // so that it will auto populate with skills used for each project  
       @include breakPoint(992px) {
+        display: inherit;
         width: 400px;
         height: 100px;
         margin: 0 5em;

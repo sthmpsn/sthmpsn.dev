@@ -20,7 +20,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      // background-color: transparent;
       color: $secondary-color;
     } // End heading for 768px
 
@@ -85,9 +84,7 @@
         }
 
         @include breakPoint(992px) {
-          // width: 265px;
-          // height: 180px;
-          width: 290px;
+          width: 265px;
           height: 220px;
           margin: 0;
           position: absolute;
@@ -95,8 +92,7 @@
           overflow: visible;
           border: none;
           transform-style: preserve-3d;
-          @include zoomCard(350px);
-          // @include zoomCard(320px); // Increase this for more space between cards (also depends on width)
+          @include zoomCard(320px); // Increase this for more space between cards (also depends on width)
             // TOA (Tangent = Opposite / Adjacent) =  320px (rounded up from 319.88) with 8 carousel objects having a width of 265px
             // 8/360 = 45deg  ( 8 cards / 360 degrees )
             // 45/2 = 22.5deg ( divide this angle in half to solve for the adjacent angle )
@@ -126,8 +122,19 @@
         } // End proj-card breakPoint 992px
 
         @include breakPoint(1200px) {
+          width: 290px;
+          height: 220px;
+          @include zoomCard(350px);
+        }
+
+        @include breakPoint(1400px) {
+          width: 326px;
+          height: 215px;
+          @include zoomCard(393px);
+        }
+
+        @include breakPoint(1600px) {
           width: 350px;
-          // height: 215px;
           height: 250px;
           @include zoomCard(422px);
         }
@@ -218,36 +225,33 @@
     } // End carousel
   } // End projects
 
-  &__carousel-controls {
-    display: none;
-
-    @include breakPoint(992px) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 100; // Ensure that the Controls are alway on top and accessible otherwise carousel transforms may block access and only apparent in dev tools
-    }
-
-    @include breakPoint(1200px) {
-      padding: 50px 0;
-    }
-
-    #{$self}--carousel-ctrl-button {
+    &--carousel-ctrl-button {
       // Common control button styles
-      border-top: 50px solid transparent;
-      border-bottom: 50px solid transparent;
+      font-size: 4rem;
+      color: $secondary-color;
+      z-index: 5;
+      margin: auto 0;
+      position: relative;
+
+      @include breakPoint(1200px){
+        margin: auto;
+      }
+
+      @include breakPoint(1600px){
+        font-size: 5rem;
+      }
       cursor: pointer;
     } // End carousel-ctrl-button
     
-    #{$self}__carousel-ctrl-prev-button {
+    &__carousel-ctrl-prev-button {
+        left: -1rem;
 
-      @include breakPoint(992px) {
-        border-right: 50px solid $btn-carousel-color;
-        clip-path: ellipse(74% 50% at 77% 50%); // clip so that edges look slightly rounded. Take sharpness off the triangle
-      }
+        @include breakPoint(1200px){
+         left: 0;
+        }
     } // End carousel-ctrl-prev-button
 
-    #{$self}__carousel-proj-details {
+    &__carousel-proj-details {
       visibility: hidden;  // Hiding carousel-proj-details for now. Will implement along with my javascript and DB portion of my training
       // so that it will auto populate with skills used for each project  
       @include breakPoint(992px) {
@@ -263,12 +267,13 @@
       }
     } // End carousel-proj-details
     
-    #{$self}__carousel-ctrl-next-button {
+    &__carousel-ctrl-next-button {
+      right: -1rem;
 
-      @include breakPoint(992px) {
-        border-left: 50px solid $btn-carousel-color;
-        clip-path: ellipse(74% 50% at 23% 50%);  // clip so that edges look slightly rounded. Take sharpness off the triangle
+      @include breakPoint(1200px){
+        right: 0;
       }
+
     }
-  } // End carousel-controls
+  // } // End carousel-controls
 } // END .sec-portfolio

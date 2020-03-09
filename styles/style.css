@@ -2883,8 +2883,8 @@ body, h2 {
 }
 
 .sec-skills .to-top-of-page > i {
-  -webkit-animation: slow-blink 2s linear infinite;
-          animation: slow-blink 2s linear infinite;
+  -webkit-animation: slow-blink 1s linear infinite;
+          animation: slow-blink 1s linear infinite;
 }
 
 .sec-footer {

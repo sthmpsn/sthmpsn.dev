@@ -105,6 +105,7 @@
 
         @include breakPoint(992px){
           display: block; 
+          // The entries with !important are needed for a use case where a user is in mobile with hamburger menu, then activates it and then switches to a "non-mobile" view
           position: relative !important;
           background: none !important;
           box-shadow: none !important;
@@ -120,7 +121,6 @@
         background: $secondary-color;
         position: absolute;
         display: block;
-        width: 50%;
         border-radius: 0 15px 15px 0;
         left: 0;
         top: 0;

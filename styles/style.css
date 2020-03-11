@@ -2611,6 +2611,8 @@ body, h2 {
     bottom: -400px;
     width: 100%;
     text-align: center;
+    -webkit-transform: scaleY(2);
+            transform: scaleY(2);
   }
   .sec-skills__showcase .sec-skills__showcase-skill-names .sec-skills--showcase-skill-names-scroll::before {
     content: "C-Sharp";
@@ -2808,8 +2810,7 @@ body, h2 {
   background-image: radial-gradient(circle at top right, #9bbb9b, #008a00);
 }
 
-.sec-skills__certs {
-  padding-top: 20px;
+.sec-skills__education {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2818,11 +2819,54 @@ body, h2 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin-top: 2em;
   margin-bottom: 4em;
 }
 
-.sec-skills__certs .sec-skills--certs {
+.sec-skills__education .sec-skills__education-heading {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: .2rem;
+  background-color: #042C71;
+  color: #eeeeee;
+  padding: 1rem;
+  margin: 3rem 0 1.5rem 0;
+  border-radius: 5px;
+  position: relative;
+}
+
+.sec-skills__education .sec-skills__education-heading::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: #737373;
+  border: 1px solid #737373;
+  -webkit-box-shadow: 5px 10px 10px;
+          box-shadow: 5px 10px 10px;
+}
+
+@media only screen and (min-width: 640px) {
+  .sec-skills__education .sec-skills__education-heading {
+    letter-spacing: .5rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .sec-skills__education .sec-skills__education-heading {
+    font-size: 2.5rem;
+    color: #eeeeee;
+    letter-spacing: .8rem;
+  }
+  .sec-skills__education .sec-skills__education-heading::before {
+    display: none;
+  }
+}
+
+.sec-skills__education .sec-skills--certs {
   height: 100px;
   width: 190px;
   border-radius: 10px;
@@ -2834,18 +2878,18 @@ body, h2 {
 }
 
 @media only screen and (min-width: 992px) {
-  .sec-skills__certs .sec-skills--certs {
+  .sec-skills__education .sec-skills--certs {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
 }
 
-.sec-skills__certs .sec-skills--certs > img {
+.sec-skills__education .sec-skills--certs > img {
   width: 100%;
   height: 100%;
 }
 
-.sec-skills__certs .sec-skills__mba-container {
+.sec-skills__education .sec-skills__mba-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2861,7 +2905,7 @@ body, h2 {
           justify-content: center;
 }
 
-.sec-skills__certs .sec-skills__mba-container .sec-skills__mba-icon {
+.sec-skills__education .sec-skills__mba-container .sec-skills__mba-icon {
   font-size: 2rem;
   line-height: 0;
   position: relative;
@@ -2872,7 +2916,7 @@ body, h2 {
   color: #b99c00;
 }
 
-.sec-skills__certs .sec-skills__mba-container .sec-skills__mba-text {
+.sec-skills__education .sec-skills__mba-container .sec-skills__mba-text {
   font-size: 3rem;
   font-weight: 500;
   text-decoration: none;

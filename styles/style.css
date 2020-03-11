@@ -2905,26 +2905,6 @@ body, h2 {
   text-decoration: none;
 }
 
-.sec-skills .to-top-of-page {
-  display: inline-block;
-  position: absolute;
-  width: 130px;
-  height: 60px;
-  bottom: 0;
-  left: 50%;
-  margin-left: -65px;
-  color: #737373;
-  font-size: 3rem;
-  text-align: center;
-  background-color: #fff;
-  border-radius: 50% 50% 0 0;
-}
-
-.sec-skills .to-top-of-page > i {
-  -webkit-animation: slow-blink 1s linear infinite;
-          animation: slow-blink 1s linear infinite;
-}
-
 .sec-footer {
   font-size: 1rem;
   padding: 0 20px 20px 20px;
@@ -3038,5 +3018,59 @@ body {
 
 .grid-wrapper {
   max-width: 1920px;
+}
+
+.grid-wrapper .to-top-of-page {
+  display: block;
+  position: fixed;
+  width: 40px;
+  height: 50px;
+  line-height: 50px;
+  bottom: 120px;
+  right: 0;
+  padding-left: 7px;
+  color: #eeeeee;
+  font-size: 1.6rem;
+  text-align: center;
+  background-color: #0B6AB0;
+  border-radius: 50% 0 0 50%;
+  border: 1px solid #eeeeee;
+  opacity: 0;
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+}
+
+@media only screen and (min-width: 992px) {
+  .grid-wrapper .to-top-of-page {
+    width: 50px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 2rem;
+  }
+}
+
+.grid-wrapper .to-top-of-page.to-top-of-page--trigger {
+  opacity: 1;
+}
+
+.grid-wrapper .to-top-of-page--at-bottom {
+  width: 130px;
+  height: 60px;
+  bottom: 120px;
+  -webkit-transform: translateX(calc(-50vw + 65px));
+          transform: translateX(calc(-50vw + 65px));
+  margin-left: -65px;
+  color: #737373;
+  font-size: 3rem;
+  padding: .4rem 0 0 0;
+  background-color: #fff;
+  border-radius: 50% 50% 0 0;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.grid-wrapper .to-top-of-page--at-bottom > i {
+  -webkit-animation: slow-blink 1s linear infinite;
+          animation: slow-blink 1s linear infinite;
 }
 /*# sourceMappingURL=style.css.map */

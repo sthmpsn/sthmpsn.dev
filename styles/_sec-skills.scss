@@ -463,24 +463,25 @@
       }
     } // End mba-container
   } // End certs
-  .to-top-of-page {
-    // Link to take you back to the top of the page
-    display: inline-block;
-    position: absolute;
-    width: 130px;
-    height: 60px;
-    bottom: 0;
-    left: 50%;
-    margin-left: -65px;   // True center the element by moving margin left negative half the width (130/2 = 65px)
-    color: $txt-color;
-    font-size: 3rem;
-    text-align: center;
-    background-color: #fff;
-    border-radius: 50% 50% 0 0;
-    
-    & > i {
-      animation: slow-blink 1s linear infinite;
-    }
 
-  }
+  // .to-top-of-page {
+  //   // Link to take you back to the top of the page
+  //   display: inline-block;
+  //   position: absolute;
+  //   width: 130px;
+  //   height: 60px;
+  //   bottom: 0;
+  //   left: 50%;
+  //   margin-left: -65px;   // True center the element by moving margin left negative half the width (130/2 = 65px)
+  //   color: $txt-color;
+  //   font-size: 3rem;
+  //   text-align: center;
+  //   background-color: #fff;
+  //   border-radius: 50% 50% 0 0;
+    
+  //   & > i {
+  //     animation: slow-blink 1s linear infinite;
+  //   }
+
+  // }
 } // End .sec-skills

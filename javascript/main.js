@@ -52,48 +52,75 @@
 
   // IF Viewport width >= 992px then remove the class sec-main__header-nav-menu--active
   // Use case is when a user is in mobile view and activates the hamburger menu then leaves mobile view (+992px) while menu active
-  window.addEventListener('resize', function(){
+  window.addEventListener('resize', () => {
     if (window.innerWidth >= 992 && menu.classList.contains("sec-main__header-nav-menu--active")) {
       menu.classList.remove("sec-main__header-nav-menu--active");
       console.log("REMOVED ACTIVE CLASS MENU - 992px or greater");
     }
   });
-
   // [END] NAV MENU RELATED
 
-  // [START] Scroll position Slide in Animations
+  // [START] Scroll position Related Animations
   // Grab all Section Header Icons and H2 Elements for slide-in-right animation
+  let windowHeight, curScrollPosition;
   
-  let headingEls, windowHeight;
-  
-  function initScrollSlide() {
-    headingEls = document.querySelectorAll("section > div > i, section > div > h2");
-    windowHeight = window.innerHeight; 
-
-    console.log("Heading Elements: " + headingEls);
-    console.log("Window Height: " + windowHeight);
-  }
+  function getNewWindowHeight() {
+    windowHeight = window.innerHeight;
+    
+    console.log("Window Height: " + windowHeight); // DEBUG - The full height of the Windows (browser/viewport). Only changes on resize of browser
+  } // [END] initScrollPositions()
 
   function checkPosition() {
+    let headingEls = document.querySelectorAll(".sec-heading > i, .sec-heading > h2"); // Get the heading and heading icon elements 
+    let curScrollPosition = (window.scrollY + windowHeight);  // The current scroll position + the Browser/viewport height
+
     headingEls.forEach(el => {
       let elPosition = el.getBoundingClientRect().top;  // Use the box container top of the element for position
-      console.log("Window Height: " + windowHeight);
-      console.log(el.innerHTML + " Position: " + elPosition);
+      console.log(el.innerHTML + " Position: " + elPosition); // Debug - Display the Icon and Section heading current position
 
       // If the class is not already applied AND the element containing box position is less than 700px
       if (!el.classList.contains('slide-in-from-right') && elPosition <= 700){
           el.classList.add('slide-in-from-right');
-          console.log("APPLIED SLIDE ANIMATION CLASS");
+          // console.log("APPLIED SLIDE ANIMATION CLASS"); // Debug - Confirms the the styles are applied
       }
     });
-  }
+    //[END] HeadingEls For Each Slide in animation
+
+    // [START] To Top button logic
+    let toTopTrigger = document.getElementById('sec-portfolio'); // The Portfolio section triggers this this from applying
+    let elToTop = document.getElementById('to-top-of-page'); 
+
+    console.log ("Current Scroll Position: " + curScrollPosition); // DEBUG
+    console.log ("Document Inner Height: " + document.body.offsetHeight);  // DEBUG - The full height of the site
+    console.log ("Window ScrollY: " + window.scrollY);  // DEBUG - Current Scroll positon on the site (not window position)
+
+
+    if (!elToTop.classList.contains('to-top-of-page--trigger') && toTopTrigger.getBoundingClientRect().top < 0) {
+      elToTop.classList.add('to-top-of-page--trigger');
+    }
+    else if (elToTop.classList.contains('to-top-of-page--trigger') && toTopTrigger.getBoundingClientRect().top > 300){
+      elToTop.classList.remove('to-top-of-page--trigger');
+    }
+
+    // Apply the "to-top-of-page--at-bottom" class one we reach the bottom of the site
+    if (curScrollPosition == document.body.offsetHeight){
+      elToTop.classList.add('to-top-of-page--at-bottom');
+    }
+    else if (elToTop.classList.contains('to-top-of-page--at-bottom') && curScrollPosition !== document.body.offsetHeight){
+      elToTop.classList.remove('to-top-of-page--at-bottom');
+      console.log("REMOVING AT BOTTOM CLASS");
+    } 
+    // [END] To Top button logic
+  } // [END] checkPosition()
 
   window.addEventListener("scroll", checkPosition);
-  window.addEventListener("resize", initScrollSlide); 
+  window.addEventListener("resize", getNewWindowHeight); 
 
-  initScrollSlide();
-  checkPosition();
+  getNewWindowHeight();  // Initial the Window Height and scroll positions on load of page
 
-  // [END] Scroll Slide in Animations
+  // [END] Scroll position Related Animations
+
+  
+
 })();
 // [END] OF DOCUMENT LOAD

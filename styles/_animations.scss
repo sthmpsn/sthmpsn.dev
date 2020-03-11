@@ -45,29 +45,6 @@
   } // End delay-pointer-events animation
 
 // Elements that use this Animation
-// Contact Section - Email
-@keyframes heartbeat {
-  0% {
-    transform: scale(1) rotate(45deg);
-  }
-  25% {
-    transform: scale(1) rotate(45deg);
-  }
-  30% {
-    transform: scale(1.2) rotate(45deg);
-  }
-  50% {
-    transform: scale(1.1) rotate(45deg);
-  }
-  70% {
-    transform: scale(1.2) rotate(45deg);
-  }
-  100% {
-    transform: scale(1) rotate(45deg);
-  }
-} // End heartbeat animation
-
-// Elements that use this Animation
 // Contact Section - Phone
 @keyframes pulse {
   0% {

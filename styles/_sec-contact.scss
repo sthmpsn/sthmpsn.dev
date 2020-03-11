@@ -46,16 +46,13 @@
   } // End of &__heading
 
   &__footer {
-    #{$self}--contact-icon {
-      font-size: 2.5rem;
-    }
 
     #{$self}__email-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: 2em;
+      margin: 4em auto 2em auto;
 
       @include breakPoint(992px) {
         flex-direction: row;
@@ -63,52 +60,26 @@
 
       #{$self}__email-icon-cta {
         display: block;
-        width: 80px;
-        height: 80px;
-        margin: 2.5em auto 1rem auto;
-        padding: 1.2rem;
-        background-color: $red-color;
-        transform: rotate(45deg);
-        animation: heartbeat 1.4s linear infinite;
-
-        @include breakPoint(992px) {
-          margin: 2.5em 2em 1rem 2em;
-        }
 
         #{$self}__email-icon {
-          color: $btn-txt-color;
-          transform: rotate(-45deg) translateY(-15px);
+          color: $btn-bg-color;
+          font-size: 3.5rem;
+          animation: slow-blink 2s linear infinite;
+
+          &:hover {
+            animation: none;
+            transform: scale(1.1);
+          }
+
+          @include breakPoint(992px) {
+            color: $secondary-color;
+            font-size: 4rem;
+          }
         } // End email-icon
-
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          background-color: $red-color;
-          transform: translateY(-50%);
-          border-radius: 50%;
-          z-index: -1;
-        }
-
-        &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          background-color: $red-color;
-          transform: translatex(-50%);
-          border-radius: 50%;
-          z-index: -1;
-        }
       } // end Email-icon-cta
 
       #{$self}__email-address {
-        margin: 1.5em auto;
+        margin: .5em auto;
         font-style: normal;
         font-weight: bold;
         letter-spacing: 0.3rem;
@@ -120,6 +91,7 @@
         }
 
         @include breakPoint(992px) {
+          font-size: 1.8rem;
           margin: 1.5em 2em;
           color: $secondary-color;
         }
@@ -131,7 +103,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin: 1em auto;
+      margin: 2em auto;
 
       @include breakPoint(992px) {
         flex-direction: row;
@@ -139,21 +111,17 @@
 
       #{$self}__phone-icon-cta {
         display: block;
-        height: 125px;
-        width: 125px;
-        margin: 1.5em auto;
+        height: 100px;
+        width: 100px;
         position: relative;
         border-radius: 50%;
         background-color: $green-color;
 
-        @include breakPoint(992px) {
-          margin: 3em 3em;
-        }
-
         #{$self}__phone-icon {
           width: 100%;
+          font-size: 1.8rem;
           text-align: center;
-          line-height: 125px;
+          line-height: 100px;
           color: $btn-txt-color;
           transform: rotateY(180deg);
         } // End phone-icon
@@ -181,7 +149,7 @@
     #{$self}__form-container {
       display: flex;
       justify-content: center;
-      margin: 1em 0;
+      margin: 2em 0;
 
       #{$self}__form {
         width: 100%;

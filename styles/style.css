@@ -374,60 +374,6 @@ body, h2 {
   }
 }
 
-@-webkit-keyframes heartbeat {
-  0% {
-    -webkit-transform: scale(1) rotate(45deg);
-            transform: scale(1) rotate(45deg);
-  }
-  25% {
-    -webkit-transform: scale(1) rotate(45deg);
-            transform: scale(1) rotate(45deg);
-  }
-  30% {
-    -webkit-transform: scale(1.2) rotate(45deg);
-            transform: scale(1.2) rotate(45deg);
-  }
-  50% {
-    -webkit-transform: scale(1.1) rotate(45deg);
-            transform: scale(1.1) rotate(45deg);
-  }
-  70% {
-    -webkit-transform: scale(1.2) rotate(45deg);
-            transform: scale(1.2) rotate(45deg);
-  }
-  100% {
-    -webkit-transform: scale(1) rotate(45deg);
-            transform: scale(1) rotate(45deg);
-  }
-}
-
-@keyframes heartbeat {
-  0% {
-    -webkit-transform: scale(1) rotate(45deg);
-            transform: scale(1) rotate(45deg);
-  }
-  25% {
-    -webkit-transform: scale(1) rotate(45deg);
-            transform: scale(1) rotate(45deg);
-  }
-  30% {
-    -webkit-transform: scale(1.2) rotate(45deg);
-            transform: scale(1.2) rotate(45deg);
-  }
-  50% {
-    -webkit-transform: scale(1.1) rotate(45deg);
-            transform: scale(1.1) rotate(45deg);
-  }
-  70% {
-    -webkit-transform: scale(1.2) rotate(45deg);
-            transform: scale(1.2) rotate(45deg);
-  }
-  100% {
-    -webkit-transform: scale(1) rotate(45deg);
-            transform: scale(1) rotate(45deg);
-  }
-}
-
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scale(1);
@@ -1849,10 +1795,6 @@ body, h2 {
   }
 }
 
-.sec-contact__footer .sec-contact--contact-icon {
-  font-size: 2.5rem;
-}
-
 .sec-contact__footer .sec-contact__email-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1867,7 +1809,7 @@ body, h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 2em;
+  margin: 4em auto 2em auto;
 }
 
 @media only screen and (min-width: 992px) {
@@ -1881,59 +1823,31 @@ body, h2 {
 
 .sec-contact__footer .sec-contact__email-container .sec-contact__email-icon-cta {
   display: block;
-  width: 80px;
-  height: 80px;
-  margin: 2.5em auto 1rem auto;
-  padding: 1.2rem;
-  background-color: #ff0000;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-animation: heartbeat 1.4s linear infinite;
-          animation: heartbeat 1.4s linear infinite;
-}
-
-@media only screen and (min-width: 992px) {
-  .sec-contact__footer .sec-contact__email-container .sec-contact__email-icon-cta {
-    margin: 2.5em 2em 1rem 2em;
-  }
 }
 
 .sec-contact__footer .sec-contact__email-container .sec-contact__email-icon-cta .sec-contact__email-icon {
-  color: #fff;
-  -webkit-transform: rotate(-45deg) translateY(-15px);
-          transform: rotate(-45deg) translateY(-15px);
+  color: #0B6AB0;
+  font-size: 3.5rem;
+  -webkit-animation: slow-blink 2s linear infinite;
+          animation: slow-blink 2s linear infinite;
 }
 
-.sec-contact__footer .sec-contact__email-container .sec-contact__email-icon-cta::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ff0000;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  border-radius: 50%;
-  z-index: -1;
+.sec-contact__footer .sec-contact__email-container .sec-contact__email-icon-cta .sec-contact__email-icon:hover {
+  -webkit-animation: none;
+          animation: none;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
-.sec-contact__footer .sec-contact__email-container .sec-contact__email-icon-cta::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ff0000;
-  -webkit-transform: translatex(-50%);
-          transform: translatex(-50%);
-  border-radius: 50%;
-  z-index: -1;
+@media only screen and (min-width: 992px) {
+  .sec-contact__footer .sec-contact__email-container .sec-contact__email-icon-cta .sec-contact__email-icon {
+    color: #eeeeee;
+    font-size: 4rem;
+  }
 }
 
 .sec-contact__footer .sec-contact__email-container .sec-contact__email-address {
-  margin: 1.5em auto;
+  margin: .5em auto;
   font-style: normal;
   font-weight: bold;
   letter-spacing: 0.3rem;
@@ -1948,6 +1862,7 @@ body, h2 {
 
 @media only screen and (min-width: 992px) {
   .sec-contact__footer .sec-contact__email-container .sec-contact__email-address {
+    font-size: 1.8rem;
     margin: 1.5em 2em;
     color: #eeeeee;
   }
@@ -1967,7 +1882,7 @@ body, h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1em auto;
+  margin: 2em auto;
 }
 
 @media only screen and (min-width: 992px) {
@@ -1981,24 +1896,18 @@ body, h2 {
 
 .sec-contact__footer .sec-contact__phone-container .sec-contact__phone-icon-cta {
   display: block;
-  height: 125px;
-  width: 125px;
-  margin: 1.5em auto;
+  height: 100px;
+  width: 100px;
   position: relative;
   border-radius: 50%;
   background-color: #008a00;
 }
 
-@media only screen and (min-width: 992px) {
-  .sec-contact__footer .sec-contact__phone-container .sec-contact__phone-icon-cta {
-    margin: 3em 3em;
-  }
-}
-
 .sec-contact__footer .sec-contact__phone-container .sec-contact__phone-icon-cta .sec-contact__phone-icon {
   width: 100%;
+  font-size: 1.8rem;
   text-align: center;
-  line-height: 125px;
+  line-height: 100px;
   color: #fff;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
@@ -2031,7 +1940,7 @@ body, h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 1em 0;
+  margin: 2em 0;
 }
 
 .sec-contact__footer .sec-contact__form-container .sec-contact__form {

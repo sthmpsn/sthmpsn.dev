@@ -282,71 +282,63 @@ body, h2 {
   grid-area: f-contact;
 }
 
-@-webkit-keyframes swing-in {
+@-webkit-keyframes grow-fs {
   0% {
-    -webkit-transform: rotateY(90deg);
-            transform: rotateY(90deg);
-    -webkit-box-shadow: 0 0 0;
-            box-shadow: 0 0 0;
     opacity: 0;
+    height: 0;
+    width: 0;
+    border-radius: 50% 0 50% 50%;
   }
   100% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-    -webkit-box-shadow: 5px 10px 10px;
-            box-shadow: 5px 10px 10px;
     opacity: 1;
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0;
   }
 }
 
-@keyframes swing-in {
+@keyframes grow-fs {
   0% {
-    -webkit-transform: rotateY(90deg);
-            transform: rotateY(90deg);
-    -webkit-box-shadow: 0 0 0;
-            box-shadow: 0 0 0;
     opacity: 0;
+    height: 0;
+    width: 0;
+    border-radius: 50% 0 50% 50%;
   }
   100% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-    -webkit-box-shadow: 5px 10px 10px;
-            box-shadow: 5px 10px 10px;
     opacity: 1;
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0;
   }
 }
 
-@-webkit-keyframes swing-out {
+@-webkit-keyframes shrink-hidden {
   0% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-    -webkit-box-shadow: 5px 10px 10px;
-            box-shadow: 5px 10px 10px;
     opacity: 1;
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0;
   }
   100% {
-    -webkit-transform: rotateY(90deg);
-            transform: rotateY(90deg);
-    -webkit-box-shadow: 0 0 0;
-            box-shadow: 0 0 0;
     opacity: 0;
+    height: 0;
+    width: 0;
+    border-radius: 50% 0 50% 50%;
   }
 }
 
-@keyframes swing-out {
+@keyframes shrink-hidden {
   0% {
-    -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-    -webkit-box-shadow: 5px 10px 10px;
-            box-shadow: 5px 10px 10px;
     opacity: 1;
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0;
   }
   100% {
-    -webkit-transform: rotateY(90deg);
-            transform: rotateY(90deg);
-    -webkit-box-shadow: 0 0 0;
-            box-shadow: 0 0 0;
     opacity: 0;
+    height: 0;
+    width: 0;
+    border-radius: 50% 0 50% 50%;
   }
 }
 
@@ -771,6 +763,8 @@ body, h2 {
 }
 
 .sec-main__header .sec-main__header-nav .sec-main__header-nav-menu-icon {
+  position: relative;
+  z-index: 100;
   font-size: 3rem;
   cursor: pointer;
 }
@@ -791,42 +785,32 @@ body, h2 {
 @media only screen and (min-width: 992px) {
   .sec-main__header .sec-main__header-nav .sec-main__header-nav-menu {
     display: block;
-    position: relative !important;
-    background: none !important;
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .sec-main__header .sec-main__header-nav .sec-main__header-nav-menu {
+    background: none;
     font-size: 1.2rem;
   }
 }
 
 .sec-main__header .sec-main__header-nav .sec-main__header-nav-menu--active {
-  background: #eeeeee;
+  background: #042C71;
   position: absolute;
   display: block;
-  border-radius: 0 15px 15px 0;
-  left: 0;
+  border-radius: 0;
+  right: 0;
   top: 0;
   margin: 0;
-  padding: 0;
+  padding: 1em 0;
   text-align: center;
-  -webkit-box-shadow: 5px 10px 10px;
-          box-shadow: 5px 10px 10px;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-  -webkit-animation: swing-in 0.5s linear;
-          animation: swing-in 0.5s linear;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  -webkit-animation: grow-fs 0.5s linear forwards;
+          animation: grow-fs 0.5s linear forwards;
 }
 
 .sec-main__header .sec-main__header-nav .sec-main__header-nav-menu--deactivated {
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-  -webkit-animation: swing-out 0.5s linear;
-          animation: swing-out 0.5s linear;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  -webkit-animation: shrink-hidden 0.5s linear forwards;
+          animation: shrink-hidden 0.5s linear forwards;
 }
 
 .sec-main__header .sec-main__header-nav .sec-main__header-nav-item #nav-link-about {
@@ -840,7 +824,7 @@ body, h2 {
 }
 
 .sec-main__header .sec-main__header-nav .sec-main__header-nav-item .sec-main--header-nav-link {
-  color: #737373;
+  color: #eeeeee;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 3px;

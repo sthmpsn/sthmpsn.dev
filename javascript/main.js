@@ -50,6 +50,15 @@
     });
   }
 
+  // IF Viewport width >= 992px then remove the class sec-main__header-nav-menu--active
+  // Use case is when a user is in mobile view and activates the hamburger menu then leaves mobile view (+992px) while menu active
+  window.addEventListener('resize', function(){
+    if (window.innerWidth >= 992 && menu.classList.contains("sec-main__header-nav-menu--active")) {
+      menu.classList.remove("sec-main__header-nav-menu--active");
+      console.log("REMOVED ACTIVE CLASS MENU - 992px or greater");
+    }
+  });
+
   // [END] NAV MENU RELATED
 
   // [START] Scroll position Slide in Animations

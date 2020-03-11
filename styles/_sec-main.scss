@@ -89,6 +89,8 @@
       }
 
       #{$self}__header-nav-menu-icon {
+        position: relative;
+        z-index: 100;
         font-size: 3rem;
         cursor: pointer;
 
@@ -105,36 +107,28 @@
 
         @include breakPoint(992px){
           display: block; 
-          // The entries with !important are needed for a use case where a user is in mobile with hamburger menu, then activates it and then switches to a "non-mobile" view
-          position: relative !important;
-          background: none !important;
-          box-shadow: none !important;
-        }
-
-        @include breakPoint(992px){
+          background: none;
           font-size: 1.2rem;
         }
-
       } // End header-nav-menu
 
       #{$self}__header-nav-menu--active {
-        background: $secondary-color;
+        background: $primary-color;
         position: absolute;
         display: block;
-        border-radius: 0 15px 15px 0;
-        left: 0;
+        border-radius: 0;
+        right: 0;
         top: 0;
         margin: 0;
-        padding: 0;
+        padding: 1em 0;
         text-align: center;
-        box-shadow: $boxShadow;
-        transform-origin: top left;
-        animation: swing-in 0.5s linear;
+        transform-origin: top right;
+        animation: grow-fs 0.5s linear forwards;
       } // End header-nav-menu--active
 
       #{$self}__header-nav-menu--deactivated {
-        transform-origin: top left;
-        animation: swing-out 0.5s linear;
+        transform-origin: top right;
+        animation: shrink-hidden 0.5s linear forwards;
       } // End header-nav-menu--deactivated
 
       #{$self}__header-nav-item {
@@ -148,7 +142,8 @@
         }
 
         #{$self}--header-nav-link {
-          color: $txt-color;
+          // color: $txt-color;
+          color: $secondary-color;
           text-decoration: none;
           text-transform: uppercase;
           letter-spacing: 3px;

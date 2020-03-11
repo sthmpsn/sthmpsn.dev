@@ -25,7 +25,7 @@
             screenWidth = window.innerWidth;  // Get the NEW screen width
             // console.log("New Screen Width: " + screenWidth);
         }
-    })
+    });
 
 
     let prevButton = document.querySelector('.sec-portfolio__carousel-ctrl-prev-button');

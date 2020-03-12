@@ -291,7 +291,7 @@ body, h2 {
   }
   100% {
     opacity: 1;
-    height: 100vh;
+    height: 310px;
     width: 100vw;
     border-radius: 0;
   }
@@ -306,7 +306,7 @@ body, h2 {
   }
   100% {
     opacity: 1;
-    height: 100vh;
+    height: 310px;
     width: 100vw;
     border-radius: 0;
   }
@@ -315,7 +315,7 @@ body, h2 {
 @-webkit-keyframes shrink-hidden {
   0% {
     opacity: 1;
-    height: 100vh;
+    height: 310px;
     width: 100vw;
     border-radius: 0;
   }
@@ -330,7 +330,7 @@ body, h2 {
 @keyframes shrink-hidden {
   0% {
     opacity: 1;
-    height: 100vh;
+    height: 310px;
     width: 100vw;
     border-radius: 0;
   }

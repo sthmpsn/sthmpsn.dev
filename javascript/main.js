@@ -97,6 +97,7 @@
 
     if (!elToTop.classList.contains('to-top-of-page--trigger') && toTopTrigger.getBoundingClientRect().top < 0) {
       elToTop.classList.add('to-top-of-page--trigger');
+      menu.classList.remove("sec-main__header-nav-menu--active");  // Also remove the active nav menu at this point
     }
     else if (elToTop.classList.contains('to-top-of-page--trigger') && toTopTrigger.getBoundingClientRect().top > 300){
       elToTop.classList.remove('to-top-of-page--trigger');

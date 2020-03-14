@@ -16,7 +16,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      // background-color: transparent;
       color: $secondary-color;
     } // End heading for 768px
 
@@ -48,21 +47,19 @@
   &__footer {
 
     #{$self}__email-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       margin: 4em auto 2em auto;
-
-      @include breakPoint(992px) {
-        flex-direction: row;
-      }
+      text-align: center;
 
       #{$self}__email-icon-cta {
-        display: block;
+        text-decoration: none;
+        color: $btn-bg-color;
+
+        @include breakPoint(992px) {
+          display: flex;
+          justify-content: center;
+        }
 
         #{$self}__email-icon {
-          color: $btn-bg-color;
           font-size: 3.5rem;
           animation: slow-blink 2s linear infinite;
 
@@ -91,8 +88,9 @@
         }
 
         @include breakPoint(992px) {
+          display: inline-block;
           font-size: 1.8rem;
-          margin: 1.5em 2em;
+          padding-left: 1.5rem;
           color: $secondary-color;
         }
       } // End email-address

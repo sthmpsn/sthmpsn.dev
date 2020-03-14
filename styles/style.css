@@ -1779,37 +1779,27 @@ body, h2 {
 }
 
 .sec-contact__footer .sec-contact__email-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin: 4em auto 2em auto;
-}
-
-@media only screen and (min-width: 992px) {
-  .sec-contact__footer .sec-contact__email-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
+  text-align: center;
 }
 
 .sec-contact__footer .sec-contact__email-container .sec-contact__email-icon-cta {
-  display: block;
+  text-decoration: none;
+  color: #0B6AB0;
+}
+
+@media only screen and (min-width: 992px) {
+  .sec-contact__footer .sec-contact__email-container .sec-contact__email-icon-cta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .sec-contact__footer .sec-contact__email-container .sec-contact__email-icon-cta .sec-contact__email-icon {
-  color: #0B6AB0;
   font-size: 3.5rem;
   -webkit-animation: slow-blink 2s linear infinite;
           animation: slow-blink 2s linear infinite;
@@ -1845,8 +1835,9 @@ body, h2 {
 
 @media only screen and (min-width: 992px) {
   .sec-contact__footer .sec-contact__email-container .sec-contact__email-address {
+    display: inline-block;
     font-size: 1.8rem;
-    margin: 1.5em 2em;
+    padding-left: 1.5rem;
     color: #eeeeee;
   }
 }

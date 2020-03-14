@@ -67,11 +67,16 @@
       #{$self}__skill-orbit-path {
         // border: 1px dashed black;  // debugging positions of skills in orbit
         position: relative;
-        width: calc(300px * #{$orbitPathScale});
-        height: calc(300px * #{$orbitPathScale});
+        width: calc(300px * #{$orbitPathScale-sm});
+        height: calc(300px * #{$orbitPathScale-sm});
         border-radius: 100%;
         transform-style: preserve-3d;
         animation: spin-right $spinRate linear infinite;
+
+        @include breakPoint(992px) {
+          width: calc(300px * #{$orbitPathScale-lg});
+          height: calc(300px * #{$orbitPathScale-lg});
+        }
 
         /* Skills image counter rotation to keep upright */
         #{$self}--skill-rotate {
@@ -86,12 +91,28 @@
           animation: spin-left $spinRate linear infinite;
         }
 
-        #{$self}__skill-csharp {
+        // Waiting until my personal training of C-Sharp is complete before displaying 
+        // #{$self}__skill-csharp {
+        //   bottom: 0;
+        //   left: 45%;
+        //   background-image: url("../assets/images/skills/logo-c-sharp.svg");
+        //   background-repeat: no-repeat;
+        //   background-size: contain;
+        // }
+
+        #{$self}__skill-sql {
           bottom: 0;
           left: 45%;
-          background-image: url("../assets/images/skills/logo-c-sharp.svg");
+          background-image: url("../assets/images/skills/logo-sql.svg");
           background-repeat: no-repeat;
           background-size: contain;
+          border: 2px solid #4d4d4d;
+          border-radius: 15px;
+
+          @include breakPoint(992px){
+            background-image: url("../assets/images/skills/logo-sql-secondary.svg");
+            border-color: $secondary-color;
+          }
         }
 
         #{$self}__skill-bootstrap {
@@ -120,7 +141,7 @@
           background-size: contain;
 
           @include breakPoint(992px){
-            background-image: url("../assets/images/skills/logo-jquery-light-gray.svg");
+            background-image: url("../assets/images/skills/logo-jquery-secondary.svg");
           }
         }
 
@@ -187,26 +208,41 @@
 
         }
 
-        #{$self}__skill-dotnetcore {
+        // Waiting until my personal training of .NET Core is complete before displaying 
+        // #{$self}__skill-dotnetcore {
+        //   bottom: 3%;
+        //   right: 22%;
+        //   background-image: url("../assets/images/skills/logo-dotNet.svg");
+        //   background-repeat: no-repeat;
+        //   background-size: contain;
+        // }
+
+        #{$self}__skill-problem-solving {
           bottom: 3%;
           right: 22%;
-          background-image: url("../assets/images/skills/logo-dotNet.svg");
-          background-repeat: no-repeat;
-          background-size: contain;
-
+          font-size: 4rem;
+          
+          @include breakPoint(992px){
+            color: $secondary-color;
+          }
         }
       }
 
       /* Center the HTML image at the center of orbit */
       #{$self}__skill-html5 {
         position: absolute;
-        height: 50%;
-        width: 50%;
+        height: 45%;
+        width: 45%;
         transform: rotateX(-$orbitAngle);
         background-image: url("../assets/images/skills/logo-html5.svg");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
+
+        @include breakPoint (992px){
+          height: 50%;
+          width: 50%;
+        }
       }
 
       #{$self}__showcase-skill-names {
@@ -217,7 +253,8 @@
         transform: scaleY(2);
 
         #{$self}--showcase-skill-names-scroll::before {
-          content: "C-Sharp";
+          // content: "C-Sharp";
+          content: "SQL";
           font-size: 4rem;
           font-weight: 500;
           letter-spacing: 5px;

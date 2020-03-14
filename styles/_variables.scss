@@ -24,7 +24,8 @@ $form-bg-color: linear-gradient(to bottom left,$skills-banner-color,$primary-col
 $boxShadow: 5px 10px 10px;
 
 // Skills Orbit Controls
-$orbitPathScale: 2.1;
+$orbitPathScale-lg: 2.1;
+$orbitPathScale-sm: 1.7;
 $orbitAngle: 70deg;
 $skillImgScale: .5;
 $spinRate: 30s;

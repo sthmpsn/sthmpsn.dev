@@ -448,10 +448,10 @@ body, h2 {
 
 @-webkit-keyframes scroll-skill-names {
   0% {
-    content: 'C-Sharp';
+    content: 'SQL';
   }
   8.3% {
-    content: '.Net Core';
+    content: 'Problem Solving';
   }
   16.6% {
     content: 'NodeJS';
@@ -484,16 +484,16 @@ body, h2 {
     content: 'Bootstrap';
   }
   100% {
-    content: 'C-Sharp';
+    content: 'SQL';
   }
 }
 
 @keyframes scroll-skill-names {
   0% {
-    content: 'C-Sharp';
+    content: 'SQL';
   }
   8.3% {
-    content: '.Net Core';
+    content: 'Problem Solving';
   }
   16.6% {
     content: 'NodeJS';
@@ -526,7 +526,7 @@ body, h2 {
     content: 'Bootstrap';
   }
   100% {
-    content: 'C-Sharp';
+    content: 'SQL';
   }
 }
 
@@ -2456,8 +2456,8 @@ body, h2 {
   }
   .sec-skills__showcase .sec-skills__skill-orbit-path {
     position: relative;
-    width: calc(300px * 2.1);
-    height: calc(300px * 2.1);
+    width: calc(300px * 1.7);
+    height: calc(300px * 1.7);
     border-radius: 100%;
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
@@ -2465,6 +2465,16 @@ body, h2 {
             animation: spin-right 30s linear infinite;
     /* Skills image counter rotation to keep upright */
   }
+}
+
+@media only screen and (min-width: 768px) and (min-width: 992px) {
+  .sec-skills__showcase .sec-skills__skill-orbit-path {
+    width: calc(300px * 2.1);
+    height: calc(300px * 2.1);
+  }
+}
+
+@media only screen and (min-width: 768px) {
   .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills--skill-rotate {
     position: absolute;
     height: 70px;
@@ -2485,13 +2495,25 @@ body, h2 {
     -webkit-animation: spin-left 30s linear infinite;
             animation: spin-left 30s linear infinite;
   }
-  .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-csharp {
+  .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-sql {
     bottom: 0;
     left: 45%;
-    background-image: url("../assets/images/skills/logo-c-sharp.svg");
+    background-image: url("../assets/images/skills/logo-sql.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    border: 2px solid #4d4d4d;
+    border-radius: 15px;
   }
+}
+
+@media only screen and (min-width: 768px) and (min-width: 992px) {
+  .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-sql {
+    background-image: url("../assets/images/skills/logo-sql-secondary.svg");
+    border-color: #eeeeee;
+  }
+}
+
+@media only screen and (min-width: 768px) {
   .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-bootstrap {
     bottom: 5%;
     left: 19%;
@@ -2517,7 +2539,7 @@ body, h2 {
 
 @media only screen and (min-width: 768px) and (min-width: 992px) {
   .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-jquery {
-    background-image: url("../assets/images/skills/logo-jquery-light-gray.svg");
+    background-image: url("../assets/images/skills/logo-jquery-secondary.svg");
   }
 }
 
@@ -2571,17 +2593,24 @@ body, h2 {
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-dotnetcore {
+  .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-problem-solving {
     bottom: 3%;
     right: 22%;
-    background-image: url("../assets/images/skills/logo-dotNet.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+    font-size: 4rem;
   }
+}
+
+@media only screen and (min-width: 768px) and (min-width: 992px) {
+  .sec-skills__showcase .sec-skills__skill-orbit-path .sec-skills__skill-problem-solving {
+    color: #eeeeee;
+  }
+}
+
+@media only screen and (min-width: 768px) {
   .sec-skills__showcase .sec-skills__skill-html5 {
     position: absolute;
-    height: 50%;
-    width: 50%;
+    height: 45%;
+    width: 45%;
     -webkit-transform: rotateX(-70deg);
             transform: rotateX(-70deg);
     background-image: url("../assets/images/skills/logo-html5.svg");
@@ -2589,6 +2618,16 @@ body, h2 {
     background-size: contain;
     background-position: center;
   }
+}
+
+@media only screen and (min-width: 768px) and (min-width: 992px) {
+  .sec-skills__showcase .sec-skills__skill-html5 {
+    height: 50%;
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
   .sec-skills__showcase .sec-skills__showcase-skill-names {
     position: absolute;
     bottom: -400px;
@@ -2598,7 +2637,7 @@ body, h2 {
             transform: scaleY(2);
   }
   .sec-skills__showcase .sec-skills__showcase-skill-names .sec-skills--showcase-skill-names-scroll::before {
-    content: "C-Sharp";
+    content: "SQL";
     font-size: 4rem;
     font-weight: 500;
     letter-spacing: 5px;

@@ -73,7 +73,6 @@
           position: inherit;
           margin-top: .8rem;
         }
-
       } // End header-name
     } // End header-brand
 
@@ -228,8 +227,6 @@
     @include breakPoint(1200px) {
       padding: 0 10em;
     }
-
-
 
     #{$self}__about-title {
       text-align: center;

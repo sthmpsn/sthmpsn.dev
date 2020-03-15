@@ -49,14 +49,12 @@
   @include breakPoint(992px){
     padding: 30px 20px;
     background-image: none;
-    // testing slide in
     overflow-x: hidden;
     position: relative;
 
     & > i, & > h2 {
       position: relative;
       right: -300px;
-      
     }
 
     .slide-in-from-right{

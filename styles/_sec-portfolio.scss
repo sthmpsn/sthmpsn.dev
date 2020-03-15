@@ -110,10 +110,6 @@
             box-shadow: 0 0 20px inset black;
             opacity: .2;
             transform: rotateX(85deg); // rotate the thin rectangle so that the shape gets mixed in with the shadow blur
-
-            @include breakPoint(992px){
-              // box-shadow: 0 0 20px inset $secondary-color;
-            }
           } // End &::before
         } // End proj-card breakPoint 992px
 
@@ -276,7 +272,6 @@
       @include breakPoint(1200px){
         right: 0;
       }
-
     }
   // } // End carousel-controls
 } // END .sec-portfolio

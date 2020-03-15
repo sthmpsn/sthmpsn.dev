@@ -96,8 +96,6 @@
     @include breakPoint(1900px){
         grid-template-columns: .5fr 2fr .5fr;
     }
-
-
 } // End .sec-portfolio
 
 .sec-contact {
@@ -218,6 +216,5 @@
     .sec-footer__contact {
         grid-area: f-contact;
     }
-
 } // End .sec-footer
 

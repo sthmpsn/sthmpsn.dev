@@ -3,7 +3,7 @@
     console.log("...loaded portfolio.js");
 
     // [START] Carousel Controls
-    let carousel = document.querySelector('.sec-portfolio__carousel');
+    let carousel = document.querySelector('.projects__carousel');
     let projCount = 8;
     var curProjIndex = 0;
     console.log("curProjectIndexed:" + curProjIndex);

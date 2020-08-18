@@ -63,7 +63,7 @@
       transform-style: preserve-3d; // preserves all the content within this (skills) as 3D
 
       /* Hidden orbit path of skills around the HTML image */
-      #{$self}__skill-orbit-path {
+      .skills-orbit-path {
         // border: 1px dashed black;  // debugging positions of skills in orbit
         position: relative;
         width: calc(300px * #{$orbitPathScale-sm});
@@ -78,7 +78,7 @@
         }
 
         /* Skills image counter rotation to keep upright */
-        #{$self}--skill-rotate {
+        .skills-orbit-path--rotate-skills {
           position: absolute;
           height: 70px;
           width: 70px;
@@ -99,7 +99,7 @@
         //   background-size: contain;
         // }
 
-        #{$self}__skill-sql {
+        .skills-orbit-path__sql {
           bottom: 0;
           left: 45%;
           background-image: url("../assets/images/skills/logo-sql.svg");
@@ -114,7 +114,7 @@
           }
         }
 
-        #{$self}__skill-bootstrap {
+        .skills-orbit-path__bootstrap {
           bottom: 5%;
           left: 19%;
           background-image: url("../assets/images/skills/logo-bootstrap.svg");
@@ -123,7 +123,7 @@
 
         }
 
-        #{$self}__skill-javascript {
+        .skills-orbit-path__javascript {
           bottom: 26%;
           left: 4%;
           background-image: url("../assets/images/skills/logo-javascript.svg");
@@ -132,7 +132,7 @@
 
         }
 
-        #{$self}__skill-jquery {
+        .skills-orbit-path__jquery {
           top: 40%;
           left: 0%;
           background-image: url("../assets/images/skills/logo-jquery.svg");
@@ -144,7 +144,7 @@
           }
         }
 
-        #{$self}__skill-reactjs {
+        .skills-orbit-path__reactjs {
           top: 16%;
           left: 8%;
           background-image: url("../assets/images/skills/logo-react.svg");
@@ -153,7 +153,7 @@
 
         }
 
-        #{$self}__skill-atlassian {
+        .skills-orbit-path__atlassian {
           top: 3%;
           left: 23%;
           background-image: url("../assets/images/skills/logo-atlassian.svg");
@@ -162,7 +162,7 @@
 
         }
 
-        #{$self}__skill-sass {
+        .skills-orbit-path__sass {
           top: -3%;
           left: 50%;
           background-image: url("../assets/images/skills/logo-sass.svg");
@@ -171,7 +171,7 @@
 
         }
 
-        #{$self}__skill-mongodb {
+        .skills-orbit-path__mongodb {
           top: 6%;
           right: 18%;
           background-image: url("../assets/images/skills/logo-mongoDB.svg");
@@ -180,7 +180,7 @@
 
         }
 
-        #{$self}__skill-git {
+        .skills-orbit-path__git {
           top: 26%;
           right: 4%;
           background-image: url("../assets/images/skills/logo-git.svg");
@@ -189,7 +189,7 @@
 
         }
 
-        #{$self}__skill-css3 {
+        .skills-orbit-path__css3 {
           bottom: 43%;
           right: 0%;
           background-image: url("../assets/images/skills/logo-css3-alt.svg");
@@ -198,7 +198,7 @@
 
         }
 
-        #{$self}__skill-nodejs {
+        .skills-orbit-path__nodejs {
           bottom: 21%;
           right: 7%;
           background-image: url("../assets/images/skills/logo-node-js.svg");
@@ -216,7 +216,7 @@
         //   background-size: contain;
         // }
 
-        #{$self}__skill-problem-solving {
+        .skills-orbit-path__problem-solving {
           bottom: 3%;
           right: 22%;
           font-size: 4rem;
@@ -228,7 +228,7 @@
       }
 
       /* Center the HTML image at the center of orbit */
-      #{$self}__skill-html5 {
+      .skills-showcase__html5 {
         position: absolute;
         height: 45%;
         width: 45%;
@@ -244,14 +244,14 @@
         }
       }
 
-      #{$self}__showcase-skill-names {
+      .skills-showcase__skill-names {
         position: absolute;
         bottom: -400px;
         width: 100%;
         text-align: center;
         transform: scaleY(2);
 
-        #{$self}--showcase-skill-names-scroll::before {
+        .skills-showcase__skill-names--scroll::before {
           content: "SQL";
           font-size: 4rem;
           font-weight: 500;

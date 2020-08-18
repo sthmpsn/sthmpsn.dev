@@ -18,14 +18,9 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="icon" type="image/png" href="assets/images/icons/favicon.ico">
-    <link rel="stylesheet" href="styles/style.css" />
-    <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-    crossorigin="anonymous"
-  />
+    <link rel="icon" type="image/png" href="dist/images/favicon.ico">
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
     <title>Steve Thompson's Web Developer Portfolio</title>
   </head>
   <body>
@@ -35,40 +30,40 @@
       <main id="sec-main" class="sec-main">
         <h1 class="sr-only">Steve Thompson's Web Developer Portfolio</h1>
         <header class="sec-main__header">
-          <div class="sec-main__header-brand">
-              <img class="sec-main__header-avatar" src="./assets/images/Avatar.svg" alt="Avatar">
-              <div class="sec-main__header-name">
-                <span class="sec-main__header-fname">Steve</span>
-                <span class="sec-main__header-lname">Thompson</span>
+          <div class="header-brand">
+              <img class="header-avatar" src="dist/images/Avatar.svg" alt="Avatar">
+              <div class="header-name">
+                <span class="header-fname">Steve</span>
+                <span class="header-lname">Thompson</span>
               </div>
           </div>
-          <nav class="sec-main__header-nav">
+          <nav class="header-nav">
             <h2 class="sr-only">Main Navigation</h2>
-            <div class="sec-main__header-nav-menu-icon"><i class="fas fa-bars"></i></div>
-            <ul class="sec-main__header-nav-menu">
-              <li class="sec-main__header-nav-item"><a id="nav-link-about" href="#sec-main" class="sec-main--header-nav-link">About</a></li>
-              <li class="sec-main__header-nav-item"><a id="nav-link-portfolio" href="#sec-portfolio" class="sec-main--header-nav-link">Portfolio</a></li>
-              <li class="sec-main__header-nav-item"><a id="nav-link-contact" href="#sec-contact" class="sec-main--header-nav-link">Contact</a></li>
-              <li class="sec-main__header-nav-item"><a id="nav-link-skills" href="#sec-skills" class="sec-main--header-nav-link">Skills</a></li>
+            <div class="nav-menu-icon"><i class="fas fa-bars"></i></div>
+            <ul class="nav-menu">
+              <li class="nav-item"><a id="nav-link-about" href="#sec-main" class="nav-link">About</a></li>
+              <li class="nav-item"><a id="nav-link-portfolio" href="#sec-portfolio" class="nav-link">Portfolio</a></li>
+              <li class="nav-item"><a id="nav-link-contact" href="#sec-contact" class="nav-link">Contact</a></li>
+              <li class="nav-item"><a id="nav-link-skills" href="#sec-skills" class="nav-link">Skills</a></li>
             </ul> 
           </nav>
         </header>
         <div id="sec-main__about" class="sec-main__about">
-            <h2 class="sec-main__about-title">
-              <span class="sec-main__about-title-primary">Web Developer</span>
+            <h2 class="about__title">
+              <span class="about__title-primary">Web Developer</span>
               <br>
-              <span class="sec-main__about-title-ampersand">&</span>
+              <span class="about__title-ampersand">&</span>
               <br>
-              <span class="sec-main__about-title-secondary">Experienced IT Professional</span>
+              <span class="about__title-secondary">Experienced IT Professional</span>
             </h2>
-            <div class="sec-main__about-me">
-              <p class="sec-main__about-me-info">
+            <div class="about__me">
+              <p class="about__me-info">
                 I'm an experienced IT professional turned full stack developer who enjoys taking ideas and turning them into reality. My strength is the ability to rapidly understand new concepts and apply them to the real world.
               </p>
             </div>
-            <aside class="sec-main__aside">
+            <aside class="about__resume">
               <h2 class="sr-only">View Steve's Resume</h2>
-                <a class="sec-main__cta-dl-resume" href="./assets/docs/SteveThompson-resume.pdf" target="_blank">View Resume</a>
+                <a class="about__cta-dl-resume" href="./src/assets/docs/SteveThompson-resume.pdf" target="_blank">View Resume</a>
             </aside>
         </div>
 
@@ -77,103 +72,131 @@
       <!-- START of PORTFOLIO Section -->
       <section id="sec-portfolio" class="sec-portfolio">
         <div class="sec-portfolio__heading sec-heading">
-          <i class="sec-portfolio__heading-icon fas fa-briefcase"></i>
-          <h2 class="sec-portfolio__heading-title">Portfolio</h2>
+          <i class="heading__icon fas fa-briefcase"></i>
+          <h2 class="heading__title">Portfolio</h2>
         </div>
         <div class="sec-portfolio__projects">
-          <div class="sec-portfolio__carousel">
-            <div id="proj-tryathlete" class="sec-portfolio__proj-card">
-              <div class="sec-portfolio__proj-card-container">
-                <img class="sec-portfolio__proj-img" src="./assets/images/projects/proj-tryathlete.jpg"/>
-                <div class="sec-portfolio__proj-info">
-                  <div class="sec-portfolio__proj-title">TryAthlete <br>App</div>
-                  <div class="sec-portfolio__proj-cta">
-                    <a class="sec-portfolio__proj-view-code proj-cta-btn btn-3d" href="https://github.com/sthmpsn/TryAthlete" target="_blank"><i class="fas fa-code"></i></a>
-                    <a class="sec-portfolio__proj-run-app proj-cta-btn btn-3d" href="https://my-try-athlete.herokuapp.com" target="_blank"><i class="fas fa-play"></i></a>
+          <div class="projects__carousel">
+            <div id="proj-tryathlete" class="projects__card">
+              <div class="projects__card-container">
+                <img class="projects__img" src="dist/images/proj-tryathlete.jpg"/>
+                <div class="projects__info">
+                  <div class="projects__title">TryAthlete
+                    <div class="projects__subtitle">
+                      Push Yourself, Pull For Everyone
+                    </div>
+                  </div>
+                  <div class="projects__cta">
+                    <a class="projects__view-code proj-cta-btn btn-3d" href="https://github.com/sthmpsn/TryAthlete" target="_blank"><i class="fas fa-code"></i></a>
+                    <a class="projects__run-app proj-cta-btn btn-3d" href="https://my-try-athlete.herokuapp.com" target="_blank"><i class="fas fa-play"></i></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div id="proj-clicky" class="sec-portfolio__proj-card">
-              <div class="sec-portfolio__proj-card-container">
-                <img class="sec-portfolio__proj-img" src="./assets/images/projects/proj-clicky.jpg"/>
-                <div class="sec-portfolio__proj-info">
-                  <div class="sec-portfolio__proj-title">The Simpsons Memory Click Game</div>
-                  <div class="sec-portfolio__proj-cta">
-                    <a class="sec-portfolio__proj-view-code proj-cta-btn btn-3d" href="https://github.com/sthmpsn/clicky-game" target="_blank"><i class="fas fa-code"></i></a>
-                    <a class="sec-portfolio__proj-run-app proj-cta-btn btn-3d" href="https://sthmpsn.github.io/clicky-game" target="_blank"><i class="fas fa-play"></i></a>
+            <div id="proj-clicky" class="projects__card">
+              <div class="projects__card-container">
+                <img class="projects__img" src="dist/images/proj-clicky.jpg"/>
+                <div class="projects__info">
+                  <div class="projects__title">Memory Click Game
+                    <div class="projects__subtitle">
+                      Simpsons Edition
+                    </div>
+                  </div>
+                  <div class="projects__cta">
+                    <a class="projects__view-code proj-cta-btn btn-3d" href="https://github.com/sthmpsn/clicky-game" target="_blank"><i class="fas fa-code"></i></a>
+                    <a class="projects__run-app proj-cta-btn btn-3d" href="https://sthmpsn.github.io/clicky-game" target="_blank"><i class="fas fa-play"></i></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div id="proj-cyoa" class="sec-portfolio__proj-card">
-              <div class="sec-portfolio__proj-card-container">
-                <img class="sec-portfolio__proj-img" src="./assets/images/projects/proj-cyoa.jpg"/>
-                <div class="sec-portfolio__proj-info">
-                  <div class="sec-portfolio__proj-title">Choose Your Own Adventure! - Coding Boot Camp Edition</div>
-                  <div class="sec-portfolio__proj-cta">
-                    <a class="sec-portfolio__proj-view-code proj-cta-btn btn-3d" href="https://github.com/sthmpsn/Web-Dev-Alliance" target="_blank"><i class="fas fa-code"></i></a>
-                    <a class="sec-portfolio__proj-run-app proj-cta-btn btn-3d" href="https://cyoa-bc.herokuapp.com" target="_blank"><i class="fas fa-play"></i></a>
+            <div id="proj-cyoa" class="projects__card">
+              <div class="projects__card-container">
+                <img class="projects__img" src="dist/images/proj-cyoa.jpg"/>
+                <div class="projects__info">
+                  <div class="projects__title">Choose Your Own Adventure!
+                    <div class="projects__subtitle">
+                      Coding Boot Camp Edition
+                    </div>
+                  </div>
+                  <div class="projects__cta">
+                    <a class="projects__view-code proj-cta-btn btn-3d" href="https://github.com/sthmpsn/Web-Dev-Alliance" target="_blank"><i class="fas fa-code"></i></a>
+                    <a class="projects__run-app proj-cta-btn btn-3d" href="https://cyoa-bc.herokuapp.com" target="_blank"><i class="fas fa-play"></i></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div id="proj-rpg" class="sec-portfolio__proj-card">
-              <div class="sec-portfolio__proj-card-container">
-                <img class="sec-portfolio__proj-img" src="./assets/images/projects/proj-rpg.jpg"/>
-                <div class="sec-portfolio__proj-info">
-                  <div class="sec-portfolio__proj-title">Star Wars RPG Game</div>
-                  <div class="sec-portfolio__proj-cta">
-                    <a class="sec-portfolio__proj-view-code proj-cta-btn btn-3d" href="https://github.com/sthmpsn/StarWars-RPG" target="_blank"><i class="fas fa-code"></i></a>
-                    <a class="sec-portfolio__proj-run-app proj-cta-btn btn-3d" href="https://sthmpsn.github.io/StarWars-RPG" target="_blank"><i class="fas fa-play"></i></a>
+            <div id="proj-rpg" class="projects__card">
+              <div class="projects__card-container">
+                <img class="projects__img" src="dist/images/proj-rpg.jpg"/>
+                <div class="projects__info">
+                  <div class="projects__title">RPG Game
+                    <div class="projects__subtitle">
+                      Star Wars Edition
+                    </div>
+                  </div>
+                  <div class="projects__cta">
+                    <a class="projects__view-code proj-cta-btn btn-3d" href="https://github.com/sthmpsn/StarWars-RPG" target="_blank"><i class="fas fa-code"></i></a>
+                    <a class="projects__run-app proj-cta-btn btn-3d" href="https://sthmpsn.github.io/StarWars-RPG" target="_blank"><i class="fas fa-play"></i></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div id="proj-lirr-schedule" class="sec-portfolio__proj-card">
-              <div class="sec-portfolio__proj-card-container">
-                <img class="sec-portfolio__proj-img" src="./assets/images/projects/proj-trainSchedule.jpg"/>
-                <div class="sec-portfolio__proj-info">
-                  <div class="sec-portfolio__proj-title">LIRR Train Schedule Mockup!</div>
-                  <div class="sec-portfolio__proj-cta">
-                    <a class="sec-portfolio__proj-view-code proj-cta-btn btn-3d" href="https://github.com/sthmpsn/Train-Schedule" target="_blank"><i class="fas fa-code"></i></a>
-                    <a class="sec-portfolio__proj-run-app proj-cta-btn btn-3d" href="https://sthmpsn.github.io/Train-Schedule" target="_blank"><i class="fas fa-play"></i></a>
+            <div id="proj-lirr-schedule" class="projects__card">
+              <div class="projects__card-container">
+                <img class="projects__img" src="dist/images/proj-trainSchedule.jpg"/>
+                <div class="projects__info">
+                  <div class="projects__title">LIRR Train Schedule
+                    <div class="projects__subtitle">
+                      Mockup
+                    </div>
+                  </div>
+                  <div class="projects__cta">
+                    <a class="projects__view-code proj-cta-btn btn-3d" href="https://github.com/sthmpsn/Train-Schedule" target="_blank"><i class="fas fa-code"></i></a>
+                    <a class="projects__run-app proj-cta-btn btn-3d" href="https://sthmpsn.github.io/Train-Schedule" target="_blank"><i class="fas fa-play"></i></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div id="proj-my-reviews" class="sec-portfolio__proj-card">
-              <div class="sec-portfolio__proj-card-container">
-                <img class="sec-portfolio__proj-img" src="./assets/images/projects/proj-myReviews.jpg"/>
-                <div class="sec-portfolio__proj-info">
-                  <div class="sec-portfolio__proj-title">My Reviews App</div>
-                  <div class="sec-portfolio__proj-cta">
-                    <a class="sec-portfolio__proj-view-code proj-cta-btn btn-3d" href="https://github.com/sthmpsn/ReviewMe" target="_blank"><i class="fas fa-code"></i></a>
-                    <a class="sec-portfolio__proj-run-app proj-cta-btn btn-3d" href="https://sthmpsn.github.io/ReviewMe" target="_blank"><i class="fas fa-play"></i></a>
+            <div id="proj-my-reviews" class="projects__card">
+              <div class="projects__card-container">
+                <img class="projects__img" src="dist/images/proj-myReviews.jpg"/>
+                <div class="projects__info">
+                  <div class="projects__title">My Reviews
+                    <div class="projects__subtitle">
+                      Personal Reviews & Comments
+                    </div>
+                  </div>
+                  <div class="projects__cta">
+                    <a class="projects__view-code proj-cta-btn btn-3d" href="https://github.com/sthmpsn/ReviewMe" target="_blank"><i class="fas fa-code"></i></a>
+                    <a class="projects__run-app proj-cta-btn btn-3d" href="https://sthmpsn.github.io/ReviewMe" target="_blank"><i class="fas fa-play"></i></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div id="proj-gifflix" class="sec-portfolio__proj-card">
-              <div class="sec-portfolio__proj-card-container">
-                <img class="sec-portfolio__proj-img" src="./assets/images/projects/proj-gifflix.jpg"/>
-                <div class="sec-portfolio__proj-info">
-                  <div class="sec-portfolio__proj-title">GifFlix App</div>
-                  <div class="sec-portfolio__proj-cta">
-                    <a class="sec-portfolio__proj-view-code proj-cta-btn btn-3d" href="https://github.com/sthmpsn/Gifflix" target="_blank"><i class="fas fa-code"></i></a>
-                    <a class="sec-portfolio__proj-run-app proj-cta-btn btn-3d" href="https://gifflix.sthmpsn.dev" target="_blank"><i class="fas fa-play"></i></a>
+            <div id="proj-gifflix" class="projects__card">
+              <div class="projects__card-container">
+                <img class="projects__img" src="dist/images/proj-gifflix.jpg"/>
+                <div class="projects__info">
+                  <div class="projects__title">GifFlix
+                    <div class="projects__subtitle">
+                      Custom Giphy Search & Display
+                    </div>
+                  </div>
+                  <div class="projects__cta">
+                    <a class="projects__view-code proj-cta-btn btn-3d" href="https://github.com/sthmpsn/Gifflix" target="_blank"><i class="fas fa-code"></i></a>
+                    <a class="projects__run-app proj-cta-btn btn-3d" href="https://gifflix.sthmpsn.dev" target="_blank"><i class="fas fa-play"></i></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div id="proj-book-search" class="sec-portfolio__proj-card">
-              <div class="sec-portfolio__proj-card-container">
-                <img class="sec-portfolio__proj-img" src="./assets/images/projects/proj-bookSearch.jpg"/>
-                <div class="sec-portfolio__proj-info">
-                  <div class="sec-portfolio__proj-title">Google Book Search Collection</div>
-                  <div class="sec-portfolio__proj-cta">
-                    <a class="sec-portfolio__proj-view-code proj-cta-btn btn-3d" href="https://github.com/sthmpsn/book-search" target="_blank"><i class="fas fa-code"></i></a>
-                    <a class="sec-portfolio__proj-run-app proj-cta-btn btn-3d" href="https://my-google-booksearch.herokuapp.com" target="_blank"><i class="fas fa-play"></i></a>
+            <div id="proj-book-search" class="projects__card">
+              <div class="projects__card-container">
+                <img class="projects__img" src="dist/images/proj-bookSearch.jpg"/>
+                <div class="projects__info">
+                  <div class="projects__title">Google Book Search Collection</div>
+                  <div class="projects__cta">
+                    <a class="projects__view-code proj-cta-btn btn-3d" href="https://github.com/sthmpsn/book-search" target="_blank"><i class="fas fa-code"></i></a>
+                    <a class="projects__run-app proj-cta-btn btn-3d" href="https://my-google-booksearch.herokuapp.com" target="_blank"><i class="fas fa-play"></i></a>
                   </div>
                 </div>
               </div>
@@ -183,71 +206,68 @@
         <div class="sec-portfolio__carousel-ctrl-prev-button sec-portfolio--carousel-ctrl-button">
           <i class="fas fa-chevron-circle-left"></i>
         </div>
-        <div class="sec-portfolio__carousel-proj-details">
-          Project Details...In Progress
-        </div>
         <div class="sec-portfolio__carousel-ctrl-next-button sec-portfolio--carousel-ctrl-button">
           <i class="fas fa-chevron-circle-right"></i>
         </div>
       </section>
       <!-- END of PORTFOLIO Section -->
       <!-- START of CONTACT Section -->
-      <section id="sec-contact" class="sec-contact ">
+      <section id="sec-contact" class="sec-contact">
         <div class="sec-contact__heading sec-heading">
-          <i class="sec-contact__heading-icon fas fa-at"></i>
-          <h2 class="sec-contact__heading-title">Contact</h2>
+          <i class="contact-heading__icon fas fa-at"></i>
+          <h2 class="contact-heading__title">Contact</h2>
         </div>
-        <footer id="sec-contact__footer" class="sec-contact__footer">
-          <div class="sec-contact__email-container">
-            <a class="sec-contact__email-icon-cta sec-contact--icon-border" href="mailto:steve@sthmpsn.dev">
-              <i class="sec-contact__email-icon sec-contact--contact-icon fas fa-envelope"></i>
-              <address class="sec-contact__email-address">
+        <footer class="sec-contact__footer">
+          <div class="contact-footer__email-container">
+            <a class="contact-footer__email-icon-cta contact--icon-border" href="mailto:steve@sthmpsn.dev">
+              <i class="contact-footer__email-icon contact--contact-icon fas fa-envelope"></i>
+              <address class="contact-footer__email-address">
                 steve@sthmpsn.dev
               </address>
-          </a>
+            </a>
           </div>
-          <div class="sec-contact__phone-container">
-            <a class="sec-contact__phone-icon-cta sec-contact--icon-border" href="tel:631-834-8881">
-              <i class="sec-contact__phone-icon sec-contact--contact-icon fas fa-phone"></i>
+          <div class="contact-footer__phone-container">
+            <a class="contact-footer__phone-icon-cta contact--icon-border" href="tel:631-834-8881">
+              <i class="contact-footer__phone-icon contact--contact-icon fas fa-phone"></i>
             </a>
           </div>
           <!-- START Contact Me Form -->
-          <div class="sec-contact__form-container">
-            <form class="sec-contact__form" action="https://formspree.io/xdozgnnw" method="POST">
-              <label class="sec-contact__form-name-label">
+          <div class="contact-footer__form-container">
+            <form class="contact-footer__form" action="https://formspree.io/xdozgnnw" method="POST">
+              <label class="contact-footer__form-name-label">
                 Your name:
-                <input class="sec-contact__form-name-input" type="text" name="name" required>
+                <input class="contact-footer__form-name-input" type="text" name="name" required>
               </label>
-              <label class="sec-contact__form-email-label">
+              <label class="contact-footer__form-email-label">
                 Your email:
-                <input class="sec-contact__form-email-input" type="email" name="_replyto" required>
+                <input class="contact-footer__form-email-input" type="email" name="_replyto" required>
               </label>
-              <label class="sec-contact__form-message-label">
+              <label class="contact-footer__form-message-label">
                 Your message:
-                <textarea class="sec-contact__form-message-input" name="message" required></textarea>
+                <textarea class="contact-footer__form-message-input" name="message" required></textarea>
               </label>
-              <button class="sec-contact__form-submit-button" type="submit">Send</button>
+              <button class="contact-footer__form-submit-button" type="submit">Send</button>
             </form>
         </div>
           <!-- END Contact Me Form -->
-          <div class="sec-contact__social-media">
-            <a class="sec-contact--github-container sec-contact--social-icon-container" href="https://github.com/sthmpsn" target="_blank">
-              <i class="sec-contact__github-icon fab sec-contact--social-icon fa-github-alt"></i>
-              <i class="sec-contact__github-silhouette-icon sec-contact--social-icon fab fa-github"></i>
+          <div class="contact-footer__social-media">
+            <a class="contact-footer__github-container social-icon-container" href="https://github.com/sthmpsn" target="_blank">
+              <i class="contact-footer__github-icon fab social-icon fa-github-alt"></i>
+              <i class="contact-footer__github-silhouette-icon social-icon fab fa-github"></i>
             </a>
-            <a class="sec-contact--linkedin-container sec-contact--social-icon-container" href="https://www.linkedin.com/in/steven-thompson-10a5071b" target="_blank">
-              <i class="sec-contact__linkedin-icon sec-contact--social-icon fab fa-linkedin-in"></i>
+            <a class="contact-footer__linkedin-container social-icon-container" href="https://www.linkedin.com/in/steven-thompson-10a5071b" target="_blank">
+              <i class="contact-footer__linkedin-icon social-icon fab fa-linkedin-in"></i>
             </a>
-            <a class="sec-contact--twitter-container sec-contact--social-icon-container" href="https://twitter.com/StevenT35878867" target="_blank">
-              <i class="sec-contact__twitter-icon sec-contact--social-icon fab fa-twitter"></i>
-              <i class="sec-contact__twitter-icon-fly-in sec-contact--social-icon fab fa-twitter"></i>
+            <a class="contact-footer__twitter-container social-icon-container" href="https://twitter.com/StevenT35878867" target="_blank">
+              <i class="contact-footer__twitter-icon social-icon fab fa-twitter"></i>
+              <i class="contact-footer__twitter-icon-fly-in social-icon fab fa-twitter"></i>
             </a>
-            <a class="sec-contact--facebook-container sec-contact--social-icon-container" href="https://www.facebook.com/steve.thompson.5055" target="_blank">
-              <i class="sec-contact__facebook-icon sec-contact--social-icon fab fa-facebook-f"></i>
-              <i class="sec-contact__facebook-thumbs-up-icon sec-contact--social-icon fas fa-thumbs-up"></i>
+            <a class="contact-footer__facebook-container social-icon-container" href="https://www.facebook.com/steve.thompson.5055" target="_blank">
+              <i class="contact-footer__facebook-icon social-icon fab fa-facebook-f"></i>
+              <i class="contact-footer__facebook-thumbs-up-icon social-icon fas fa-thumbs-up"></i>
             </a>
-            <a class="sec-contact--codepen-container sec-contact--social-icon-container" href="https://codepen.io/sthmpsn" target="_blank">
-              <i class="sec-contact__codepen-icon sec-contact--social-icon fab fa-codepen"></i>
+            <a class="contact-footer__codepen-container social-icon-container" href="https://codepen.io/sthmpsn" target="_blank">
+              <i class="contact-footer__codepen-icon social-icon fab fa-codepen"></i>
             </a>
           </div>  
         </footer>
@@ -256,33 +276,33 @@
       <!-- START of SKILLS Section -->
       <section id="sec-skills" class="sec-skills ">
         <div class="sec-skills__heading sec-heading">
-          <i class="sec-skills__heading-icon fas fa-tools"></i>
-          <h2 class="sec-skills__heading-title">Skills</h2>
+          <i class="skills-heading__icon fas fa-tools"></i>
+          <h2 class="skills-heading__title">Skills</h2>
         </div>
         <div class="sec-skills__showcase">
-          <div class="sec-skills__skill-orbit-path sec-skills--skill-orbit-path-rotate">
+          <div class="skills-orbit-path skills-orbit-path--rotate">
             <!-- IN PROGRESS LEARNING - Will add once complete -->
             <!-- <div class="sec-skills__skill-csharp sec-skills--skill-rotate"></div> -->
-            <div class="sec-skills__skill-sql sec-skills--skill-rotate"></div>
-            <div class="sec-skills__skill-bootstrap sec-skills--skill-rotate"></div>
-            <div class="sec-skills__skill-javascript sec-skills--skill-rotate"></div>
-            <div class="sec-skills__skill-jquery sec-skills--skill-rotate"></div>
-            <div class="sec-skills__skill-reactjs sec-skills--skill-rotate"></div>
-            <div class="sec-skills__skill-atlassian sec-skills--skill-rotate"></div>
-            <div class="sec-skills__skill-sass sec-skills--skill-rotate"></div>
-            <div class="sec-skills__skill-mongodb sec-skills--skill-rotate"></div>
-            <div class="sec-skills__skill-git sec-skills--skill-rotate"></div>
-            <div class="sec-skills__skill-css3 sec-skills--skill-rotate"></div>
-            <div class="sec-skills__skill-nodejs sec-skills--skill-rotate"></div>
+            <div class="skills-orbit-path__sql skills-orbit-path--rotate-skills"></div>
+            <div class="skills-orbit-path__bootstrap skills-orbit-path--rotate-skills"></div>
+            <div class="skills-orbit-path__javascript skills-orbit-path--rotate-skills"></div>
+            <div class="skills-orbit-path__jquery skills-orbit-path--rotate-skills"></div>
+            <div class="skills-orbit-path__reactjs skills-orbit-path--rotate-skills"></div>
+            <div class="skills-orbit-path__atlassian skills-orbit-path--rotate-skills"></div>
+            <div class="skills-orbit-path__sass skills-orbit-path--rotate-skills"></div>
+            <div class="skills-orbit-path__mongodb skills-orbit-path--rotate-skills"></div>
+            <div class="skills-orbit-path__git skills-orbit-path--rotate-skills"></div>
+            <div class="skills-orbit-path__css3 skills-orbit-path--rotate-skills"></div>
+            <div class="skills-orbit-path__nodejs skills-orbit-path--rotate-skills"></div>
             <!-- IN PROGRESS LEARNING - Will add once complete -->
             <!-- <div class="sec-skills__skill-dotnetcore sec-skills--skill-rotate"></div> -->
-            <div class="sec-skills__skill-problem-solving sec-skills--skill-rotate">
+            <div class="skills-orbit-path__problem-solving skills-orbit-path--rotate-skills">
               <i class="fas fa-puzzle-piece"></i>
             </div>
           </div>
-          <div class="sec-skills__skill-html5"></div>
-          <div class="sec-skills__showcase-skill-names">
-            <span class="sec-skills--showcase-skill-names-scroll"></span>
+          <div class="skills-showcase__html5"></div>
+          <div class="skills-showcase__skill-names">
+            <span class="skills-showcase__skill-names--scroll"></span>
           </div>
         </div>
         <div class="sec-skills__chart">
@@ -391,46 +411,45 @@
         <div class="sec-skills__education">
           <h3 class="sec-skills__education-heading">Education</h3>
           <div class="sec-skills__security-plus sec-skills--certs">
-            <img src="assets/images/certs/Security+_CE.jpg" alt="Security Plus Cert"/>
+            <img src="dist/images/Security+_CE.jpg" alt="Security Plus Cert"/>
           </div> 
           <div class="sec-skills__network-plus sec-skills--certs">
-            <img src="assets/images/certs/Network+_CE.jpg" alt="Network Plus Cert"/>
+            <img src="dist/images/Network+_CE.jpg" alt="Network Plus Cert"/>
           </div>
           <div class="sec-skills__itil sec-skills--certs">
-            <img src="assets/images/certs/ITIL-v3.jpg" alt="ITIL Cert" title="Information Technology Infrastructure Library - Foundations version 3"/>
+            <img src="dist/images/ITIL-v3.jpg" alt="ITIL Cert" title="Information Technology Infrastructure Library - Foundations version 3"/>
           </div>
           <div class="sec-skills__mba-container sec-skills--certs">
             <i class="sec-skills__mba-icon fas fa-graduation-cap"></i>
             <abbr class="sec-skills__mba-text" title="Master of Business Administration">MBA</abbr>
           </div>
         </div>  
-        <!-- <i href="#sec-main" class="to-top-of-page" title="To Top"><i class="fas fa-angle-double-up"></i></a> -->
       </section>
       <!-- END of SKILLS Section -->
       <!-- START of FOOTER Section -->
       <footer class="sec-footer">
         <div class="sec-footer__copyright">&copy; Copyright <span id=currentYear></span> - Steve Thompson</div>
         <div class="sec-footer__contact">
-          <a class="sec-footer__email-icon-cta sec-footer--icon-container" href="mailto:steve@sthmpsn.dev">
-            <i class="sec-footer__email-icon sec-footer--icon fas fa-envelope"></i>
+          <a class="footer__email-icon-cta footer__icon-container" href="mailto:steve@sthmpsn.dev">
+            <i class="footer__email-icon footer__icon fas fa-envelope"></i>
           </a>
-          <a class="sec-footer__phone-icon-cta sec-footer--icon-container" href="tel:631-834-8881">
-            <i class="sec-footer__phone-icon sec-footer--icon fas fa-phone"></i>
+          <a class="footer__phone-icon-cta footer__icon-container" href="tel:631-834-8881">
+            <i class="footer__phone-icon footer__icon fas fa-phone"></i>
           </a>
-          <a class="sec-footer__github-container sec-footer--icon-container" href="https://github.com/sthmpsn" target="_blank">
-            <i class="sec-footer__github-silhouette-icon sec-footer--icon fab fa-github"></i>
+          <a class="footer__github-container footer__icon-container" href="https://github.com/sthmpsn" target="_blank">
+            <i class="footer__github-silhouette-icon footer__icon fab fa-github"></i>
           </a>
-          <a class="sec-footer__linkedin-container sec-footer--icon-container" href="https://www.linkedin.com/in/steven-thompson-10a5071b" target="_blank">
-            <i class="sec-footer__linkedin-icon sec-footer--icon fab fa-linkedin-in"></i>
+          <a class="footer__linkedin-container footer__icon-container" href="https://www.linkedin.com/in/steven-thompson-10a5071b" target="_blank">
+            <i class="footer__linkedin-icon footer__icon fab fa-linkedin-in"></i>
           </a>
-          <a class="sec-footer__twitter-container sec-footer--icon-container" href="https://twitter.com/StevenT35878867" target="_blank">
-            <i class="sec-footer__twitter-icon sec-footer--icon fab fa-twitter"></i>
+          <a class="footer__twitter-container footer__icon-container" href="https://twitter.com/StevenT35878867" target="_blank">
+            <i class="footer__twitter-icon footer__icon fab fa-twitter"></i>
           </a>
-          <a class="sec-footer__facebook-container sec-footer--icon-container" href="https://www.facebook.com/steve.thompson.5055" target="_blank">
-            <i class="sec-footer__facebook-icon sec-footer--icon fab fa-facebook-f"></i>
+          <a class="footer__facebook-container footer__icon-container" href="https://www.facebook.com/steve.thompson.5055" target="_blank">
+            <i class="footer__facebook-icon footer__icon fab fa-facebook-f"></i>
           </a>
-          <a class="sec-footer__codepen-container sec-footer--icon-container" href="https://codepen.io/sthmpsn" target="_blank">
-            <i class="sec-footer__codepen-icon sec-footer--icon fab fa-codepen"></i>
+          <a class="footer__codepen-container footer__icon-container" href="https://codepen.io/sthmpsn" target="_blank">
+            <i class="footer__codepen-icon footer__icon fab fa-codepen"></i>
           </a>
         </div>
       </footer>
@@ -438,6 +457,6 @@
       <a href="#sec-main" id="to-top-of-page" class="to-top-of-page" title="To Top"><i class="fas fa-angle-double-up"></i></a>
     </div>
     <!-- END of Grid WRAPPER -->
-    <script src="javascript/main.js"></script>
-    <script src="javascript/portfolio.js"></script>
-  </body
+    
+    <script type="text/javascript" src="dist/js/bundle.js"></script>
+    </body>

@@ -47,9 +47,10 @@
 
     @include breakPoint(992px) {
       perspective: 1000px; // Sets the 3d perspective (view point)
+      height: 600px;
     }
 
-    #{$self}__carousel {
+    .projects__carousel {
       display: flex;
       flex-wrap: wrap; // push children (proj-card) to next row as needed
       justify-content: center;
@@ -63,7 +64,7 @@
         transition: transform 1s;
       }
 
-      #{$self}__proj-card {
+      .projects__card {
         min-width: 200px;
         max-width: 360px;
         height: 230px;
@@ -132,16 +133,16 @@
         }
 
         // The purpose of this container is to contain the rotating and scaling image effect while the card can "overflow" the drop shadow in the carousel
-        #{$self}__proj-card-container {
+        .projects__card-container {
           overflow: hidden;
           position: relative;
           height: 100%;
           width: 100%;
 
-          &:hover #{$self}__proj-info {
+          &:hover .projects__info {
             opacity: 1;
 
-            #{$self}__proj-cta {
+            .projects__cta {
               opacity: 1;
               transition: opacity 0.5s linear; // smoothens the button display
               pointer-events: auto; // enables clicking of the links again (after animation runs)
@@ -149,17 +150,17 @@
             }
           } // proj_card hover impacting proj-info elements
 
-          &:hover #{$self}__proj-img {
+          &:hover .projects__img {
             transform: scale(1.3) rotate(15deg);
           }
 
-          #{$self}__proj-img {
+          .projects__img {
             width: 100%;
             height: 100%;
             transition: all 0.5s;
           }
 
-          #{$self}__proj-info {
+          .projects__info {
             position: absolute;
             top: 0;
             left: 0;
@@ -175,12 +176,17 @@
             opacity: 0;
             transition: 0.05s;
 
-            #{$self}__proj-title {
+            .projects__title {
               padding: 5px;
               font-size: 1.3rem;
+              
+              .projects__subtitle {
+                padding: 5px;
+                font-size: .8rem;
+              }
             }
 
-            #{$self}__proj-cta {
+            .projects__cta {
               position: relative;
               display: flex;
               justify-content: space-around;

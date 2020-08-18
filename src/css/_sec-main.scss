@@ -25,7 +25,7 @@
       margin: 0;
     }
 
-    #{$self}__header-brand {
+    .header-brand {
       padding-right: 60px;
       text-align: left;
 
@@ -44,7 +44,7 @@
         margin: 15px;
       }
 
-      #{$self}__header-avatar {
+      .header-avatar {
         display: none;
 
         @include breakPoint(992px){
@@ -59,7 +59,7 @@
       } //End header-avatar
 
 
-      #{$self}__header-name {
+      .header-name {
 
         @include breakPoint(992px){
           text-align: center;
@@ -76,7 +76,7 @@
       } // End header-name
     } // End header-brand
 
-    #{$self}__header-nav {
+    .header-nav {
       
       @include breakPoint(640px) {
         // Mobile Landscape
@@ -87,7 +87,7 @@
         height: 100%;
       }
 
-      #{$self}__header-nav-menu-icon {
+      .nav-menu-icon {
         position: relative;
         z-index: 100;
         font-size: 3rem;
@@ -98,7 +98,7 @@
         }
       } // End header-nav-menu-icon
 
-      #{$self}__header-nav-menu {
+      .nav-menu {
         display: none;
         list-style-type: none;
         font-size: 1rem;
@@ -111,7 +111,7 @@
         }
       } // End header-nav-menu
 
-      #{$self}__header-nav-menu--active {
+      .nav-menu--active {
         background: $primary-color;
         position: absolute;
         display: block;
@@ -125,12 +125,12 @@
         animation: grow-fs 0.5s linear forwards;
       } // End header-nav-menu--active
 
-      #{$self}__header-nav-menu--deactivated {
+      .nav-menu--deactivated {
         transform-origin: top right;
         animation: shrink-hidden 0.5s linear forwards;
       } // End header-nav-menu--deactivated
 
-      #{$self}__header-nav-item {
+      .nav-item {
         
         #nav-link-about {
           font-weight: 700;
@@ -140,7 +140,7 @@
           }
         }
 
-        #{$self}--header-nav-link {
+        .nav-link {
           // color: $txt-color;
           color: $secondary-color;
           text-decoration: none;
@@ -228,10 +228,10 @@
       padding: 0 10em;
     }
 
-    #{$self}__about-title {
+    .about__title {
       text-align: center;
 
-      #{$self}__about-title-primary {
+      .about__title-primary {
         font-size: 1.9rem;
         letter-spacing: 3px;
         
@@ -244,7 +244,20 @@
         }
       } // End about-title-primary
 
-      #{$self}__about-title-secondary {
+      .about__title-ampersand {
+        font-weight: 500;
+
+        @include breakPoint(992px) {
+          font-size: 1.8rem;
+        }
+
+        @include breakPoint(1200px) {
+          font-size: 2.2rem;
+        }
+
+      } // End about-title-ampersand
+
+      .about__title-secondary {
         font-weight: 600;
         letter-spacing: 3px;
         
@@ -257,21 +270,10 @@
         }
       } // End about-title-secondary
 
-      #{$self}__about-title-ampersand {
-        font-weight: 500;
-
-        @include breakPoint(992px) {
-          font-size: 1.8rem;
-        }
-
-        @include breakPoint(1200px) {
-          font-size: 2.2rem;
-        }
-
-      } // End about-title-ampersand
+      
     } // End about-title
 
-    #{$self}__about-me {
+    .about__me {
       padding: 20px 0;
       font-size: 0.9rem;
       letter-spacing: 1px;
@@ -304,7 +306,7 @@
     } // End about-me
   } // End "about"
 
-  &__aside {
+  .about__resume {
     padding: 5px 0;
     text-align: center; // center the button
 
@@ -312,7 +314,7 @@
       text-align: right;
     }
 
-    #{$self}__cta-dl-resume {
+    .about__cta-dl-resume {
       @include newButton(10px, 20px, normal, 1rem, 20px);
 
       @include breakPoint(768px) {

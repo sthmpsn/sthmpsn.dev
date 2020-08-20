@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  background-image: url("/assets/images/backgrounds/bg-error-404-mobile-devices.jpg");
+  background-image: url("../assets/images/backgrounds/bg-error-404-mobile-devices.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

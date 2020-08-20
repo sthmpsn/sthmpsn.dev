@@ -18,20 +18,20 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="icon" type="image/png" href="dist/images/favicon.ico">
-    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="icon" type="image/png" href="./assets/images/icons/favicon.ico">
+    <!-- Custom Styles (sass) added via app.js as import for bundler compilation -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
     <title>Steve Thompson's Web Developer Portfolio</title>
   </head>
   <body>
-    <!-- START of Grud Wrapper -->
+    <!-- START of Grid Wrapper -->
     <div class="grid-wrapper">
       <!-- START of MAIN Section (Header & About) -->
       <main id="sec-main" class="sec-main">
         <h1 class="sr-only">Steve Thompson's Web Developer Portfolio</h1>
         <header class="sec-main__header">
           <div class="header-brand">
-              <img class="header-avatar" src="dist/images/Avatar.svg" alt="Avatar">
+              <img class="header-avatar" src="assets/images/Avatar.svg" alt="Avatar">
               <div class="header-name">
                 <span class="header-fname">Steve</span>
                 <span class="header-lname">Thompson</span>
@@ -63,7 +63,7 @@
             </div>
             <aside class="about__resume">
               <h2 class="sr-only">View Steve's Resume</h2>
-                <a class="about__cta-dl-resume" href="./src/assets/docs/SteveThompson-resume.pdf" target="_blank">View Resume</a>
+                <a class="about__cta-dl-resume" href="assets/docs/SteveThompson-resume.pdf" target="_blank">View Resume</a>
             </aside>
         </div>
 
@@ -79,7 +79,7 @@
           <div class="projects__carousel">
             <div id="proj-tryathlete" class="projects__card">
               <div class="projects__card-container">
-                <img class="projects__img" src="dist/images/proj-tryathlete.jpg"/>
+                <img class="projects__img" src="assets/images/projects/proj-tryathlete.jpg"/>
                 <div class="projects__info">
                   <div class="projects__title">TryAthlete
                     <div class="projects__subtitle">
@@ -95,7 +95,7 @@
             </div>
             <div id="proj-clicky" class="projects__card">
               <div class="projects__card-container">
-                <img class="projects__img" src="dist/images/proj-clicky.jpg"/>
+                <img class="projects__img" src="assets/images/projects/proj-clicky.jpg"/>
                 <div class="projects__info">
                   <div class="projects__title">Memory Click Game
                     <div class="projects__subtitle">
@@ -111,7 +111,7 @@
             </div>
             <div id="proj-cyoa" class="projects__card">
               <div class="projects__card-container">
-                <img class="projects__img" src="dist/images/proj-cyoa.jpg"/>
+                <img class="projects__img" src="assets/images/projects/proj-cyoa.jpg"/>
                 <div class="projects__info">
                   <div class="projects__title">Choose Your Own Adventure!
                     <div class="projects__subtitle">
@@ -127,7 +127,7 @@
             </div>
             <div id="proj-rpg" class="projects__card">
               <div class="projects__card-container">
-                <img class="projects__img" src="dist/images/proj-rpg.jpg"/>
+                <img class="projects__img" src="assets/images/projects/proj-rpg.jpg"/>
                 <div class="projects__info">
                   <div class="projects__title">RPG Game
                     <div class="projects__subtitle">
@@ -143,7 +143,7 @@
             </div>
             <div id="proj-lirr-schedule" class="projects__card">
               <div class="projects__card-container">
-                <img class="projects__img" src="dist/images/proj-trainSchedule.jpg"/>
+                <img class="projects__img" src="assets/images/projects/proj-trainSchedule.jpg"/>
                 <div class="projects__info">
                   <div class="projects__title">LIRR Train Schedule
                     <div class="projects__subtitle">
@@ -159,7 +159,7 @@
             </div>
             <div id="proj-my-reviews" class="projects__card">
               <div class="projects__card-container">
-                <img class="projects__img" src="dist/images/proj-myReviews.jpg"/>
+                <img class="projects__img" src="assets/images/projects/proj-myReviews.jpg"/>
                 <div class="projects__info">
                   <div class="projects__title">My Reviews
                     <div class="projects__subtitle">
@@ -175,7 +175,7 @@
             </div>
             <div id="proj-gifflix" class="projects__card">
               <div class="projects__card-container">
-                <img class="projects__img" src="dist/images/proj-gifflix.jpg"/>
+                <img class="projects__img" src="assets/images/projects/proj-gifflix.jpg"/>
                 <div class="projects__info">
                   <div class="projects__title">GifFlix
                     <div class="projects__subtitle">
@@ -191,7 +191,7 @@
             </div>
             <div id="proj-book-search" class="projects__card">
               <div class="projects__card-container">
-                <img class="projects__img" src="dist/images/proj-bookSearch.jpg"/>
+                <img class="projects__img" src="assets/images/projects/proj-bookSearch.jpg"/>
                 <div class="projects__info">
                   <div class="projects__title">Google Book Search Collection</div>
                   <div class="projects__cta">
@@ -411,13 +411,13 @@
         <div class="sec-skills__education">
           <h3 class="sec-skills__education-heading">Education</h3>
           <div class="sec-skills__security-plus sec-skills--certs">
-            <img src="dist/images/Security+_CE.jpg" alt="Security Plus Cert"/>
+            <img src="assets/images/certs/Security+_CE.jpg" alt="Security Plus Cert"/>
           </div> 
           <div class="sec-skills__network-plus sec-skills--certs">
-            <img src="dist/images/Network+_CE.jpg" alt="Network Plus Cert"/>
+            <img src="assets/images/certs/Network+_CE.jpg" alt="Network Plus Cert"/>
           </div>
           <div class="sec-skills__itil sec-skills--certs">
-            <img src="dist/images/ITIL-v3.jpg" alt="ITIL Cert" title="Information Technology Infrastructure Library - Foundations version 3"/>
+            <img src="assets/images/certs/ITIL-v3.jpg" alt="ITIL Cert" title="Information Technology Infrastructure Library - Foundations version 3"/>
           </div>
           <div class="sec-skills__mba-container sec-skills--certs">
             <i class="sec-skills__mba-icon fas fa-graduation-cap"></i>
@@ -458,5 +458,6 @@
     </div>
     <!-- END of Grid WRAPPER -->
     
-    <script type="text/javascript" src="dist/js/bundle.js"></script>
-    </body>
+    <script src="js/app.js"></script>
+</body>
+</html>

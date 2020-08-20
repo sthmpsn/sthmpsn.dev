@@ -4,10 +4,8 @@
   "description": "Portfolio of Steve Thompson",
   "main": "index.html",
   "scripts": {
-    "build": "npm run clean && webpack && npm run imagemin",
-    "clean": "rimraf dist && mkdirp dist",
-    "imagemin": "imagemin src/assets/images/**/* -o dist/images",
-    "watch:js": "onchange \"src/js/*.js\" -- npm run build",
+    "build": "parcel build src/*.html -d dist/prod --public-url ./",
+    "start": "parcel src/index.html -d dist/dev --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,11 +21,10 @@
   "author": "Steve Thompson",
   "license": "ISC",
   "devDependencies": {
-    "imagemin-cli": "^6.0.0",
-    "mkdirp": "^1.0.4",
-    "onchange": "^7.0.2",
-    "rimraf": "^3.0.2",
-    "webpack": "^3.2.0"
+    "node-sass": "^4.14.1",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-imagemin": "^4.0.1",
+    "parcel-plugin-nuke-dist": "^1.0.1"
   },
   "bugs": {
     "url": "https://github.com/sthmpsn/sthmpsn.github.io/issues"

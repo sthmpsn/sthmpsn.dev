@@ -90,15 +90,6 @@
           animation: spin-left $spinRate linear infinite;
         }
 
-        // Waiting until my personal training of C-Sharp is complete before displaying 
-        // #{$self}__skill-csharp {
-        //   bottom: 0;
-        //   left: 45%;
-        //   background-image: url("../assets/images/skills/logo-c-sharp.svg");
-        //   background-repeat: no-repeat;
-        //   background-size: contain;
-        // }
-
         .skills-orbit-path__sql {
           bottom: 0;
           left: 45%;
@@ -207,23 +198,12 @@
 
         }
 
-        // Waiting until my personal training of .NET Core is complete before displaying 
-        // #{$self}__skill-dotnetcore {
-        //   bottom: 3%;
-        //   right: 22%;
-        //   background-image: url("../assets/images/skills/logo-dotNet.svg");
-        //   background-repeat: no-repeat;
-        //   background-size: contain;
-        // }
-
-        .skills-orbit-path__problem-solving {
+        .skills-orbit-path__php {
           bottom: 3%;
           right: 22%;
-          font-size: 4rem;
-          
-          @include breakPoint(992px){
-            color: $secondary-color;
-          }
+          background-image: url("../assets/images/skills/logo-php.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
         }
       }
 

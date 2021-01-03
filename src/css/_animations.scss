@@ -93,12 +93,10 @@
 // 12 skill divided by 100 = 8.3 which is the percent increment
 // Note state at 0% and 100% the skill will be the same 
   0% {
-      // content:'C-Sharp';
       content: 'SQL';
   }
   8.3% {
-      // content:'.Net Core';
-      content: 'Problem Solving';
+      content: 'PHP';
   }
   16.6% {
       content:'NodeJS';

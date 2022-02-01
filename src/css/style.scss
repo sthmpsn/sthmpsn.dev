@@ -49,6 +49,28 @@ body {
 
 }
 
+.alert {
+  display: block;
+  margin: 20px;
+  padding: 10px 20px;
+  background-color: $standout-color;
+  color: #000;
+  border-radius: 10px;
+  text-align: center;
+}
+
+a.alert {
+  text-decoration: none;
+  transition: all 1s ease-in-out;
+  
+  &:hover{
+    transform: scale(1.05);
+    background-color: darken($standout-color, 4%);
+    color: lighten(#000, 20%);
+  }
+
+}
+
 .grid-wrapper {
   max-width: 1920px;
 
@@ -71,6 +93,7 @@ body {
     border: 1px solid $secondary-color;
     opacity: 0;
     transition: opacity 1s linear;
+    z-index: 1;
 
     @include breakPoint(992px){
       width: 50px;
